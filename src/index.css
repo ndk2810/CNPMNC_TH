@@ -3,6 +3,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
 }
 .top-image {
   position: relative;
@@ -17,7 +18,6 @@
 .top-image-text {
   position: absolute;
   color: white;
-  font-family: "Noto Sans JP", sans-serif;
   top: 35%;
   left: 40%;
   font-weight: 900;
@@ -32,7 +32,7 @@
   margin-top: -40px;
   right: 35%;
   left: 50%;
-  margin-left: -365px;
+  margin-left: -395px;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -40,7 +40,7 @@
   box-shadow: 3px 3px 5px 6px #ccc;
   height: 85px;
   border-radius: 6px;
-  width: 50%;
+  width: 55%;
 }
 .search input {
   border: 0px;
@@ -61,4 +61,16 @@
 .search input,
 .search-logo {
   margin: 0px 15px;
+}
+.main-index-body {
+  margin: 80px 85px;
+}
+.list-diemDenDP ul li {
+  display: inline-block;
+  border-radius: 6px;
+  width: max-content;
+}
+.diemDen img {
+  width: 120px;
+  height: 100px;
 }
