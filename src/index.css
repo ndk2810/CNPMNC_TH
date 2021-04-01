@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -27,4 +26,39 @@
 .top-image-text h1 {
   font-size: 36px;
   margin-bottom: 16px;
+}
+.search {
+  position: absolute;
+  margin-top: -40px;
+  right: 35%;
+  left: 50%;
+  margin-left: -365px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: 3px 3px 5px 6px #ccc;
+  height: 85px;
+  border-radius: 6px;
+  width: 50%;
+}
+.search input {
+  border: 0px;
+}
+.search input:focus[type="text"] {
+  outline: 0px;
+}
+.search input[type="submit"] {
+  background-color: rgb(255, 109, 106);
+  background-image: url(https://d1785e74lyxkqq.cloudfront.net/webxpe-desktop/_next/static/13e9b928244e46d452ab434001cf575a.svg);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 6px;
+  width: 75px;
+  margin: 5px 0px;
+}
+.search input,
+.search-logo {
+  margin: 0px 15px;
 }
