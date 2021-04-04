@@ -28,11 +28,8 @@
   margin-bottom: 16px;
 }
 .search {
-  position: absolute;
-  margin-top: -40px;
-  right: 35%;
-  left: 50%;
-  margin-left: -395px;
+  position: relative;
+  margin: -40px 0px 0px 500px;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -40,7 +37,7 @@
   box-shadow: 3px 3px 5px 6px #ccc;
   height: 85px;
   border-radius: 6px;
-  width: 55%;
+  width: 45%;
 }
 .search input {
   border: 0px;
@@ -66,11 +63,22 @@
   margin: 80px 85px;
 }
 .list-diemDenDP ul li {
+  position: relative;
   display: inline-block;
   border-radius: 6px;
   width: max-content;
+  width: 280px;
+  height: 210px;
+  margin-right: 25px;
+  background-position: center;
+  opacity: 0.8;
 }
-.diemDen img {
-  width: 120px;
-  height: 100px;
+.list-diemDenDP ul li h4 {
+  position: absolute;
+  top: 42%;
+  left: 30%;
+  text-shadow: black;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  text-align: center;
 }

@@ -2,9 +2,8 @@ import React from 'react'
 
 const DiemDen = ({ diemDen }) => {
     return (
-        <li className="diemDen">
+        <li className="diemDen" style={{ backgroundImage: `url(${diemDen.img})` }}>
             <h4>{diemDen.ten}</h4>
-            <img src={diemDen.img} alt="" />
         </li>
     )
 }
