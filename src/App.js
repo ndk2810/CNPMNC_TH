@@ -1,10 +1,12 @@
 import TopImage from './components/TopImage'
 import SearchBox from './components/SearchBox'
 import DiemDenDP from './components/DiemDenDP'
+import Header from './components/Header'
 
 const App = () => {
   return (
     <div className="App">
+      <Header />
       <TopImage />
       <SearchBox />
 
