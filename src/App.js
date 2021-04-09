@@ -13,6 +13,9 @@ const App = () => {
       <div className="main-index-body">
         <DiemDenDP arrDiemDen={diemDen} />
       </div>
+      <div className="main-index-body">
+        <DiemDenDP arrDiemDen={diemDen} />
+      </div>
     </div>
   );
 }
