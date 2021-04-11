@@ -4,6 +4,7 @@ import './index.css';
 import './queries.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './Grid.css'
 
 ReactDOM.render(
   <React.StrictMode>
