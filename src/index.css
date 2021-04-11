@@ -12,7 +12,6 @@
 .top-image {
   position: relative;
   height: 300px;
-  margin-top: 5%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 25%), url("resources/img/topImage.jpg");
   background-size: cover;
   background-position: center;
@@ -37,7 +36,7 @@
   margin: -40px 0px 0px 500px;
   background-color: white;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 20px;
   box-shadow: 3px 3px 5px 6px #ccc;
   height: 85px;
@@ -46,6 +45,7 @@
 }
 .search input {
   border: 0px;
+  width: 90%;
 }
 .search input:focus[type="text"] {
   outline: 0px;
@@ -97,11 +97,13 @@
 /* HEADER */
 .header {
   width: 100%;
-  display: block;
   overflow: hidden;
   position: fixed;
   top: 0;
   z-index: 1;
+}
+.header + .body {
+  padding-top: 6%;
 }
 nav {
   background-color: white;

@@ -1,4 +1,3 @@
-
 //import components
 import TopImage from '../components/TopImage'
 import SearchBox from '../components/SearchBox'
@@ -7,9 +6,9 @@ import Header from '../components/Header'
 
 const index = () => {
     return (
-        <div>
-            <div className="App">
-                <Header />
+        <div className="App">
+            <Header />
+            <div className="body">
                 <TopImage />
                 <SearchBox />
 
