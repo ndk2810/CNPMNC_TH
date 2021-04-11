@@ -1,9 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+@font-face {
+  font-family: MuseoSans;
+  src: url("resources/fonts/SVN-Museo\ Sans\ Regular.ttf");
+}
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "MuseoSans";
 }
 .top-image {
   position: relative;
@@ -28,22 +32,20 @@
   margin-bottom: 16px;
 }
 .search {
-  position: absolute;
-  margin-top: -40px;
-  right: 35%;
-  left: 50%;
-  margin-left: -395px;
+  position: relative;
+  margin: -40px 0px 0px 500px;
   background-color: white;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 20px;
   box-shadow: 3px 3px 5px 6px #ccc;
   height: 85px;
   border-radius: 6px;
-  width: 55%;
+  width: 45%;
 }
 .search input {
   border: 0px;
+  width: 90%;
 }
 .search input:focus[type="text"] {
   outline: 0px;
@@ -66,11 +68,87 @@
   margin: 80px 85px;
 }
 .list-diemDenDP ul li {
+  position: relative;
   display: inline-block;
   border-radius: 6px;
   width: max-content;
+  width: 280px;
+  height: 210px;
+  margin-right: 25px;
+  background-position: center;
+  opacity: 0.8;
 }
-.diemDen img {
-  width: 120px;
-  height: 100px;
+.list-diemDenDP ul {
+  margin-top: 30px;
+}
+.list-diemDenDP h4 {
+  color: rgba(143, 143, 143, 1);
+  margin-top: 15px;
+}
+.list-diemDenDP ul li h4 {
+  position: absolute;
+  top: 42%;
+  left: 30%;
+  text-shadow: black;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  text-align: center;
+}
+/* HEADER */
+.header {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+.header + .body {
+  padding-top: 6%;
+}
+nav {
+  background-color: white;
+  padding: 10px 125px;
+}
+.main-nav ul,
+.main-nav img {
+  height: 36px;
+}
+nav ul {
+  list-style: none;
+  display: inline-flex;
+  float: right;
+}
+nav ul li {
+  margin-right: 30px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+nav ul li img.service-logo {
+  width: 20px;
+  margin-right: 8px;
+}
+.services-nav {
+  background-color: rgba(242, 243, 243, 1);
+  height: 35px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.services-nav ul {
+  float: none;
+}
+.services-nav ul li {
+  margin-top: 6px;
+  margin-bottom: 5px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
 }

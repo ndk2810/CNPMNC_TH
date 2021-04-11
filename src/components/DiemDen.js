@@ -1,11 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const DiemDen = ({ diemDen }) => {
     return (
-        <li className="diemDen">
-            <h4>{diemDen.ten}</h4>
-            <img src={diemDen.img} alt="" />
-        </li>
+        <Link to="/diaDiem">
+            <li className="diemDen" style={{ backgroundImage: `url(${diemDen.img})` }}>
+                <h4>{diemDen.ten}</h4>
+            </li>
+        </Link>
     )
 }
 

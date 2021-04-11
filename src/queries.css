@@ -1,11 +1,41 @@
+@media only screen and (max-width: 1650px) {
+    .search {
+        margin: -40px 0px 0px 450px;
+    }
+    nav {
+        padding: 10px 100px;
+    }
+}
 @media only screen and (max-width: 1200px) {
+    .search {
+        margin: -40px 0px 0px 395px;
+    }
+    nav {
+        padding: 10px 50px;
+    }
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1080px) {
+    .search {
+        margin: -40px 0px 0px 366px;
+    }
+    nav {
+        padding: 10px 10px;
+    }
+}
+@media only screen and (max-width: 870px) {
+    .search {
+        margin: -40px 0px 0px 300px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
-}
-
-@media only screen and (max-width: 480px) {
+    .search {
+        margin: -40px 0px 0px 300px;
+    }
+    .search input[type="submit"] {
+        background-size: 15px;
+        width: 60px;
+        margin: 5px 0px;
+    }
 }
