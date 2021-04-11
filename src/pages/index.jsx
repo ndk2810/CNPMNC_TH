@@ -3,6 +3,7 @@ import TopImage from '../components/TopImage'
 import SearchBox from '../components/SearchBox'
 import DiemDenDP from '../components/DiemDenDP'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 const index = () => {
     return (
@@ -19,6 +20,7 @@ const index = () => {
                     <DiemDenDP arrDiemDen={diemDen} />
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
