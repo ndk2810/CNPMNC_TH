@@ -165,13 +165,29 @@ img {
   overflow-x: hidden;
   overflow-y: hidden;
 }
+.row {
+  margin: 0px 8%;
+}
 .row h4 {
   color: whitesmoke;
+}
+.Content {
+  line-height: 2.5rem;
+  font-weight: bold;
+}
+.footer-col {
+  padding: 0 2rem;
+}
+.img-tieuChuan {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.Footer1-1 h4 {
+  margin: 15px 0px;
 }
 .Footer-payment-image {
   display: inline-flex;
   justify-content: center;
-  position: relative;
   width: 64px;
   height: 48px;
   align-items: center;
@@ -182,6 +198,9 @@ img {
   border-bottom-right-radius: 6px;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
+}
+.Footer-payment-image img {
+  height: 18px;
 }
 .box-companion {
   display: flex;
@@ -229,13 +248,18 @@ div ul {
 .Footer-2-1 li a:hover {
   color: whitesmoke;
 }
-.Footer-content {
+.Footer-content,
+.Footer-content1 {
   filter: grayscale(1);
+  font-size: 0.88rem;
 }
 .Footer-2-2 li a:hover {
   color: whitesmoke;
   filter: none;
   -webkit-filter: grayscale(0);
+}
+.Footer-2-2 img {
+  margin-right: 6%;
 }
 .Footer-3 ul li {
   display: block;
@@ -275,6 +299,14 @@ div ul {
   transform: translateX(-50%) scaleX(1);
   -webkit-transform: translateX(-50%) scaleX(1);
 }
+.Footer-content1 p {
+  display: inline-flex;
+  font-size: 0.88rem;
+}
+.Footer-content1 p:hover {
+  border-bottom: 2px solid white;
+}
+
 .Footer-dowload-imgae-filter {
   filter: grayscale(200%);
   opacity: 0.5;
@@ -287,4 +319,6 @@ div ul {
 .wrap-content-end {
   text-align: center;
   color: white;
+  margin-top: 2%;
+  font-weight: bolder;
 }
