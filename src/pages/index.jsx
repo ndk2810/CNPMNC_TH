@@ -7,20 +7,16 @@ import Footer from '../components/Footer'
 
 const index = () => {
     return (
-        <div className="App">
-            <Header />
-            <div className="body">
-                <TopImage />
-                <SearchBox />
+        <div>
+            <TopImage />
+            <SearchBox />
 
-                <div className="main-index-body">
-                    <DiemDenDP arrDiemDen={diemDen} />
-                </div>
-                <div className="main-index-body">
-                    <DiemDenDP arrDiemDen={diemDen} />
-                </div>
+            <div className="main-index-body">
+                <DiemDenDP arrDiemDen={diemDen} />
             </div>
-            <Footer />
+            <div className="main-index-body">
+                <DiemDenDP arrDiemDen={diemDen} />
+            </div>
         </div>
     )
 }

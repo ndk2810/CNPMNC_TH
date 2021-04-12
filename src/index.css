@@ -3,8 +3,8 @@
   font-family: MuseoSans;
   src: url("resources/fonts/SVN-Museo\ Sans\ Regular.ttf");
 }
-a{
-	text-decoration: none
+a {
+  text-decoration: none;
 }
 * {
   box-sizing: border-box;
@@ -156,18 +156,19 @@ img {
   max-width: 100%;
 }
 
-.Footer{
-  background-color: rgba(27,27,27,1.00);
+/* FOOTER */
+.Footer {
+  background-color: rgba(27, 27, 27, 1);
   width: 100%;
   padding-top: 56px;
   padding-bottom: 80px;
   overflow-x: hidden;
   overflow-y: hidden;
 }
-.row h4{
-  color: whitesmoke
+.row h4 {
+  color: whitesmoke;
 }
- .Footer-payment-image{
+.Footer-payment-image {
   display: inline-flex;
   justify-content: center;
   position: relative;
@@ -181,8 +182,8 @@ img {
   border-bottom-right-radius: 6px;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-} 
-.box-companion{
+}
+.box-companion {
   display: flex;
   justify-content: center;
   border: 0 solid black;
@@ -201,63 +202,63 @@ img {
   border-bottom-right-radius: 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  border-bottom-color: rgba(255,255,255,1.00);
-  border-left-color: rgba(255,255,255,1.00);
-  border-right-color: rgba(255,255,255,1.00);
-  border-top-color: rgba(255,255,255,1.00);
-} 
-.box-companion img{
+  border-bottom-color: rgba(255, 255, 255, 1);
+  border-left-color: rgba(255, 255, 255, 1);
+  border-right-color: rgba(255, 255, 255, 1);
+  border-top-color: rgba(255, 255, 255, 1);
+}
+.box-companion img {
   width: 36px;
   margin-right: 16px;
 }
-.box-companion-content{
-  color: rgba(255,255,255,1.00);
+.box-companion-content {
+  color: rgba(255, 255, 255, 1);
   text-align: left;
   font-size: 16px;
 }
 div ul {
   list-style: none;
 }
-.Footer-2 ul li{
-  display:list-item
+.Footer-2 ul li {
+  display: list-item;
 }
-.Footer-2 ul li a{
+.Footer-2 ul li a {
   position: relative;
   color: gray;
 }
-.Footer-2-1 li a:hover{
-  color: whitesmoke; 
+.Footer-2-1 li a:hover {
+  color: whitesmoke;
 }
-.Footer-content{
+.Footer-content {
   filter: grayscale(1);
 }
-.Footer-2-2 li a:hover{
-  color: whitesmoke; 
+.Footer-2-2 li a:hover {
+  color: whitesmoke;
   filter: none;
   -webkit-filter: grayscale(0);
 }
-.Footer-3 ul li{
+.Footer-3 ul li {
   display: block;
 }
-.Footer-3 ul li a{
+.Footer-3 ul li a {
   position: relative;
   color: gray;
 }
-.Footer-3-1 li a:hover{
-  color: whitesmoke; 
+.Footer-3-1 li a:hover {
+  color: whitesmoke;
 }
-.Footer-4 ul li{
+.Footer-4 ul li {
   display: block;
 }
-.Footer-4 ul li a{
+.Footer-4 ul li a {
   position: relative;
   color: gray;
 }
-.Footer-4-1 li a:hover{
+.Footer-4-1 li a:hover {
   color: whitesmoke;
 }
 
-.Footer-content::after{
+.Footer-content::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -265,25 +266,25 @@ div ul {
   background-color: whitesmoke;
   transform: translateX(-50%) scaleX(0);
   -webkit-transform: translateX(-50%) scaleX(0);
-  -webkit-transform-origin:translateX(-50%) scaleX(0);
+  -webkit-transform-origin: translateX(-50%) scaleX(0);
   transform-origin: 50% 50%;
   left: 50%;
   bottom: 0;
 }
-.Footer-content:hover::after{
+.Footer-content:hover::after {
   transform: translateX(-50%) scaleX(1);
   -webkit-transform: translateX(-50%) scaleX(1);
 }
-.Footer-dowload-imgae-filter{
+.Footer-dowload-imgae-filter {
   filter: grayscale(200%);
   opacity: 0.5;
 }
-.Footer-dowload-imgae-filter:hover{
+.Footer-dowload-imgae-filter:hover {
   filter: none;
   -webkit-filter: contrast(200%);
   opacity: 1;
 }
-.wrap-content-end{
+.wrap-content-end {
   text-align: center;
   color: white;
 }
