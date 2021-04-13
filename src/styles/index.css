@@ -70,7 +70,7 @@ a {
 .main-index-body {
   margin: 80px 85px;
 }
-.list-diemDenDP ul li {
+.list-diaDiemDP ul li {
   position: relative;
   display: inline-block;
   border-radius: 6px;
@@ -81,20 +81,21 @@ a {
   background-position: center;
   opacity: 0.8;
 }
-.list-diemDenDP ul {
+.list-diaDiemDP ul {
   margin-top: 30px;
 }
-.list-diemDenDP h4 {
+.list-diaDiemDP h4 {
   color: rgba(143, 143, 143, 1);
   margin-top: 15px;
 }
-.list-diemDenDP ul li h4 {
+.list-diaDiemDP ul li h4 {
   position: absolute;
-  top: 42%;
-  left: 30%;
-  text-shadow: black;
-  color: rgb(0, 0, 0);
-  font-size: 25px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  color: white;
+  width: 100%;
+  font-size: 1.5rem;
   text-align: center;
 }
 /* HEADER */

@@ -9,3 +9,5 @@ Lê Duy Thắng
 Trần Quang Hữu Thuận
 Lê Trường Chinh
 ```
+
+Link cơ sở dữ liệu: https://cloud.mongodb.com/v2/60758e23aa9d4e36649b82c8#clusters/detail/tourDuLich
