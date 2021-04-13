@@ -3,9 +3,9 @@
 
 Thành viên nhóm:
 ```
-**Nguyễn Thanh Tùng
+Nguyễn Thanh Tùng
 Ngô Duy Khang
 Lê Duy Thắng
 Trần Quang Hữu Thuận
-Lê Trường Chinh**
+Lê Trường Chinh
 ```
