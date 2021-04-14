@@ -3,7 +3,6 @@ import TopImage from '../components/TopImage'
 import SearchBox from '../components/SearchBox'
 import DiaDiems from '../components/DiaDiems'
 
-
 const Index = ({ arrDiaDiem }) => {
     return (
         <div>

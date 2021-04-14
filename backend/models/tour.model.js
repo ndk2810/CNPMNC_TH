@@ -4,6 +4,7 @@ const Schema = mongoose.Schema
 
 const tourSchema = new Schema({
     tenTour: String,
+    diaDiem: String,
     gia: Number,
 })
 
