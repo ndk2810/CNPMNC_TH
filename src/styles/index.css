@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
 @font-face {
   font-family: MuseoSans;
-  src: url("resources/fonts/SVN-Museo\ Sans\ Regular.ttf");
+  src: url("../resources/fonts/SVN-Museo\ Sans\ Regular.ttf");
 }
 a {
   text-decoration: none;
@@ -15,7 +15,7 @@ a {
 .top-image {
   position: relative;
   height: 300px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 25%), url("resources/img/topImage.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 25%), url("../resources/img/topImage.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -70,31 +70,32 @@ a {
 .main-index-body {
   margin: 80px 85px;
 }
-.list-diemDenDP ul li {
+/*LIST DD*/
+.list-diaDiemDP ul li {
   position: relative;
   display: inline-block;
-  border-radius: 6px;
-  width: max-content;
-  width: 280px;
-  height: 210px;
-  margin-right: 25px;
+  width: 235px;
+  height: 160px;
+  margin-right: 20px;
   background-position: center;
   opacity: 0.8;
 }
-.list-diemDenDP ul {
+.list-diaDiemDP ul {
   margin-top: 30px;
+  width: max-content;
 }
-.list-diemDenDP h4 {
+.list-diaDiemDP h4 {
   color: rgba(143, 143, 143, 1);
   margin-top: 15px;
 }
-.list-diemDenDP ul li h4 {
+.list-diaDiemDP ul li h4 {
   position: absolute;
-  top: 42%;
-  left: 30%;
-  text-shadow: black;
-  color: rgb(0, 0, 0);
-  font-size: 25px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  color: white;
+  width: 100%;
+  font-size: 1.5rem;
   text-align: center;
 }
 /* HEADER */
