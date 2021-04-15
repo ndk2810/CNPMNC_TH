@@ -1,0 +1,11 @@
+/* .tour-list {
+    float: right;
+} */
+.card-tour {
+    display: inline-flex;
+    margin-bottom: 2%;
+}
+.card-tour img {
+    max-width: 100%;
+    width: 20rem;
+}

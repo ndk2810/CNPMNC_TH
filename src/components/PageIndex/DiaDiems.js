@@ -2,6 +2,7 @@ import React from 'react'
 import DiaDiem from './DiaDiem'
 
 const DiaDiems = ({ arrDiaDiem }) => {
+
     return (
         <div className="list-diaDiemDP">
             <h1>Điểm đến địa phương</h1>

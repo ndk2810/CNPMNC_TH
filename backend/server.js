@@ -25,20 +25,6 @@ const tourRouter = require('./routes/tour')
 app.use('/diaDiem', diaDiemRouter)
 app.use('/tour', tourRouter)
 
-// app.get('/', (req, resp) => {
-//     axios.post('http://localhost:5000/diaDiem/add', {
-//         tenDiaDiem: 'Vũng Tàu',
-//         hinhAnh: 'https://ik.imagekit.io/tvlk/image/imageResource/2018/07/04/1530675715058-9ca722b0e9d3f97d1c54bacb0f7dfa52.jpeg'
-//     })
-//         .then(res => {
-//             console.log(`statusCode: ${res.statusCode}`)
-//         })
-//         .catch(error => {
-//             console.error(error)
-
-//         })
-
-// })
 
 app.listen(port, () => {
     console.log('Server is running on port: ', port)

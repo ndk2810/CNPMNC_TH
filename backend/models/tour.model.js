@@ -6,8 +6,13 @@ const tourSchema = new Schema({
     tenTour: String,
     diaDiem: String,
     gia: Number,
+    diemNoiBat: String,
+    gioiThieu: String,
+    lichTrinh: String,
+    hinhAnh: String,
 })
 
-const Tour = mongoose.model('Tour', tourSchema)
+let collectionName = 'tour'
+const Tour = mongoose.model('Tour', tourSchema, collectionName)
 
 module.exports = Tour

@@ -1,7 +1,7 @@
 //import components
-import TopImage from '../components/TopImage'
-import SearchBox from '../components/SearchBox'
-import DiaDiems from '../components/DiaDiems'
+import TopImage from '../components/PageIndex/TopImage'
+import SearchBox from '../components/PageIndex/SearchBox'
+import DiaDiems from '../components/PageIndex/DiaDiems'
 
 const Index = ({ arrDiaDiem }) => {
     return (
@@ -11,8 +11,7 @@ const Index = ({ arrDiaDiem }) => {
 
             <div className="main-index-body">
                 <DiaDiems arrDiaDiem={arrDiaDiem} />
-            </div>
-            <div className="main-index-body">
+
                 <DiaDiems arrDiaDiem={arrDiaDiem} />
             </div>
         </div>

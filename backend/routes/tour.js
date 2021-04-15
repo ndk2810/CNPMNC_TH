@@ -7,4 +7,10 @@ router.route('/').get((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err))
 })
 
+router.route('/:tenDiaDiem').get((req, res) => {
+    tour.find({ diaDiem: req.params.tenDiaDiem })
+        .then(tours => res.json(tours))
+        .catch(err => res.status(400).json('Error: ' + err))
+})
+
 module.exports = router
