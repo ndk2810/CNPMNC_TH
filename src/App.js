@@ -2,6 +2,7 @@ import axios from 'axios'
 import FormThemDD from './components/FormThemDD'
 import TableDD from './components/TableDD'
 import { useState, useEffect } from 'react'
+import { Resource } from 'ra-core'
 
 const submitForm = (e) => {
   e.preventDefault()
@@ -29,6 +30,7 @@ const deleteDD = (id, tenDiaDiem, hinhAnh) => {
 
   window.location.reload()
 }
+
 
 function App() {
   const [DiaDiems, setDiaDiems] = useState([])
