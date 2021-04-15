@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import './queries.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './Grid.css'
+
+//IMPORT CSS HERE
+import './styles/index.css'
+import './styles/Grid.css'
+import './styles/queries.css'
 
 ReactDOM.render(
   <React.StrictMode>
