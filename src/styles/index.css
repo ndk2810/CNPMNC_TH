@@ -300,12 +300,18 @@ div ul {
   transform: translateX(-50%) scaleX(1);
   -webkit-transform: translateX(-50%) scaleX(1);
 }
+.Footer-content1 {
+  display: inline-flex;
+  justify-items: center;
+  line-height: 1.65rem;
+}
 .Footer-content1 p {
   display: inline-flex;
   font-size: 0.88rem;
+  margin-left: 0.45rem;
 }
 .Footer-content1 p:hover {
-  border-bottom: 2px solid white;
+  text-decoration: underline;
 }
 
 .Footer-dowload-imgae-filter {

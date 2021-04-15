@@ -18,4 +18,15 @@ router.route('/add').post((req, res) => {
         .catch(err => res.status(400).json('Error ' + err))
 })
 
+router.route('/remove').post((req, res) => {
+    const tenDiaDiem = req.body.tenDiaDiem
+
+    diaDiem.deleteOne({ tenDiaDiem: tenDiaDiem }, function (err) {
+        if (err)
+            console.log(err);
+        else
+            console.log('Delete ' + tenDiaDiem + ' successful')
+    })
+})
+
 module.exports = router
