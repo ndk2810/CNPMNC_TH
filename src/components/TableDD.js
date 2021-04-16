@@ -1,8 +1,9 @@
 import React from 'react'
+import {BsTrashFill} from "react-icons/bs"
 
-const TableDD = ({ DiaDiems, deleteDD }) => {
+const TableDD = ({ DiaDiems, deleteDD,}) => {
     return (
-        <div>
+        <div className="table-admin">
             <table>
                 <thead>
                     <tr>
@@ -17,7 +18,10 @@ const TableDD = ({ DiaDiems, deleteDD }) => {
                             <tr>
                                 <td>{data.tenDiaDiem}</td>
                                 <td><img className="table-img" src={data.hinhAnh} alt="#" /></td>
-                                <td><button onClick={() => deleteDD(data._id.str, data.tenDiaDiem, data.hinhAnh)}>DELETE</button></td>
+                                <td>
+                                    <button onClick={() => deleteDD(data._id.str, data.tenDiaDiem, data.hinhAnh)}><BsTrashFill /></button>
+                                    <h3>Delete</h3>
+                                </td>
                             </tr>
                         )
                     })}
