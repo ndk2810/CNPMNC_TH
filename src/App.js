@@ -19,7 +19,7 @@ const submitForm = (e) => {
     .catch(err => console.log(err))
 }
 
-const deleteDD = (id, tenDiaDiem, hinhAnh) => {
+const deleteDD = (tenDiaDiem) => {
   const data = {
     tenDiaDiem: tenDiaDiem,
   }
