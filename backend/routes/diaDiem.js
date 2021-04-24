@@ -16,6 +16,8 @@ router.route('/add').post((req, res) => {
     newDiaDiem.save()
         .then(() => console.log('DiaDiem added !'))
         .catch(err => res.status(400).json('Error ' + err))
+
+    res.send('Done added')
 })
 
 router.route('/remove').post((req, res) => {
@@ -27,6 +29,7 @@ router.route('/remove').post((req, res) => {
         else
             console.log('Delete ' + tenDiaDiem + ' successful')
     })
+    res.send('Done man')
 })
 
 module.exports = router

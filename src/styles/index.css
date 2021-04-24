@@ -3,6 +3,11 @@
   font-family: MuseoSans;
   src: url("../resources/fonts/SVN-Museo\ Sans\ Regular.ttf");
 }
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 a {
   text-decoration: none;
 }
@@ -68,7 +73,7 @@ a {
   margin: 0px 15px;
 }
 .main-index-body {
-  margin: 80px 85px;
+  margin: 50px 85px;
 }
 /*LIST DD*/
 .list-diaDiemDP ul li {

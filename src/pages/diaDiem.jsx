@@ -3,6 +3,8 @@ import '../styles/diaDiem.css'
 
 //COMPONENTS
 import TourList from '../components/PageDiaDiem/TourList'
+import SearchBoxCT from '../components/PageDiaDiem/SearchBoxCT'
+import BoLoc from '../components/PageDiaDiem/BoLoc'
 
 const DiaDiem = () => {
     let search = window.location.search;
@@ -26,7 +28,10 @@ const DiaDiem = () => {
 
     return (
         <div>
+            <SearchBoxCT />
             <div className="main-index-body">
+                <h4 className="h4-chiTiet">Tất cả kết quả cho {diaDiem}</h4>
+                <BoLoc />
                 <TourList tours={Tours} />
             </div>
         </div>
