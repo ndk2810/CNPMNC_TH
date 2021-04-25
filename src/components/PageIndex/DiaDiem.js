@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom'
 
+
 const DiaDiem = ({ diaDiem }) => {
-    const linkTo = '/diaDiem?tenDiaDiem=' + diaDiem.tenDiaDiem
+    const linkTo = '/diaDiem?IDDiaDiem=' + diaDiem.IDDiaDiem + '&TenDiaDiem=' + diaDiem.TenDiaDiem
+    const hinhAnhBase64 = Buffer.from(diaDiem.HinhAnhDiaDiem).toString('base64')
+
     return (
         <Link to={linkTo}>
-            <li className="diaDiem" style={{ backgroundImage: `url(${diaDiem.hinhAnh})` }}>
-                <h4>{diaDiem.tenDiaDiem}</h4>
+            <li key={diaDiem.IDDiaDiem} className="diaDiem" style={{ backgroundImage: `url(data:image/jpeg;base64,${hinhAnhBase64}` }}>
+                <h4>{diaDiem.TenDiaDiem}</h4>
             </li>
         </Link>
     )

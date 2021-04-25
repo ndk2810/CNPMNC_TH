@@ -1,35 +1,19 @@
 const router = require('express').Router()
-let diaDiem = require('../models/diaDiem.model')
+const db = require('../dbConfig')
 
 router.route('/').get((req, res) => {
-    diaDiem.find()
-        .then(diaDiems => res.json(diaDiems))
-        .catch(err => res.status(400).json('Error: ' + err))
-})
-
-router.route('/add').post((req, res) => {
-    const tenDiaDiem = req.body.tenDiaDiem
-    const hinhAnh = req.body.hinhAnh
-
-    const newDiaDiem = new diaDiem({ tenDiaDiem, hinhAnh })
-
-    newDiaDiem.save()
-        .then(() => console.log('DiaDiem added !'))
-        .catch(err => res.status(400).json('Error ' + err))
-
-    res.send('Done added')
-})
-
-router.route('/remove').post((req, res) => {
-    const tenDiaDiem = req.body.tenDiaDiem
-
-    diaDiem.deleteOne({ tenDiaDiem: tenDiaDiem }, function (err) {
-        if (err)
-            console.log(err);
-        else
-            console.log('Delete ' + tenDiaDiem + ' successful')
+    db.connect().then(() => {
+        //simple query
+        var queryString = 'select * FROM DIADIEM';
+        db.request().query(queryString, (err, result) => {
+            if (err)
+                console.log(err)
+            else {
+                console.log(result)
+                res.send(result.recordset)
+            }
+        })
     })
-    res.send('Done man')
 })
 
 module.exports = router

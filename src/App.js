@@ -13,7 +13,7 @@ const App = () => {
   const [DiaDiems, setDiaDiems] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:5000/diaDiem/")
+    fetch("http://localhost:5000/diaDiem")
       .then(data => {
         return data.json();
       })
