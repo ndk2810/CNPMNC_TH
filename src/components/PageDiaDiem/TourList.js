@@ -1,11 +1,11 @@
-import Tour from './Tour'
+import CardTour from './CardTour'
 
 const TourList = ({ tours }) => {
     return (
         <div className="tour-list">
             {tours.map(tour => {
                 return (
-                    <Tour tour={tour} />
+                    <CardTour tour={tour} />
                 )
             })}
         </div>

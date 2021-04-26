@@ -5,6 +5,7 @@
     width: 70%;
     box-shadow: 3px 3px 5px 6px #ccc;
     border-radius: 10px;
+    height: 230px;
 }
 .card-tour h1 {
     font-size: 1.2rem;
