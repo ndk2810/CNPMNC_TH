@@ -9,10 +9,13 @@ import TableDD from './components/TableDD'
 const submitForm = (e) => {
   e.preventDefault()
   const TenDiaDiem = document.getElementById('tenDiaDiem').value
-  const HinhAnh = document.getElementById('hinhAnh').value
+  const hinhAnhBase64 = document.getElementById('hinhAnh').src
+  const HinhAnh = hinhAnhBase64.replace(/^data:image\/\w+;base64,/, "")
 
-  console.log(TenDiaDiem)
-  console.log(HinhAnh)
+  if (!TenDiaDiem || !hinhAnhBase64) {
+    alert('Không được để trống các trường thông tin')
+    return;
+  }
 
   if (window.confirm('Thêm địa điểm vào CSDL ?')) {
     axios.post('http://localhost:5000/diaDiem/add', {
@@ -24,9 +27,9 @@ const submitForm = (e) => {
   }
 }
 
-const deleteDD = (tenDiaDiem) => {
+const deleteDD = (IDDiaDiem) => {
   const data = {
-    tenDiaDiem: tenDiaDiem,
+    IDDiaDiem: IDDiaDiem,
   }
 
   if (window.confirm('Xoá địa điểm ?')) {
