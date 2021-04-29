@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 
 const accordion = () => {
     var acc = document.getElementsByClassName("accordion");
@@ -17,18 +18,33 @@ const accordion = () => {
     }
 }
 
-const BoLoc = () => {
+const BoLoc = ({ filterTour }) => {
+    let [TheLoaiTour, setTheLoaiTour] = useState([])
+    useEffect(() => {
+        fetch("http://localhost:5000/theLoaiTour")
+            .then(data => {
+                return data.json();
+            })
+            .then(data => {
+                if (data.length > 0)
+                    setTheLoaiTour(data)
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }, []);
     return (
         <div className="boLoc">
             <button class="accordion" onClick={accordion}>Tour</button>
             <div class="panel">
                 <ul>
-                    <li><input type="checkbox" />Thiên nhiên</li>
-                    <li><input type="checkbox" />Ngắm cảnh</li>
-                    <li><input type="checkbox" />Tour dưới nước</li>
-                    <li><input type="checkbox" />Tour trên đất liền</li>
-                    <li><input type="checkbox" />Tour ẩm thực</li>
-                    <li><input type="checkbox" />Tour theo chủ đề</li>
+                    {TheLoaiTour.map(theLoai => {
+                        return (
+                            <li>
+                                <input className='loc-key' type="checkbox" onClick={filterTour} value={theLoai.IDTheLoaiTour} />{theLoai.TenTheLoaiTour}
+                            </li>
+                        )
+                    })}
                 </ul>
             </div>
         </div>

@@ -1,11 +1,11 @@
 import CardTour from './CardTour'
 
-const TourList = ({ tours }) => {
+const TourList = ({ filterList, tours }) => {
     return (
         <div className="tour-list">
             {tours.map(tour => {
                 return (
-                    <CardTour tour={tour} />
+                    filterList.find(IDTheLoai => IDTheLoai === tour.IDTheLoaiTour) && <CardTour tour={tour} />
                 )
             })}
         </div>

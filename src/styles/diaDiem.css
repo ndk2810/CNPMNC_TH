@@ -37,10 +37,18 @@
     margin-bottom: 2%;
     font-size: 2rem;
 }
-.type {
+.card-tour-type {
     display: inline-block;
     color: rgb(2, 100, 200);
     background-color: rgb(236, 248, 255);
+    font-size: 0.8rem;
+    padding: 0.4rem;
+    max-width: max-content;
+    border-radius: 14px;
+}
+.card-tour-theLoai {
+    display: inline-block;
+    color: rgb(114, 114, 114);
     font-size: 0.8rem;
     padding: 0.4rem;
     max-width: max-content;
