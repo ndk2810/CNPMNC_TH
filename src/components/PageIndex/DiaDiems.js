@@ -8,7 +8,7 @@ const DiaDiems = ({ arrDiaDiem }) => {
             <ul>
                 {arrDiaDiem.length > 0 ? (arrDiaDiem.map(diaDiem => (
                     <DiaDiem diaDiem={diaDiem} />
-                ))) : 'No data to show'}
+                ))) : 'Không có địa điểm nào cả'}
             </ul>
         </div>
     )

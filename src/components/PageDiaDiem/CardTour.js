@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 
 const CardTour = ({ tour }) => {
+    //GET Hình ảnh bìa của tour
     let [HinhAnh, setHinhAnh] = useState([])
     useEffect(() => {
         fetch("http://localhost:5000/tour/hinhAnh/" + tour.IDTour)
@@ -16,6 +17,7 @@ const CardTour = ({ tour }) => {
             });
     }, []);
 
+    //GET thể loại tour
     let [TheLoaiTour, setTheLoaiTour] = useState([])
     useEffect(() => {
         fetch("http://localhost:5000/theLoaiTour/" + tour.IDTheLoaiTour)
@@ -31,6 +33,7 @@ const CardTour = ({ tour }) => {
             });
     }, []);
 
+    //Decode hình ảnh từ binary thành base64 để hiển thị
     let src = 'https://semantic-ui.com/images/wireframe/white-image.png'
     if (HinhAnh.HinhAnh) {
         let hinhAnhBase64 = Buffer.from(HinhAnh.HinhAnh).toString('base64')

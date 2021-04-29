@@ -1,6 +1,7 @@
 const router = require('express').Router()
 const db = require('../dbConfig')
 
+//GET tất cả địa điểm
 router.route('/').get((req, res) => {
     db.connect().then(() => {
         //simple query
@@ -15,6 +16,7 @@ router.route('/').get((req, res) => {
     })
 })
 
+//Thêm địa điểm
 router.route('/add').post((req, res) => {
     db.connect().then(() => {
         const TenDiaDiem = req.body.tenDiaDiem
@@ -35,6 +37,7 @@ router.route('/add').post((req, res) => {
     })
 })
 
+//Xoá địa điểm
 router.route('/remove').post((req, res) => {
     db.connect().then(() => {
         const IDDiaDiem = req.body.IDDiaDiem

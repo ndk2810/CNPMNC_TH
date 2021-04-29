@@ -5,6 +5,7 @@ const TourList = ({ filterList, tours }) => {
         <div className="tour-list">
             {tours.map(tour => {
                 return (
+                    //Nếu IDTheLoai của tour nằm trong Array filterList thì sẽ không hiển thị
                     filterList.find(IDTheLoai => IDTheLoai === tour.IDTheLoaiTour) && <CardTour tour={tour} />
                 )
             })}

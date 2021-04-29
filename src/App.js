@@ -10,8 +10,8 @@ import Index from './pages/index'
 import DiaDiem from './pages/diaDiem'
 
 const App = () => {
+  //GET tất cả địa điểm
   const [DiaDiems, setDiaDiems] = useState([])
-
   useEffect(() => {
     fetch("http://localhost:5000/diaDiem")
       .then(data => {
@@ -33,7 +33,7 @@ const App = () => {
 
         <div className='body'>
           <Switch>
-            {/* Mốt có thêm trang nào vào thì thêm dưới đây nhé */}
+            {/* Mốt có thêm trang nào vào thì thêm trong Switch đây nhé */}
 
             <Route exact path="/">
               <Index arrDiaDiem={DiaDiems} />

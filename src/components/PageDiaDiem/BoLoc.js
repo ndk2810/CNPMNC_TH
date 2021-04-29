@@ -19,6 +19,7 @@ const accordion = () => {
 }
 
 const BoLoc = ({ filterTour }) => {
+    //GET các thể loại tour từ server để load
     let [TheLoaiTour, setTheLoaiTour] = useState([])
     useEffect(() => {
         fetch("http://localhost:5000/theLoaiTour")
@@ -33,6 +34,7 @@ const BoLoc = ({ filterTour }) => {
                 console.log(err);
             });
     }, []);
+
     return (
         <div className="boLoc">
             <button class="accordion" onClick={accordion}>Tour</button>
