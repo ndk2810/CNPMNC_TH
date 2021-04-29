@@ -1,31 +1,56 @@
 const router = require('express').Router()
-let diaDiem = require('../models/diaDiem.model')
+const db = require('../dbConfig')
 
+//GET tất cả địa điểm
 router.route('/').get((req, res) => {
-    diaDiem.find()
-        .then(diaDiems => res.json(diaDiems))
-        .catch(err => res.status(400).json('Error: ' + err))
+    db.connect().then(() => {
+        //simple query
+        const queryString = 'select * FROM DIADIEM';
+        db.request().query(queryString, (err, result) => {
+            if (err)
+                console.log(err)
+            else {
+                res.send(result.recordset)
+            }
+        })
+    })
 })
 
+//Thêm địa điểm
 router.route('/add').post((req, res) => {
-    const tenDiaDiem = req.body.tenDiaDiem
-    const hinhAnh = req.body.hinhAnh
+    db.connect().then(() => {
+        const TenDiaDiem = req.body.tenDiaDiem
+        const HinhAnhDiaDiem = req.body.hinhAnh
+        //simple query
+        const queryString = `DECLARE @str VARCHAR(MAX);
+        SET @str = '${HinhAnhDiaDiem}';
+        INSERT INTO DIADIEM(TenDiaDiem, HinhAnhDiaDiem)
+        VALUES (N'${TenDiaDiem}', cast(N'' as xml).value('xs:base64Binary(sql:variable("@str"))', 'VARBINARY(MAX)'))`;
 
-    const newDiaDiem = new diaDiem({ tenDiaDiem, hinhAnh })
-
-    newDiaDiem.save()
-        .then(() => console.log('DiaDiem added !'))
-        .catch(err => res.status(400).json('Error ' + err))
+        db.request().query(queryString, (err, result) => {
+            if (err)
+                console.log(err)
+            else {
+                res.send(result.recordset)
+            }
+        })
+    })
 })
 
+//Xoá địa điểm
 router.route('/remove').post((req, res) => {
-    const tenDiaDiem = req.body.tenDiaDiem
+    db.connect().then(() => {
+        const IDDiaDiem = req.body.IDDiaDiem
+        //simple query
+        const queryString = `DELETE FROM DIADIEM WHERE IDDiaDiem = ` + IDDiaDiem;
 
-    diaDiem.deleteOne({ tenDiaDiem: tenDiaDiem }, function (err) {
-        if (err)
-            console.log(err);
-        else
-            console.log('Delete ' + tenDiaDiem + ' successful')
+        db.request().query(queryString, (err, result) => {
+            if (err)
+                console.log(err)
+            else {
+                res.send(result.recordset)
+            }
+        })
     })
 })
 

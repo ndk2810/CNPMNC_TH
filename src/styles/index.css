@@ -3,6 +3,11 @@
   font-family: MuseoSans;
   src: url("../resources/fonts/SVN-Museo\ Sans\ Regular.ttf");
 }
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 a {
   text-decoration: none;
 }
@@ -68,7 +73,7 @@ a {
   margin: 0px 15px;
 }
 .main-index-body {
-  margin: 80px 85px;
+  margin: 50px 85px;
 }
 /*LIST DD*/
 .list-diaDiemDP ul li {
@@ -77,8 +82,13 @@ a {
   width: 235px;
   height: 160px;
   margin-right: 20px;
+  background-size: cover;
   background-position: center;
   opacity: 0.8;
+}
+.list-diaDiemDP {
+  margin-top: 50px;
+  width: max-content;
 }
 .list-diaDiemDP ul {
   margin-top: 30px;
@@ -195,10 +205,7 @@ img {
   background: white;
   margin-right: 8px;
   margin-bottom: 8px;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+  border-radius: 6px;
 }
 .Footer-payment-image img {
   height: 18px;
@@ -210,22 +217,10 @@ img {
   width: 246.93px;
   height: 72px;
   align-items: center;
-  padding-bottom: 16px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 16px;
-  border-bottom-width: 2px;
-  border-left-width: 2px;
-  border-right-width: 2px;
-  border-top-width: 2px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-color: rgba(255, 255, 255, 1);
-  border-left-color: rgba(255, 255, 255, 1);
-  border-right-color: rgba(255, 255, 255, 1);
-  border-top-color: rgba(255, 255, 255, 1);
+  padding: 16px;
+  border-width: 2px;
+  border-radius: 10px;
+  border-color: rgba(255, 255, 255, 1);
 }
 .box-companion img {
   width: 36px;

@@ -1,6 +1,9 @@
 @media only screen and (max-width: 1650px) {
     .search {
-        margin: -40px 0px 0px 450px;
+        margin: -20px 0px 0px 450px;
+    }
+    .search-chiTiet {
+        margin: 20px 0px 0px 450px;
     }
     nav {
         padding: 10px 100px;

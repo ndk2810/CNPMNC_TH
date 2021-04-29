@@ -1,13 +1,12 @@
 const router = require('express').Router()
 const db = require('../dbConfig')
 
-//GET các tour bằng IDDiaDiem
-router.route('/:IDDiaDiem').get((req, res) => {
+//GET tất cả các thể loại tour
+router.route('/').get((req, res) => {
     db.connect().then(() => {
         //simple query
         const queryString =
-            'select * FROM TOUR WHERE IDDiaDiem = ' + req.params.IDDiaDiem;
-
+            'select * FROM THELOAITOUR';
         db.request().query(queryString, (err, result) => {
             if (err)
                 console.log(err)
@@ -18,12 +17,12 @@ router.route('/:IDDiaDiem').get((req, res) => {
     })
 })
 
-//GET hình ảnh bìa của 1 tour
-router.route('/HinhAnh/:IDTour').get((req, res) => {
+//GET thông tin thể loại tour theo ID
+router.route('/:IDTheLoaiTour').get((req, res) => {
     db.connect().then(() => {
+        //simple query
         const queryString =
-            'select TOP 1 * FROM HINHANHTOUR WHERE IDTour = ' + req.params.IDTour;
-
+            'select * FROM THELOAITOUR WHERE IDTheLoaiTour = ' + req.params.IDTheLoaiTour;
         db.request().query(queryString, (err, result) => {
             if (err)
                 console.log(err)

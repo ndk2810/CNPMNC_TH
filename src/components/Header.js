@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
     return (
         <div className="header">
             <nav className="main-nav">
                 <a href="#" style={{ marginRight: 8 }}><img src="https://d1785e74lyxkqq.cloudfront.net/webxpe-desktop/_next/static/8e5cadd29984fb1d2acd37e86225fbd1.svg" alt="#" /></a>
-                <a href="#"><img src="https://d1785e74lyxkqq.cloudfront.net/webxpe-desktop/_next/static/97f3e7a54e9c6987283b78e016664776.svg" alt="#" /></a>
+                <Link to="/"><img src="https://d1785e74lyxkqq.cloudfront.net/webxpe-desktop/_next/static/97f3e7a54e9c6987283b78e016664776.svg" alt="#" /></Link>
                 <ul>
                     <li>
                         <a href="#" className="container">
