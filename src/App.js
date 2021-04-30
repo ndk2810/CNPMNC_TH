@@ -24,6 +24,21 @@ function App() {
       });
   }, []);
 
+
+  const [Tours, setTours] = useState([])
+  useEffect(() => {
+    fetch("http://localhost:5000/tour/")
+      .then(data => {
+        return data.json();
+      })
+      .then(data => {
+        setTours(data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <Router>
 
@@ -38,7 +53,7 @@ function App() {
             </Route>
 
             <Route exact path="/quanLyTour">
-              <QuanLyTour />
+              <QuanLyTour Tours={Tours} />
             </Route>
 
           </Switch>

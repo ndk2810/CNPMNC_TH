@@ -4,10 +4,11 @@ import React from 'react'
 import FormThemTour from '../components/PageQLTour/FormThemTour'
 import TableTour from '../components/PageQLTour/TableTour'
 
-const quanLyTour = () => {
+const quanLyTour = ({ Tours }) => {
     return (
         <div>
             <FormThemTour />
+            <TableTour Tours={Tours} />
         </div>
     )
 }

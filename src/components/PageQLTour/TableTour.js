@@ -1,29 +1,32 @@
 import { BsTrashFill } from "react-icons/bs"
 
-const TableDD = ({ DiaDiems, deleteDD }) => {
+const TableDD = ({ Tours }) => {
     return (
         <div className="table-admin">
             <table>
                 <thead>
                     <tr>
-                        <th>Tên địa điểm</th>
-                        <th>Hình ảnh</th>
-                        <th>Giới thiệu</th>
+                        <th>Tên tour</th>
+                        <th>Địa chỉ</th>
+                        <th>Điểm nổi bật</th>
+                        <th>Lịch trình</th>
+                        <th>Nội dung</th>
+                        <th>Độ dài</th>
                         <th>Hành động</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {DiaDiems.map(data => {
-                        let hinhAnhBase64 = ''
-                        if (data.HinhAnhDiaDiem)
-                            hinhAnhBase64 = Buffer.from(data.HinhAnhDiaDiem).toString('base64')
+                    {Tours.map(data => {
                         return (
                             <tr>
-                                <td>{data.TenDiaDiem}</td>
-                                <td><img className="table-img" src={`data:image/jpeg;base64,${hinhAnhBase64}`} alt="Not available" /></td>
-                                <td>{data.GioiThieu}</td>
+                                <td>{data.TenTour}</td>
+                                <td>{data.DiaChiTour}</td>
+                                <td>{data.DiemNoiBat}</td>
+                                <td>{data.LichTrinh}</td>
+                                <td>{data.NoiDungTour}</td>
+                                <td>{data.DoDai} giờ</td>
                                 <td>
-                                    <button className="btn-del" onClick={() => deleteDD(data.IDDiaDiem)}><BsTrashFill /></button>
+                                    <button className="btn-del"><BsTrashFill /></button>
                                     <h3>Delete</h3>
                                 </td>
                             </tr>
