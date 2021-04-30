@@ -8,11 +8,7 @@ router.route('/').get((req, res) => {
         const queryString =
             'select * FROM THELOAITOUR';
         db.request().query(queryString, (err, result) => {
-            if (err)
-                console.log(err)
-            else {
-                res.send(result.recordset)
-            }
+            err ? console.log(err) : res.send(result.recordset)
         })
     })
 })
@@ -24,11 +20,7 @@ router.route('/:IDTheLoaiTour').get((req, res) => {
         const queryString =
             'select * FROM THELOAITOUR WHERE IDTheLoaiTour = ' + req.params.IDTheLoaiTour;
         db.request().query(queryString, (err, result) => {
-            if (err)
-                console.log(err)
-            else {
-                res.send(result.recordset)
-            }
+            err ? console.log(err) : res.send(result.recordset)
         })
     })
 })

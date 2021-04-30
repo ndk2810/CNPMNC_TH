@@ -9,11 +9,18 @@ router.route('/').get((req, res) => {
             'select * FROM TOUR';
 
         db.request().query(queryString, (err, result) => {
-            if (err)
-                console.log(err)
-            else {
-                res.send(result.recordset)
-            }
+            err ? console.log(err) : res.send(result.recordset)
+        })
+    })
+})
+//GET tour bằng IDTour
+router.route('/chiTiet/:IDTour').get((req, res) => {
+    db.connect().then(() => {
+        const queryString =
+            'select * FROM TOUR WHERE IDTour = ' + req.params.IDTour;
+
+        db.request().query(queryString, (err, result) => {
+            err ? console.log(err) : res.send(result.recordset)
         })
     })
 })
@@ -25,15 +32,10 @@ router.route('/:IDDiaDiem').get((req, res) => {
             'select * FROM TOUR WHERE IDDiaDiem = ' + req.params.IDDiaDiem;
 
         db.request().query(queryString, (err, result) => {
-            if (err)
-                console.log(err)
-            else {
-                res.send(result.recordset)
-            }
+            err ? console.log(err) : res.send(result.recordset)
         })
     })
 })
-
 
 //GET hình ảnh bìa của 1 tour
 router.route('/HinhAnh/:IDTour').get((req, res) => {
@@ -42,12 +44,45 @@ router.route('/HinhAnh/:IDTour').get((req, res) => {
             'select TOP 1 * FROM HINHANHTOUR WHERE IDTour = ' + req.params.IDTour;
 
         db.request().query(queryString, (err, result) => {
-            if (err)
-                console.log(err)
-            else {
-                res.send(result.recordset)
-            }
+            err ? console.log(err) : res.send(result.recordset)
         })
     })
 })
-module.exports = router
+
+//Thêm tour
+router.route('/add').post((req, res) => {
+    db.connect().then(() => {
+        const DiaDiem = req.body.DiaDiem
+        const TheLoai = req.body.TheLoai
+        const TenTour = req.body.TenTour
+        const DiaChiTour = req.body.DiaChiTour
+        const DiemNoiBat = req.body.DiemNoiBat
+        const LichTrinh = req.body.LichTrinh
+        const NoiDung = req.body.NoiDung
+        const DoDai = req.body.DoDai
+
+        //Query
+        const queryString =
+            `INSERT INTO TOUR(IDDiaDiem, IDTheLoaiTour, TenTour, DiaChiTour, DiemNoiBat, LichTrinh, NoiDungTour, DoDai) 
+        VALUES(${DiaDiem}, ${TheLoai}, N'${TenTour}', N'${DiaChiTour}', N'${DiemNoiBat}', N'${LichTrinh}', N'${NoiDung}', ${DoDai})`
+
+        db.request().query(queryString, (err, result) => {
+            err ? console.log(err) : res.send(result.recordset)
+        })
+    })
+})
+
+//Xoá tour
+router.route('/remove').post((req, res) => {
+    db.connect().then(() => {
+        const IDTour = req.body.IDTour
+        //simple query
+        const queryString = `DELETE FROM TOUR WHERE IDTour = ` + IDTour;
+
+        db.request().query(queryString, (err, result) => {
+            err ? console.log(err) : res.send(result.recordset)
+        })
+    })
+})
+
+module.exports = router;
