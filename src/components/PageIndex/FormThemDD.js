@@ -23,6 +23,10 @@ const FormThemDD = ({ submitForm }) => {
                     <label className="form-label">Tên địa điểm</label>
                 </div>
                 <div className="form1">
+                    <input type="text" placeholder="Nhập giới thiệu địa điểm..." id="gioiThieuDiaDiem" className="form-input" />
+                    <label className="form-label">Giới thiệu</label>
+                </div>
+                <div className="form1">
                     <input type="file" onChange={loadIMG} className="form-input" />
                 </div>
                 <img src="" className="upload-img" id="hinhAnh" alt="Preview..."></img>
