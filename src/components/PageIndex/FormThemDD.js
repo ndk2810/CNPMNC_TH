@@ -13,7 +13,7 @@ function loadIMG() {
     }
 }
 
-const FormThemDD = ({ submitForm }) => {
+const FormThemDD = ({ addDiaDiem }) => {
     return (
         <div className="form-create" id="form">
             <form action="" className="Create">
@@ -27,10 +27,10 @@ const FormThemDD = ({ submitForm }) => {
                     <label className="form-label">Giới thiệu</label>
                 </div>
                 <div className="form1">
-                    <input type="file" onChange={loadIMG} className="form-input" />
+                    <input type="file" onChange={loadIMG} id="themHinhAnh" className="form-input" />
                 </div>
                 <img src="" className="upload-img" id="hinhAnh" alt="Preview..."></img>
-                <input type="submit" value="Thêm" onClick={submitForm} className="submit" />
+                <input type="submit" value="Thêm" onClick={addDiaDiem} className="submit" />
             </form>
         </div>
     )

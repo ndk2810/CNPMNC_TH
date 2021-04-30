@@ -8,6 +8,7 @@ import Header from './components/Header'
 //import các trang
 import Index from './pages/quanLyDiaDiem'
 import QuanLyTour from './pages/quanLyTour'
+import TourChiTiet from './pages/tourChiTiet'
 
 function App() {
   const [DiaDiems, setDiaDiems] = useState([])
@@ -24,7 +25,6 @@ function App() {
       });
   }, []);
 
-
   const [Tours, setTours] = useState([])
   useEffect(() => {
     fetch("http://localhost:5000/tour/")
@@ -33,6 +33,21 @@ function App() {
       })
       .then(data => {
         setTours(data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, []);
+
+  let [TheLoaiTour, setTheLoaiTour] = useState([])
+  useEffect(() => {
+    fetch("http://localhost:5000/theLoaiTour")
+      .then(data => {
+        return data.json();
+      })
+      .then(data => {
+        if (data.length > 0)
+          setTheLoaiTour(data)
       })
       .catch(err => {
         console.log(err);
@@ -53,7 +68,11 @@ function App() {
             </Route>
 
             <Route exact path="/quanLyTour">
-              <QuanLyTour Tours={Tours} />
+              <QuanLyTour Tours={Tours} DiaDiems={DiaDiems} TheLoaiTour={TheLoaiTour} />
+            </Route>
+
+            <Route exact path="/tourChiTiet">
+              <TourChiTiet />
             </Route>
 
           </Switch>

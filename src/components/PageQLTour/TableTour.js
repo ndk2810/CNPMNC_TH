@@ -1,6 +1,6 @@
-import { BsTrashFill } from "react-icons/bs"
+//import { BsTrashFill } from "react-icons/bs"
 
-const TableDD = ({ Tours }) => {
+const TableDD = ({ Tours, deleteTour }) => {
     return (
         <div className="table-admin">
             <table>
@@ -26,8 +26,8 @@ const TableDD = ({ Tours }) => {
                                 <td>{data.NoiDungTour}</td>
                                 <td>{data.DoDai} giờ</td>
                                 <td>
-                                    <button className="btn-del"><BsTrashFill /></button>
-                                    <h3>Delete</h3>
+                                    <button className="table-btn btn-details">Chi tiết</button> <br />
+                                    <button className="table-btn btn-del" onClick={() => deleteTour(data.IDTour)}>Xoá</button>
                                 </td>
                             </tr>
                         )

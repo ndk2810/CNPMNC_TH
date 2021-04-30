@@ -4,14 +4,14 @@ import axios from 'axios'
 import FormThemDD from '../components/PageIndex/FormThemDD'
 import TableDD from '../components/PageIndex/TableDD'
 
-const submitForm = (e) => {
+const addDiaDiem = (e) => {
     e.preventDefault()
     const TenDiaDiem = document.getElementById('tenDiaDiem').value
     const GioiThieuDiaDiem = document.getElementById('gioiThieuDiaDiem').value
     const hinhAnhBase64 = document.getElementById('hinhAnh').src
     const HinhAnh = hinhAnhBase64.replace(/^data:image\/\w+;base64,/, "")
 
-    if (!TenDiaDiem || !hinhAnhBase64 || !GioiThieuDiaDiem) {
+    if (!TenDiaDiem || document.getElementById('themHinhAnh').files.length === 0 || !GioiThieuDiaDiem) {
         alert('Không được để trống các trường thông tin')
         return;
     }
@@ -44,7 +44,7 @@ const deleteDD = (IDDiaDiem) => {
 const quanLyDiaDiem = ({ DiaDiems }) => {
     return (
         <div>
-            <FormThemDD submitForm={submitForm} />
+            <FormThemDD addDiaDiem={addDiaDiem} />
             <TableDD DiaDiems={DiaDiems} deleteDD={deleteDD} />
         </div>
     )

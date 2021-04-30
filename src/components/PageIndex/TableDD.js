@@ -1,5 +1,5 @@
 import React from 'react'
-import { BsTrashFill } from "react-icons/bs"
+//import { BsTrashFill } from "react-icons/bs"
 
 const TableDD = ({ DiaDiems, deleteDD, }) => {
     return (
@@ -24,8 +24,8 @@ const TableDD = ({ DiaDiems, deleteDD, }) => {
                                 <td><img className="table-img" src={`data:image/jpeg;base64,${hinhAnhBase64}`} alt="Not available" /></td>
                                 <td>{data.GioiThieu}</td>
                                 <td>
-                                    <button className="btn-del" onClick={() => deleteDD(data.IDDiaDiem)}><BsTrashFill /></button>
-                                    <h3>Delete</h3>
+                                    <button className="table-btn btn-details">Chi tiết</button> <br />
+                                    <button className="table-btn btn-del" onClick={() => deleteDD(data.IDDiaDiem)}>Xoá</button>
                                 </td>
                             </tr>
                         )
