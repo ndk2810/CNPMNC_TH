@@ -21,11 +21,12 @@ router.route('/add').post((req, res) => {
     db.connect().then(() => {
         const TenDiaDiem = req.body.tenDiaDiem
         const HinhAnhDiaDiem = req.body.hinhAnh
+        const GioiThieuDiaDiem = req.body.gioiThieu
         //simple query
         const queryString = `DECLARE @str VARCHAR(MAX);
         SET @str = '${HinhAnhDiaDiem}';
-        INSERT INTO DIADIEM(TenDiaDiem, HinhAnhDiaDiem)
-        VALUES (N'${TenDiaDiem}', cast(N'' as xml).value('xs:base64Binary(sql:variable("@str"))', 'VARBINARY(MAX)'))`;
+        INSERT INTO DIADIEM(TenDiaDiem, HinhAnhDiaDiem, GioiThieu)
+        VALUES (N'${TenDiaDiem}', cast(N'' as xml).value('xs:base64Binary(sql:variable("@str"))', 'VARBINARY(MAX)'), N'${GioiThieuDiaDiem}')`;
 
         db.request().query(queryString, (err, result) => {
             if (err)
