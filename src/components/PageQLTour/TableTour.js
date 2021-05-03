@@ -1,4 +1,4 @@
-//import { BsTrashFill } from "react-icons/bs"
+import { Link } from 'react-router-dom'
 
 const TableDD = ({ Tours, deleteTour }) => {
     return (
@@ -9,24 +9,21 @@ const TableDD = ({ Tours, deleteTour }) => {
                         <th>Tên tour</th>
                         <th>Địa chỉ</th>
                         <th>Điểm nổi bật</th>
-                        <th>Lịch trình</th>
-                        <th>Nội dung</th>
                         <th>Độ dài</th>
                         <th>Hành động</th>
                     </tr>
                 </thead>
                 <tbody>
                     {Tours.map(data => {
+                        const linkTo = "/tourChiTiet?IDTour=" + data.IDTour
                         return (
                             <tr>
                                 <td>{data.TenTour}</td>
                                 <td>{data.DiaChiTour}</td>
                                 <td>{data.DiemNoiBat}</td>
-                                <td>{data.LichTrinh}</td>
-                                <td>{data.NoiDungTour}</td>
                                 <td>{data.DoDai} giờ</td>
                                 <td>
-                                    <button className="table-btn btn-details">Chi tiết</button> <br />
+                                    <Link to={linkTo}><button className="table-btn btn-details">Chi tiết</button></Link> <br />
                                     <button className="table-btn btn-del" onClick={() => deleteTour(data.IDTour)}>Xoá</button>
                                 </td>
                             </tr>

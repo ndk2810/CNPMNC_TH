@@ -8,6 +8,9 @@
   margin: 0;
   font-family: "MuseoSans";
 }
+.main-body {
+  padding: 0px 5%;
+}
 .form-create {
   display: flex;
   justify-content: center;
