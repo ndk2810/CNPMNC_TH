@@ -8,6 +8,7 @@ import { useState, useEffect } from 'react'
 //Import các trang
 import Index from './pages/index'
 import DiaDiem from './pages/diaDiem'
+import DatCho from './pages/datCho'
 
 const App = () => {
   //GET tất cả địa điểm
@@ -43,6 +44,9 @@ const App = () => {
               <DiaDiem />
             </Route>
 
+            <Route exact path="/datCho">
+              <DatCho />
+            </Route>
           </Switch>
         </div>
 

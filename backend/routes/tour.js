@@ -85,4 +85,22 @@ router.route('/remove').post((req, res) => {
     })
 })
 
+//Thêm 1 hình ảnh vào tour
+router.route('/insertPic').post((req, res) => {
+    db.connect().then(() => {
+        const IDTour = req.body.IDTour
+        const HinhAnhDiaDiem = req.body.hinhAnh
+        //simple query
+        const queryString = `DECLARE @str VARCHAR(MAX);
+        SET @str = '${HinhAnhDiaDiem}';
+        INSERT INTO HINHANHTOUR(IDTour, HinhAnh)
+        VALUES (${IDTour}, cast(N'' as xml).value('xs:base64Binary(sql:variable("@str"))', 'VARBINARY(MAX)'))`;
+
+        db.request().query(queryString, (err, result) => {
+            err ? console.log(err) : res.send(result.recordset)
+        })
+    })
+})
+
+
 module.exports = router;
