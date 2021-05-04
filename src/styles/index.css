@@ -55,7 +55,7 @@ a {
   border: 0px;
   width: 90%;
 }
-.search input:focus[type="text"] {
+input:focus {
   outline: 0px;
 }
 .search input[type="submit"] {
@@ -94,7 +94,7 @@ a {
   margin-top: 30px;
   width: max-content;
 }
-.list-diaDiemDP h4 {
+h4 {
   color: rgba(143, 143, 143, 1);
   margin-top: 15px;
 }
