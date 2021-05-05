@@ -1,6 +1,17 @@
 const router = require('express').Router()
 const db = require('../dbConfig')
 
+//GET địa điểm = IDDiaDiem
+router.route('/:IDDiaDiem').get((req, res) => {
+    db.connect().then(() => {
+
+        const queryString = 'select * FROM DIADIEM WHERE IDDiaDiem = ' + req.params.IDDiaDiem;
+        db.request().query(queryString, (err, result) => {
+            err ? console.log(err) : res.send(result.recordset)
+        })
+    })
+})
+
 //GET tất cả địa điểm
 router.route('/').get((req, res) => {
     db.connect().then(() => {

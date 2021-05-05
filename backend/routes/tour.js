@@ -26,6 +26,7 @@ router.route('/chiTiet/:IDTour').get((req, res) => {
 })
 //GET các tour bằng IDDiaDiem
 router.route('/:IDDiaDiem').get((req, res) => {
+    console.log(req.params.IDDiaDiem)
     db.connect().then(() => {
         //simple query
         const queryString =
@@ -36,6 +37,7 @@ router.route('/:IDDiaDiem').get((req, res) => {
         })
     })
 })
+
 
 //GET hình ảnh bìa của 1 tour
 router.route('/HinhAnh/:IDTour').get((req, res) => {

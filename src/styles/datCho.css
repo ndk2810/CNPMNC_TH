@@ -32,13 +32,15 @@
     padding: 1.5%;
 }
 .form-thongTinLienHe-input label,
+.form-thongTinLienHe-input select,
 .form-thongTinLienHe-input input {
     display: block;
     width: 100%;
     border-radius: 5px;
     margin-bottom: 5px;
 }
-.form-thongTinLienHe-input input {
+.form-thongTinLienHe-input input,
+.form-thongTinLienHe-input select {
     padding: 10px;
     height: 40px;
     border: 1px solid rgb(216, 216, 216);
@@ -52,4 +54,67 @@
 }
 .form-thongTinLienHe-footer input[type="radio"] {
     margin-right: 1.2rem;
+}
+
+/* BOX TOUR ĐẶT */
+.box-tourDat {
+    width: max-content;
+    float: right;
+    margin-top: 6%;
+    box-shadow: rgb(3 18 26 / 20%) 0px 1px 2px;
+}
+.box-tourDat-header {
+    display: inline-flex;
+    width: 100%;
+    padding: 1.5%;
+    border-bottom: 1px solid rgb(216, 216, 216);
+}
+.box-tourDat-header h3 {
+    display: inline-flex;
+}
+.box-tourDat-header img {
+    margin-right: 2%;
+}
+.box-tourDat-header button {
+    width: 80%;
+    text-align: end;
+    border: none;
+    font-weight: bold;
+    background-color: transparent;
+    font-size: 1rem;
+    color: rgb(1, 148, 243);
+    transition: 0.2s;
+}
+.box-tourDat-header button:hover {
+    cursor: pointer;
+    color: rgb(0, 90, 150);
+}
+.box-tourDat-body {
+    padding: 0%;
+}
+.box-tourDat-body h4 {
+    color: black;
+    margin-bottom: 2%;
+}
+.box-tourDat-chiTietTour {
+    display: inline-flex;
+}
+.pd {
+    padding: 5px 15px;
+}
+.box-tourDat-chiTietTour img {
+    object-fit: cover;
+    object-position: 50% 50%;
+    margin-right: 2%;
+}
+.box-tourDat-thongTinTour {
+    margin-top: 2%;
+    background-color: rgb(242, 243, 243);
+}
+.box-tourDat-thongTinTour table {
+    width: 100%;
+}
+.box-tourDat-thongTinTour-value {
+    text-align: end;
+    font-weight: bold;
 }
