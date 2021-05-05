@@ -4,6 +4,14 @@ import '../styles/chiTietTour.css'
 const axios = require('axios');
 const { default: FormCTTour } = require('../components/PageChiTietTour/FormCTTour');
 
+function wait(ms) {
+    var d = new Date();
+    var d2 = null;
+    do { d2 = new Date(); }
+    while (d2 - d < ms);
+}
+
+
 const addHinhAnh = (IDTour) => {
     //e.preventDefault()
     const hinhAnhBase64 = document.getElementById('hinhAnh').src
@@ -30,6 +38,8 @@ const TourChiTiet = () => {
     let search = window.location.search;
     let params = new URLSearchParams(search);
     let IDTour = params.get('IDTour');
+    let IDTheLoaiTour = params.get('IDTheLoaiTour');
+    let IDDiaDiem = params.get('IDDiaDiem');
 
     const [Tour, setTour] = useState([])
     useEffect(() => {
@@ -47,13 +57,28 @@ const TourChiTiet = () => {
 
     let [TheLoaiTour, setTheLoaiTour] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/theLoaiTour/" + Tour.IDTheLoaiTour)
+        fetch("http://localhost:5000/theLoaiTour/" + IDTheLoaiTour)
             .then(data => {
                 return data.json();
             })
             .then(data => {
                 if (data.length > 0)
                     setTheLoaiTour(data[0])
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }, []);
+
+    let [DiaDiem, setDiaDiem] = useState([])
+    useEffect(() => {
+        fetch("http://localhost:5000/diaDiem/" + IDDiaDiem)
+            .then(data => {
+                return data.json();
+            })
+            .then(data => {
+                if (data.length > 0)
+                    setDiaDiem(data[0])
             })
             .catch(err => {
                 console.log(err);
@@ -77,7 +102,7 @@ const TourChiTiet = () => {
 
     return (
         <div className="main-body">
-            <FormCTTour addHinhAnh={addHinhAnh} Tour={Tour} HinhAnh={HinhAnh} TheLoaiTour={TheLoaiTour} />
+            <FormCTTour addHinhAnh={addHinhAnh} Tour={Tour} HinhAnh={HinhAnh} TheLoaiTour={TheLoaiTour} DiaDiem={DiaDiem} />
         </div>
     )
 }

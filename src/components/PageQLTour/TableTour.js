@@ -15,7 +15,7 @@ const TableDD = ({ Tours, deleteTour }) => {
                 </thead>
                 <tbody>
                     {Tours.map(data => {
-                        const linkTo = "/tourChiTiet?IDTour=" + data.IDTour
+                        const linkTo = "/tourChiTiet?IDTour=" + data.IDTour + "&IDTheLoaiTour=" + data.IDTheLoaiTour + "&IDDiaDiem=" + data.IDDiaDiem
                         return (
                             <tr>
                                 <td>{data.TenTour}</td>

@@ -13,7 +13,7 @@
 //     }
 // }
 
-const FormCTTour = ({ addHinhAnh, Tour, HinhAnh, TheLoaiTour }) => {
+const FormCTTour = ({ addHinhAnh, Tour, HinhAnh, TheLoaiTour, DiaDiem }) => {
     let src = 'https://semantic-ui.com/images/wireframe/white-image.png'
     if (HinhAnh.HinhAnh) {
         let hinhAnhBase64 = Buffer.from(HinhAnh.HinhAnh).toString('base64')
@@ -32,7 +32,7 @@ const FormCTTour = ({ addHinhAnh, Tour, HinhAnh, TheLoaiTour }) => {
                     </div>
                     <div className="form-chiTiet-info">
                         <h2>Địa chỉ tour: </h2>
-                        <span>{Tour.DiaChiTour}</span>
+                        <span>{Tour.DiaChiTour}, <b>{DiaDiem.TenDiaDiem}</b></span>
                     </div>
                     <div className="form-chiTiet-info">
                         <h2>Thể loại tour: </h2>
