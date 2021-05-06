@@ -11,14 +11,12 @@ function wait(ms) {
     while (d2 - d < ms);
 }
 
-
 const addHinhAnh = (IDTour) => {
-    //e.preventDefault()
     const hinhAnhBase64 = document.getElementById('hinhAnh').src
     const HinhAnh = hinhAnhBase64.replace(/^data:image\/\w+;base64,/, "")
 
-    if (document.getElementById('themHinhAnh').files.length === 0) {
-        alert('Không được để trống các trường thông tin')
+    if (document.getElementById('hinhAnh').src === "https://semantic-ui.com/images/wireframe/white-image.png") {
+        alert('Bạn chưa chọn hình ảnh')
         return;
     }
 
@@ -27,10 +25,26 @@ const addHinhAnh = (IDTour) => {
             IDTour: IDTour,
             hinhAnh: HinhAnh,
         })
-            .then(() => window.location.reload())
+            .then(() => {
+                alert('Thêm hình ảnh thành công !')
+                window.location.reload()
+            })
             .catch(err => alert(err))
     }
-    console.log(HinhAnh)
+}
+
+const xoaTatCaHinhAnh = (IDTour) => {
+    //e.preventDefault()
+
+    if (window.confirm('Xoá tất cả hình ảnh của tour ?')) {
+        axios.post('http://localhost:5000/tour/removeAllPic', {
+            IDTour: IDTour,
+        })
+            .then(() => {
+                window.location.reload()
+            })
+            .catch(err => alert(err))
+    }
 }
 
 const TourChiTiet = () => {
@@ -102,7 +116,7 @@ const TourChiTiet = () => {
 
     return (
         <div className="main-body">
-            <FormCTTour addHinhAnh={addHinhAnh} Tour={Tour} HinhAnh={HinhAnh} TheLoaiTour={TheLoaiTour} DiaDiem={DiaDiem} />
+            <FormCTTour addHinhAnh={addHinhAnh} Tour={Tour} HinhAnh={HinhAnh} TheLoaiTour={TheLoaiTour} DiaDiem={DiaDiem} xoaTatCaHinhAnh={xoaTatCaHinhAnh} />
         </div>
     )
 }

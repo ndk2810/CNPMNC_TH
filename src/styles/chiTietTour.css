@@ -1,0 +1,31 @@
+.form-chiTiet-imgs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.form-chiTiet-imgs img {
+    width: 50%;
+}
+.form-chiTiet-info {
+    width: 100%;
+    display: inline-flex;
+    margin-top: 1%;
+}
+.form-chiTiet-info h2 {
+    width: 20%;
+}
+.form-chiTiet-info input {
+    width: 80%;
+    padding: 5px;
+}
+.form-themHinhAnh {
+    display: inline-flex;
+    justify-content: space-between;
+    float: right;
+    width: 80%;
+    margin: 2% 0;
+}
+.form-themHinhAnh-input {
+    border: 1px solid rgb(179, 179, 179);
+    margin-right: 2%;
+}
