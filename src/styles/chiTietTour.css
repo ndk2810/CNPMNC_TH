@@ -18,9 +18,29 @@
     width: 80%;
     padding: 5px;
 }
+.form-chiTiet-footer-submit {
+    width: 80%;
+    margin-top: 15px;
+    float: right;
+}
+.form-chiTiet-footer-submit input {
+    padding: 1%;
+    float: left;
+    width: 30%;
+    font-size: 1rem;
+    color: white;
+    background-color: #1a73e8;
+    border: none;
+    transition: 0.3s;
+}
+.form-chiTiet-footer-submit input:hover {
+    cursor: pointer;
+    background-color: #1252a7;
+}
+
 .form-themHinhAnh {
     display: inline-flex;
-    justify-content: space-between;
+    justify-content: space-around;
     float: right;
     width: 80%;
     margin: 2% 0;

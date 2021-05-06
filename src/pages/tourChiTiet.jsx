@@ -4,11 +4,36 @@ import '../styles/chiTietTour.css'
 const axios = require('axios');
 const { default: FormCTTour } = require('../components/PageChiTietTour/FormCTTour');
 
-function wait(ms) {
-    var d = new Date();
-    var d2 = null;
-    do { d2 = new Date(); }
-    while (d2 - d < ms);
+// function wait(ms) {
+//     var d = new Date();
+//     var d2 = null;
+//     do { d2 = new Date(); }
+//     while (d2 - d < ms);
+// }
+
+const suaThongTinTour = (IDTour) => {
+    const TenTour = document.getElementById('tenTour').value
+    const DiaChiTour = document.getElementById('diaChiTour').value
+    const DiemNoiBat = document.getElementById('diemNoiBat').value
+    const LichTrinh = document.getElementById('lichTrinh').value
+    const NoiDung = document.getElementById('noiDung').value
+    const DoDai = document.getElementById('doDai').value
+
+    if (window.confirm('Sửa thông tin tour ?')) {
+        axios.post('http://localhost:5000/tour/modifyTour', {
+            IDTour: IDTour,
+            TenTour: TenTour,
+            DiaChiTour: DiaChiTour,
+            DiemNoiBat: DiemNoiBat,
+            LichTrinh: LichTrinh,
+            NoiDung: NoiDung,
+            DoDai: DoDai
+        })
+            .then(() => {
+                window.location.reload()
+            })
+            .catch(err => alert(err))
+    }
 }
 
 const addHinhAnh = (IDTour) => {
@@ -34,8 +59,6 @@ const addHinhAnh = (IDTour) => {
 }
 
 const xoaTatCaHinhAnh = (IDTour) => {
-    //e.preventDefault()
-
     if (window.confirm('Xoá tất cả hình ảnh của tour ?')) {
         axios.post('http://localhost:5000/tour/removeAllPic', {
             IDTour: IDTour,
@@ -116,7 +139,7 @@ const TourChiTiet = () => {
 
     return (
         <div className="main-body">
-            <FormCTTour addHinhAnh={addHinhAnh} Tour={Tour} HinhAnh={HinhAnh} TheLoaiTour={TheLoaiTour} DiaDiem={DiaDiem} xoaTatCaHinhAnh={xoaTatCaHinhAnh} />
+            <FormCTTour suaThongTinTour={suaThongTinTour} addHinhAnh={addHinhAnh} Tour={Tour} HinhAnh={HinhAnh} TheLoaiTour={TheLoaiTour} DiaDiem={DiaDiem} xoaTatCaHinhAnh={xoaTatCaHinhAnh} />
         </div>
     )
 }

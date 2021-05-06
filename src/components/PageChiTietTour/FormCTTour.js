@@ -13,7 +13,7 @@ const loadIMG = () => {
     }
 }
 
-const FormCTTour = ({ addHinhAnh, Tour, HinhAnh, TheLoaiTour, DiaDiem, xoaTatCaHinhAnh }) => {
+const FormCTTour = ({ suaThongTinTour, addHinhAnh, Tour, HinhAnh, TheLoaiTour, DiaDiem, xoaTatCaHinhAnh }) => {
     let src = 'https://semantic-ui.com/images/wireframe/white-image.png'
     if (HinhAnh.HinhAnh) {
         let hinhAnhBase64 = Buffer.from(HinhAnh.HinhAnh).toString('base64')
@@ -28,31 +28,36 @@ const FormCTTour = ({ addHinhAnh, Tour, HinhAnh, TheLoaiTour, DiaDiem, xoaTatCaH
                 <div className="form-chiTiet-body">
                     <div className="form-chiTiet-info">
                         <h2>Tên tour: </h2>
-                        <input type="text" value={Tour.TenTour} />
+                        <input type="text" id="tenTour" defaultValue={Tour.TenTour} />
                     </div>
                     <div className="form-chiTiet-info">
                         <h2>Địa chỉ tour: </h2>
-                        <input type="text" value={Tour.DiaChiTour} />
+                        <input type="text" id="diaChiTour" defaultValue={Tour.DiaChiTour} />
                     </div>
                     <div className="form-chiTiet-info">
                         <h2>Thể loại tour: </h2>
-                        <input type="text" value={TheLoaiTour.TenTheLoaiTour} />
+                        <input type="text" readonly defaultValue={TheLoaiTour.TenTheLoaiTour} />
                     </div>
                     <div className="form-chiTiet-info">
                         <h2>Điểm nổi bật: </h2>
-                        <input type="text" value={Tour.DiemNoiBat} />
+                        <input type="text" id="diemNoiBat" defaultValue={Tour.DiemNoiBat} />
                     </div>
                     <div className="form-chiTiet-info">
                         <h2>Lịch trình: </h2>
-                        <input type="text" value={Tour.LichTrinh} />
+                        <input type="text" id="lichTrinh" defaultValue={Tour.LichTrinh} />
                     </div>
                     <div className="form-chiTiet-info">
                         <h2>Nội dung tour: </h2>
-                        <input type="text" value={Tour.NoiDungTour} />
+                        <input type="text" id="noiDung" defaultValue={Tour.NoiDungTour} />
                     </div>
                     <div className="form-chiTiet-info">
                         <h2>Độ dài (giờ): </h2>
-                        <input type="text" value={Tour.DoDai} />
+                        <input type="number" id="doDai" defaultValue={Tour.DoDai} />
+                    </div>
+                </div>
+                <div className="form-chiTiet-footer">
+                    <div className="form-chiTiet-footer-submit">
+                        <input type="submit" onClick={() => suaThongTinTour(Tour.IDTour)} value="Lưu thay đổi" />
                     </div>
                 </div>
             </form>
@@ -64,9 +69,9 @@ const FormCTTour = ({ addHinhAnh, Tour, HinhAnh, TheLoaiTour, DiaDiem, xoaTatCaH
                     e.preventDefault()
                     addHinhAnh(Tour.IDTour)
                 }} className="submit" />
-            </form>
 
-            <button onClick={() => xoaTatCaHinhAnh(Tour.IDTour)}>Xoá tất cả hình ảnh của tour</button>
+                <button className="submit" onClick={() => xoaTatCaHinhAnh(Tour.IDTour)}>Xoá tất cả hình ảnh</button>
+            </form>
         </div>
     )
 }
