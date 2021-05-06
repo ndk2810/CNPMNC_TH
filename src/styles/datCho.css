@@ -114,7 +114,88 @@
 .box-tourDat-thongTinTour table {
     width: 100%;
 }
+.box-tourDat-thongTinTour table td {
+    padding: 5px 0px;
+}
 .box-tourDat-thongTinTour-value {
     text-align: end;
     font-weight: bold;
+}
+
+.thoiGianTQ {
+    margin-top: 5%;
+}
+.box-thoiGianTQ-header {
+    border-bottom: 1px solid rgb(216, 216, 216);
+}
+.box-thoiGianTQ-header-content {
+    width: 100%;
+    display: inline-flex;
+    padding: 1.5% 1.5%;
+}
+.box-thoiGianTQ-header-content h4 {
+    margin-top: 0;
+}
+.box-thoiGianTQ-header img {
+    margin-right: 2%;
+}
+.box-thoiGianTQ-yeuCauThem {
+    padding: 0.5% 1.5%;
+}
+.box-thoiGianTQ-yeuCauThem textarea {
+    margin-top: 1%;
+    resize: none;
+    width: 100%;
+    padding: 1%;
+    border: 0.5px solid rgb(205, 208, 209);
+}
+
+.tomTat {
+    margin-top: 5%;
+}
+.box-tomTat {
+    padding: 1.5%;
+}
+.box-tomTat-tongGia {
+    display: inline-flex;
+    width: 100%;
+    font-size: 1.5rem;
+}
+.box-tomTat-tongGia h4 {
+    margin-top: 0;
+    width: 20%;
+}
+.box-tomTat-tongGia p {
+    float: right;
+    width: 80%;
+    text-align: end;
+}
+.box-tomTat-giaCaNhan {
+    margin-top: 4%;
+    font-size: 1.2rem;
+}
+.box-tomTat-giaCaNhan h4 {
+    color: black;
+}
+.box-tomTat-giaCaNhan p {
+    float: right;
+    width: 80%;
+    text-align: end;
+}
+
+.btn-tiepTuc {
+    background-color: rgb(255, 94, 31);
+    margin-top: 5%;
+    text-align: end;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 1% 5%;
+    border: none;
+    border-radius: 6px;
+}
+.btn-tiepTuc:hover {
+    cursor: pointer;
+    background-color: rgb(168, 59, 16);
+    transition: 0.5s;
 }

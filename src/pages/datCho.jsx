@@ -4,6 +4,8 @@ import '../styles/datCho.css'
 import ThongTinLienHe from '../components/PageDatCho/ThongTinLienHe'
 import ThongTinKhach from '../components/PageDatCho/ThongTinKhach'
 import BoxTourDat from '../components/PageDatCho/BoxTourDat'
+import ThoiGianTQ from '../components/PageDatCho/ThoiGianTQ'
+import TomTat from '../components/PageDatCho/TomTat'
 
 const datCho = () => {
     return (
@@ -14,6 +16,10 @@ const datCho = () => {
                 <BoxTourDat />
                 <ThongTinLienHe />
                 <ThongTinKhach />
+                <ThoiGianTQ />
+                <TomTat />
+
+                <button className="btn-tiepTuc">Tiếp tục</button>
             </div>
         </div>
     )

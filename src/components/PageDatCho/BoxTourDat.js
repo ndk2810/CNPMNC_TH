@@ -36,7 +36,7 @@ const BoxTourDat = () => {
                     </div>
                 </form>
             </div>
-        </div >
+        </div>
     )
 }
 
