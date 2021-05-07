@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Header from './components/Header'
 import Footer from './components/Footer'
-
+import ThongTinTour from './components/PageDatCho/ThongTinTour'
 import { useState, useEffect } from 'react'
 
 //Import các trang
@@ -42,6 +42,9 @@ const App = () => {
 
             <Route exact path="/diaDiem">
               <DiaDiem />
+            </Route>
+            <Route expact path="/thongtintour">
+              <ThongTinTour />
             </Route>
 
             <Route exact path="/datCho">
