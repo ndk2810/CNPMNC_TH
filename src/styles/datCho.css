@@ -35,13 +35,15 @@ img{
     padding: 1.5%;
 }
 .form-thongTinLienHe-input label,
+.form-thongTinLienHe-input select,
 .form-thongTinLienHe-input input {
     display: block;
     width: 100%;
     border-radius: 5px;
     margin-bottom: 5px;
 }
-.form-thongTinLienHe-input input {
+.form-thongTinLienHe-input input,
+.form-thongTinLienHe-input select {
     padding: 10px;
     height: 40px;
     border: 1px solid rgb(216, 216, 216);
@@ -56,6 +58,7 @@ img{
 .form-thongTinLienHe-footer input[type="radio"] {
     margin-right: 1.2rem;
 }
+<<<<<<< HEAD
 /* thongtintour */
 .noidung-dattour{
     width:60rem;
@@ -178,3 +181,149 @@ img{
   border: 0 solid black;
   cursor: pointer;
 }
+=======
+
+/* BOX TOUR ĐẶT */
+.box-tourDat {
+    width: max-content;
+    float: right;
+    margin-top: 6%;
+    box-shadow: rgb(3 18 26 / 20%) 0px 1px 2px;
+}
+.box-tourDat-header {
+    display: inline-flex;
+    width: 100%;
+    padding: 1.5%;
+    border-bottom: 1px solid rgb(216, 216, 216);
+}
+.box-tourDat-header h3 {
+    display: inline-flex;
+}
+.box-tourDat-header img {
+    margin-right: 2%;
+}
+.box-tourDat-header button {
+    width: 80%;
+    text-align: end;
+    border: none;
+    font-weight: bold;
+    background-color: transparent;
+    font-size: 1rem;
+    color: rgb(1, 148, 243);
+    transition: 0.2s;
+}
+.box-tourDat-header button:hover {
+    cursor: pointer;
+    color: rgb(0, 90, 150);
+}
+.box-tourDat-body {
+    padding: 0%;
+}
+.box-tourDat-body h4 {
+    color: black;
+    margin-bottom: 2%;
+}
+.box-tourDat-chiTietTour {
+    display: inline-flex;
+}
+.pd {
+    padding: 5px 15px;
+}
+.box-tourDat-chiTietTour img {
+    object-fit: cover;
+    object-position: 50% 50%;
+    margin-right: 2%;
+}
+.box-tourDat-thongTinTour {
+    margin-top: 2%;
+    background-color: rgb(242, 243, 243);
+}
+.box-tourDat-thongTinTour table {
+    width: 100%;
+}
+.box-tourDat-thongTinTour table td {
+    padding: 5px 0px;
+}
+.box-tourDat-thongTinTour-value {
+    text-align: end;
+    font-weight: bold;
+}
+
+.thoiGianTQ {
+    margin-top: 5%;
+}
+.box-thoiGianTQ-header {
+    border-bottom: 1px solid rgb(216, 216, 216);
+}
+.box-thoiGianTQ-header-content {
+    width: 100%;
+    display: inline-flex;
+    padding: 1.5% 1.5%;
+}
+.box-thoiGianTQ-header-content h4 {
+    margin-top: 0;
+}
+.box-thoiGianTQ-header img {
+    margin-right: 2%;
+}
+.box-thoiGianTQ-yeuCauThem {
+    padding: 0.5% 1.5%;
+}
+.box-thoiGianTQ-yeuCauThem textarea {
+    margin-top: 1%;
+    resize: none;
+    width: 100%;
+    padding: 1%;
+    border: 0.5px solid rgb(205, 208, 209);
+}
+
+.tomTat {
+    margin-top: 5%;
+}
+.box-tomTat {
+    padding: 1.5%;
+}
+.box-tomTat-tongGia {
+    display: inline-flex;
+    width: 100%;
+    font-size: 1.5rem;
+}
+.box-tomTat-tongGia h4 {
+    margin-top: 0;
+    width: 20%;
+}
+.box-tomTat-tongGia p {
+    float: right;
+    width: 80%;
+    text-align: end;
+}
+.box-tomTat-giaCaNhan {
+    margin-top: 4%;
+    font-size: 1.2rem;
+}
+.box-tomTat-giaCaNhan h4 {
+    color: black;
+}
+.box-tomTat-giaCaNhan p {
+    float: right;
+    width: 80%;
+    text-align: end;
+}
+
+.btn-tiepTuc {
+    background-color: rgb(255, 94, 31);
+    margin-top: 5%;
+    text-align: end;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 1% 5%;
+    border: none;
+    border-radius: 6px;
+}
+.btn-tiepTuc:hover {
+    cursor: pointer;
+    background-color: rgb(168, 59, 16);
+    transition: 0.5s;
+}
+>>>>>>> 3510c97bcc718122e02c4ef67aa2791dc96046db
