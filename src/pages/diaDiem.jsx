@@ -45,6 +45,7 @@ const DiaDiem = () => {
         <div>
             <SearchBoxCT />
             <div className="main-index-body">
+                <p className="Xperience">Xperience/{TenDiaDiem}</p>
                 <h4 className="h4-chiTiet" style={{ color: 'black' }}>Tất cả kết quả cho {TenDiaDiem}</h4>
                 <BoLoc filterTour={filterTour} />
                 <TourList filterList={filterList} tours={Tours} />
