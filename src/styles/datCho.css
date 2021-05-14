@@ -1,4 +1,4 @@
-img{
+img {
     cursor: pointer;
 }
 .thongTinLienHe {
@@ -58,101 +58,100 @@ img{
 .form-thongTinLienHe-footer input[type="radio"] {
     margin-right: 1.2rem;
 }
-<<<<<<< HEAD
 /* thongtintour */
-.noidung-dattour{
-    width:60rem;
+.noidung-dattour {
+    width: 60rem;
     box-shadow: 3px 3px 5px 6px #ccc;
     border-radius: 10px;
     height: 48rem;
     margin: 0 auto;
     margin-top: 5rem;
 }
-.image{
+.image {
     display: flex;
     flex-wrap: wrap;
     margin-top: 1rem;
     margin-left: 2rem;
 }
-.image-dattour-1{
+.image-dattour-1 {
     flex: 4.3;
     flex-direction: column;
 }
-.image-dattour-2{
+.image-dattour-2 {
     flex: 1;
     margin-right: 2rem;
     flex-direction: column;
 }
-.btn-favorite{
+.btn-favorite {
     width: 24px;
     height: 24px;
     float: right;
 }
-.giatien-tour{
+.giatien-tour {
     display: flex;
     flex-wrap: wrap;
     margin-top: 2rem;
-    justify-content: space-around
+    justify-content: space-around;
 }
-.noidung-giatien-tour{
+.noidung-giatien-tour {
     flex-basis: 65%;
 }
-.btn-timtour{
-  width: 15rem;
-  height:3rem;
-  text-align: center;
-  padding: 0.6rem;
-  border-width: 2px;
-  border-radius: 10px;
-  border-color: rgba(255, 255, 255, 1);
-  background-color: rgb(255, 94, 31);
-  border: 0 solid black;
-  cursor: pointer;
-}
-.image-khoanhkhac{
-    display: flex;
-}
-.img-khoanhkhac{
-    flex: auto;
-    margin: .5vw;
+.btn-timtour {
+    width: 15rem;
+    height: 3rem;
+    text-align: center;
+    padding: 0.6rem;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: rgba(255, 255, 255, 1);
+    background-color: rgb(255, 94, 31);
+    border: 0 solid black;
     cursor: pointer;
 }
-.type-hoatdong{
-    margin:3rem 17.5rem 0;
+.image-khoanhkhac {
+    display: flex;
 }
-.DiemNoiBat-hoatdong{
+.img-khoanhkhac {
+    flex: auto;
+    margin: 0.5vw;
+    cursor: pointer;
+}
+.type-hoatdong {
+    margin: 3rem 17.5rem 0;
+}
+.DiemNoiBat-hoatdong {
     display: flex;
     flex-wrap: initial;
     margin-top: 2rem;
 }
-.NoiDung-DiemNoiBat{
-    width:41rem;
+.NoiDung-DiemNoiBat {
+    width: 41rem;
     box-shadow: 3px 3px 5px 6px #ccc;
     border-radius: 10px;
     height: 48rem;
     margin-left: 17.3rem;
 }
-.Noidung-DatTour-small-hoatdong{
-    width:18rem;
+.Noidung-DatTour-small-hoatdong {
+    width: 18rem;
     box-shadow: 3px 3px 5px 6px #ccc;
     border-radius: 10px;
     height: 20rem;
     margin-left: 1.6rem;
 }
-.ThongTin-DuaDon{
-    width:41rem;
+.ThongTin-DuaDon {
+    width: 41rem;
     box-shadow: 3px 3px 5px 6px #ccc;
     border-radius: 10px;
     height: 48rem;
     margin-left: 17.3rem;
     margin-top: 2rem;
 }
-.Content-Dattour{
-    margin:3rem 17.5rem 0
+.Content-Dattour {
+    margin: 3rem 17.5rem 0;
 }
-.Chon-Dattour{
+.Chon-Dattour {
     display: flex;
-    width:60rem;
+    width: 60rem;
     box-shadow: 3px 3px 5px 6px #ccc;
     border-radius: 10px;
     height: 48rem;
@@ -160,28 +159,27 @@ img{
     margin-top: 2rem;
     justify-content: space-around;
 }
-.Content-Chon-Dattour{
+.Content-Chon-Dattour {
     flex-basis: 85%;
     margin-top: 2rem;
 }
-.giatien-chitiet{
+.giatien-chitiet {
     position: relative;
     top: 2rem;
     right: 7rem;
 }
-.btn-Chon{
+.btn-Chon {
     width: 5rem;
-  height:3rem;
-  text-align: center;
-  padding: 0.6rem;
-  border-width: 2px;
-  border-radius: 10px;
-  border-color: rgba(255, 255, 255, 1);
-  background-color: rgb(255, 94, 31);
-  border: 0 solid black;
-  cursor: pointer;
+    height: 3rem;
+    text-align: center;
+    padding: 0.6rem;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: rgba(255, 255, 255, 1);
+    background-color: rgb(255, 94, 31);
+    border: 0 solid black;
+    cursor: pointer;
 }
-=======
 
 /* BOX TOUR ĐẶT */
 .box-tourDat {
@@ -326,4 +324,3 @@ img{
     background-color: rgb(168, 59, 16);
     transition: 0.5s;
 }
->>>>>>> 3510c97bcc718122e02c4ef67aa2791dc96046db
