@@ -144,5 +144,19 @@ router.route('/removeAllPic').post((req, res) => {
     })
 })
 
+//Search tour
+router.route('/searchTour/:TuKhoaTimKiem').get((req, res) => {
+    db.connect().then(() => {
+        const TuKhoaTimKiem = req.params.TuKhoaTimKiem
+
+        const queryString =
+            `select * FROM TOUR WHERE TenTour LIKE N'%${TuKhoaTimKiem}%'`;
+
+        db.request().query(queryString, (err, result) => {
+            err ? console.log(err) : res.send(result.recordset)
+        })
+    })
+})
+
 
 module.exports = router;

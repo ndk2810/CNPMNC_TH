@@ -9,6 +9,7 @@ import { useState, useEffect } from 'react'
 import Index from './pages/index'
 import DiaDiem from './pages/diaDiem'
 import DatCho from './pages/datCho'
+import TimKiem from './pages/timKiem'
 
 const App = () => {
   //GET tất cả địa điểm
@@ -49,6 +50,10 @@ const App = () => {
 
             <Route exact path="/datCho">
               <DatCho />
+            </Route>
+
+            <Route exact path="/timKiem">
+              <TimKiem />
             </Route>
           </Switch>
         </div>
