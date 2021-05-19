@@ -1,12 +1,12 @@
-import HeaderTour from './HeaderGTTour'
-import BodyTour from './BodyGTTour'
+import HeaderGTTour from './HeaderGTTour'
+import BodyGTTour from './BodyGTTour'
 
-const BoxGioiThieu = () => {
+const BoxGioiThieu = ({ Tour }) => {
     return (
         <div>
             <div className="noidung-dattour" >
-                <HeaderTour />
-                <BodyTour />
+                <HeaderGTTour Tour={Tour} />
+                <BodyGTTour Tour={Tour} />
             </div>
         </div>
     )
