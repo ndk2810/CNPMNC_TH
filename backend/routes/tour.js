@@ -26,7 +26,6 @@ router.route('/chiTiet/:IDTour').get((req, res) => {
 })
 //GET các tour bằng IDDiaDiem
 router.route('/:IDDiaDiem').get((req, res) => {
-    console.log(req.params.IDDiaDiem)
     db.connect().then(() => {
         //simple query
         const queryString =
@@ -137,6 +136,20 @@ router.route('/removeAllPic').post((req, res) => {
         const IDTour = req.body.IDTour
         //simple query
         const queryString = `DELETE FROM HINHANHTOUR WHERE IDTour = ` + IDTour
+
+        db.request().query(queryString, (err, result) => {
+            err ? console.log(err) : res.send(result.recordset)
+        })
+    })
+})
+
+//Search tour
+router.route('/searchTour/:TuKhoaTimKiem').get((req, res) => {
+    db.connect().then(() => {
+        const TuKhoaTimKiem = req.params.TuKhoaTimKiem
+
+        const queryString =
+            `select * FROM TOUR WHERE TenTour LIKE N'%${TuKhoaTimKiem}%'`;
 
         db.request().query(queryString, (err, result) => {
             err ? console.log(err) : res.send(result.recordset)

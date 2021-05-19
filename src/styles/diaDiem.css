@@ -22,6 +22,9 @@
     display: inline-block;
     margin-left: 8px;
 }
+.card-tour-info-tenTour {
+    color: black;
+}
 .card-tour-info-gia {
     color: rgb(255, 94, 31);
     font-weight: bold;

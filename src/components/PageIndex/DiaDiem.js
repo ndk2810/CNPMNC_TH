@@ -8,7 +8,7 @@ const DiaDiem = ({ diaDiem }) => {
     let src = 'url(https://semantic-ui.com/images/wireframe/white-image.png)'
     if (diaDiem.HinhAnhDiaDiem) {
         let hinhAnhBase64 = Buffer.from(diaDiem.HinhAnhDiaDiem).toString('base64')
-        src = `url(data:image/jpeg;base64,${hinhAnhBase64}`
+        src = `url(data:image/jpeg;base64,${hinhAnhBase64})`
     }
 
     return (

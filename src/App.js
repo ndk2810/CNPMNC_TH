@@ -2,13 +2,14 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Header from './components/Header'
 import Footer from './components/Footer'
-
 import { useState, useEffect } from 'react'
 
 //Import các trang
 import Index from './pages/index'
 import DiaDiem from './pages/diaDiem'
 import DatCho from './pages/datCho'
+import TimKiem from './pages/timKiem'
+import ChiTietTour from './pages/chiTietTour'
 
 const App = () => {
   //GET tất cả địa điểm
@@ -44,8 +45,16 @@ const App = () => {
               <DiaDiem />
             </Route>
 
+            <Route expact path="/thongTinTour">
+              <ChiTietTour />
+            </Route>
+
             <Route exact path="/datCho">
               <DatCho />
+            </Route>
+
+            <Route exact path="/timKiem">
+              <TimKiem />
             </Route>
           </Switch>
         </div>
