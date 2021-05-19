@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Header from './components/Header'
 import Footer from './components/Footer'
-import ThongTinTour from './components/PageDatCho/ThongTinTour'
 import { useState, useEffect } from 'react'
 
 //Import các trang
@@ -10,6 +9,7 @@ import Index from './pages/index'
 import DiaDiem from './pages/diaDiem'
 import DatCho from './pages/datCho'
 import TimKiem from './pages/timKiem'
+import ChiTietTour from './pages/chiTietTour'
 
 const App = () => {
   //GET tất cả địa điểm
@@ -44,8 +44,9 @@ const App = () => {
             <Route exact path="/diaDiem">
               <DiaDiem />
             </Route>
-            <Route expact path="/thongtintour">
-              <ThongTinTour />
+
+            <Route expact path="/thongTinTour">
+              <ChiTietTour />
             </Route>
 
             <Route exact path="/datCho">

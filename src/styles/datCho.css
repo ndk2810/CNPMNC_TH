@@ -67,8 +67,7 @@ img {
     margin: 0 auto;
     margin-top: 5rem;
 }
-<<<<<<< HEAD
-.cardtour{
+.cardtour {
     color: rgb(2, 100, 200);
     background-color: rgb(236, 248, 255);
     font-size: 0.8rem;
@@ -77,10 +76,10 @@ img {
     border-radius: 14px;
     margin-left: 1rem;
 }
-.cardtourlocationImg{
+.cardtourlocationImg {
     margin-left: 1rem;
 }
-.cardtourinfodiaDiem{
+.cardtourinfodiaDiem {
     display: inline-block;
     white-space: pre-wrap;
     word-wrap: break-word;
@@ -89,13 +88,10 @@ img {
     line-height: 16px;
     margin-left: 4px;
 }
-.diadiem-dattour{
+.diadiem-dattour {
     border-bottom: 1px solid rgb(216, 216, 216);
 }
-.image{
-=======
 .image {
->>>>>>> 077cd90bf46c7f30889f6f6a59583f87fe94e105
     display: flex;
     flex-wrap: wrap;
     margin-top: 1rem;
@@ -110,9 +106,9 @@ img {
     margin-right: 2rem;
     flex-direction: column;
 }
-.noidung-giatien-tour{
+.noidung-giatien-tour {
     display: inline;
-    color: rgba(3,18,26,1.00);
+    color: rgba(3, 18, 26, 1);
     font-weight: bold;
     white-space: pre-wrap;
     word-wrap: break-word;
@@ -120,7 +116,7 @@ img {
     font-size: 20px;
     margin-left: 4px;
 }
-.btn-favorite{
+.btn-favorite {
     width: 24px;
     height: 24px;
     float: right;
@@ -130,33 +126,27 @@ img {
     flex-wrap: wrap;
     margin-top: 2rem;
     justify-content: space-around;
-<<<<<<< HEAD
     border-top: 1px solid rgb(216, 216, 216);
-=======
->>>>>>> 077cd90bf46c7f30889f6f6a59583f87fe94e105
 }
 .noidung-giatien-tour {
     flex-basis: 65%;
 }
-<<<<<<< HEAD
-.btn-timtour{
-  width: 15rem;
-  height:3rem;
-  text-align: center;
-  padding: 0.6rem;
-  border-width: 2px;
-  border-radius: 10px;
-  border-color: rgba(255, 255, 255, 1);
-  background-color: rgb(255, 94, 31);
-  border: 0 solid black;
-  cursor: pointer;
+.btn-timtour {
+    width: 15rem;
+    height: 3rem;
+    text-align: center;
+    padding: 0.6rem;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: rgba(255, 255, 255, 1);
+    background-color: rgb(255, 94, 31);
+    border: 0 solid black;
+    cursor: pointer;
 }
-.khoanhkhac{
+.khoanhkhac {
     border-top: 1px solid rgb(216, 216, 216);
     margin-top: 2rem;
 }
-.image-khoanhkhac{
-=======
 .btn-timtour {
     width: 15rem;
     height: 3rem;
@@ -170,7 +160,6 @@ img {
     cursor: pointer;
 }
 .image-khoanhkhac {
->>>>>>> 077cd90bf46c7f30889f6f6a59583f87fe94e105
     display: flex;
 }
 .img-khoanhkhac {
@@ -200,19 +189,18 @@ img {
     height: 23rem;
     margin-left: 1.6rem;
 }
-<<<<<<< HEAD
-.tieude-diadiem{
+.tieude-diadiem {
     margin-top: 1rem;
-    font-size: 1.3rem;  
-    flex: 16; 
+    font-size: 1.3rem;
+    flex: 16;
     font-weight: bold;
     white-space: pre-wrap;
     word-wrap: break-word;
     margin-left: 1rem;
 }
-.btn-Noidung-DatTour-small-hoatdong{
+.btn-Noidung-DatTour-small-hoatdong {
     width: 18rem;
-    height:3rem;
+    height: 3rem;
     text-align: center;
     padding: 0.6rem;
     border-width: 2px;
@@ -223,117 +211,114 @@ img {
     cursor: pointer;
     margin-top: 1rem;
 }
-.Ve-Noidung-DatTour-small-hoatdong{
+.Ve-Noidung-DatTour-small-hoatdong {
     display: flex;
     margin-top: 1rem;
 }
-.Ve-Noidung-DatTour-small-hoatdong img{
-    width:1rem;
+.Ve-Noidung-DatTour-small-hoatdong img {
+    width: 1rem;
     height: 1rem;
-    flex:1 ;
+    flex: 1;
     margin-left: 1rem;
     margin-top: 0.2rem;
 }
-.title-Ve-Noidung-DatTour-small-hoatdong{
-    font-size: 0.9rem;  
-    flex: 16; 
+.title-Ve-Noidung-DatTour-small-hoatdong {
+    font-size: 0.9rem;
+    flex: 16;
     font-weight: bold;
     white-space: pre-wrap;
     word-wrap: break-word;
     margin-left: 1rem;
 }
-.ThoiGian-Noidung-DatTour-small-hoatdong{
+.ThoiGian-Noidung-DatTour-small-hoatdong {
     display: flex;
     border-bottom: 1px solid rgb(216, 216, 216);
 }
-.ThoiGian-Noidung-DatTour-small-hoatdong img{
-    width:1rem;
+.ThoiGian-Noidung-DatTour-small-hoatdong img {
+    width: 1rem;
     height: 1rem;
-    flex:1 ;
+    flex: 1;
     margin-left: 1rem;
     margin-top: 0.2rem;
 }
-.title-ThoiGian-Noidung-DatTour-small-hoatdong{
-    font-size: 0.9rem;  
-    flex: 16; 
+.title-ThoiGian-Noidung-DatTour-small-hoatdong {
+    font-size: 0.9rem;
+    flex: 16;
     font-weight: bold;
     white-space: pre-wrap;
     word-wrap: break-word;
     margin-left: 1rem;
 }
-.TinhNang-Noidung-DatTour-small-hoatdong{
+.TinhNang-Noidung-DatTour-small-hoatdong {
     margin-top: 1rem;
-    font-size: 1rem;  
-    flex: 16; 
+    font-size: 1rem;
+    flex: 16;
     font-weight: bold;
     white-space: pre-wrap;
     word-wrap: break-word;
     margin-left: 1rem;
 }
-.Easy-Noidung-DatTour-small-hoatdong{
+.Easy-Noidung-DatTour-small-hoatdong {
     display: flex;
     margin-top: 1rem;
 }
-.Easy-Noidung-DatTour-small-hoatdong img{
-    width:1rem;
+.Easy-Noidung-DatTour-small-hoatdong img {
+    width: 1rem;
     height: 1rem;
-    flex:1 ;
+    flex: 1;
     margin-left: 1rem;
     margin-top: 0.2rem;
 }
-.title-Easy-Noidung-DatTour-small-hoatdong{
-    font-size: 0.9rem;  
-    flex: 16; 
+.title-Easy-Noidung-DatTour-small-hoatdong {
+    font-size: 0.9rem;
+    flex: 16;
     font-weight: bold;
     white-space: pre-wrap;
     word-wrap: break-word;
     margin-left: 1rem;
 }
-.Gia-Noidung-DatTour-small-hoatdong{
+.Gia-Noidung-DatTour-small-hoatdong {
     display: flex;
     margin-top: 0.5rem;
 }
-.Gia-Noidung-DatTour-small-hoatdong img{ 
-    width:1rem;
+.Gia-Noidung-DatTour-small-hoatdong img {
+    width: 1rem;
     height: 1rem;
-    flex:1 ;
+    flex: 1;
     margin-left: 1rem;
     margin-top: 0.2rem;
 }
-.title-Gia-Noidung-DatTour-small-hoatdong{
-    font-size: 0.9rem;  
-    flex: 16; 
+.title-Gia-Noidung-DatTour-small-hoatdong {
+    font-size: 0.9rem;
+    flex: 16;
     font-weight: bold;
     white-space: pre-wrap;
     word-wrap: break-word;
     margin-left: 1rem;
 }
-.Accept-Noidung-DatTour-small-hoatdong{
+.Accept-Noidung-DatTour-small-hoatdong {
     display: flex;
     margin-top: 0.5rem;
     border-bottom: 1px solid rgb(216, 216, 216);
 }
-.Accept-Noidung-DatTour-small-hoatdong img{
-    width:1rem;
+.Accept-Noidung-DatTour-small-hoatdong img {
+    width: 1rem;
     height: 1rem;
-    flex:1 ;
+    flex: 1;
     margin-left: 1rem;
     margin-top: 0.2rem;
 }
-.title-Accept-Noidung-DatTour-small-hoatdong{
-    font-size: 0.9rem;  
-    flex: 11; 
+.title-Accept-Noidung-DatTour-small-hoatdong {
+    font-size: 0.9rem;
+    flex: 11;
     font-weight: bold;
     white-space: pre-wrap;
     word-wrap: break-word;
     margin-left: 1rem;
 }
-.ThongTin-DuaDon{
-    width:41rem;
-=======
 .ThongTin-DuaDon {
     width: 41rem;
->>>>>>> 077cd90bf46c7f30889f6f6a59583f87fe94e105
+    width: 41rem;
     box-shadow: 3px 3px 5px 6px #ccc;
     border-radius: 10px;
     height: 48rem;
@@ -364,17 +349,6 @@ img {
 }
 .btn-Chon {
     width: 5rem;
-<<<<<<< HEAD
-  height:3rem;
-  text-align: center;
-  padding: 0.6rem;
-  border-width: 2px;
-  border-radius: 10px;
-  border-color: rgba(255, 255, 255, 1);
-  background-color: rgb(255, 94, 31);
-  border: 0 solid black;
-  cursor: pointer;
-=======
     height: 3rem;
     text-align: center;
     padding: 0.6rem;
@@ -384,7 +358,15 @@ img {
     background-color: rgb(255, 94, 31);
     border: 0 solid black;
     cursor: pointer;
->>>>>>> 077cd90bf46c7f30889f6f6a59583f87fe94e105
+    height: 3rem;
+    text-align: center;
+    padding: 0.6rem;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: rgba(255, 255, 255, 1);
+    background-color: rgb(255, 94, 31);
+    border: 0 solid black;
+    cursor: pointer;
 }
 
 /* BOX TOUR ĐẶT */
