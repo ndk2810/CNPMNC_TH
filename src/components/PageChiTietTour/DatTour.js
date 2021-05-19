@@ -8,7 +8,7 @@ const DatTour = () => {
                 <div className="Content-Chon-Dattour">Tour mở - Khởi hành tại Nha Trang</div>
                 <div className="Btn-Chon-giatien">
                     <div className="giatien-chitiet">700.000VND</div>
-                    <div className="btn-Chon">Chon</div>
+                    <div className="btn-timtour btn-Chon">Chọn</div>
                 </div>
             </div>
         </div>

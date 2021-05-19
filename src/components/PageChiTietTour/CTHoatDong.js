@@ -1,24 +1,25 @@
 import React from 'react'
 
-const CTHoatDong = () => {
+const CTHoatDong = ({ Tour }) => {
     return (
         <div>
             <div className="hoatdong">
-                <div className="type-hoatdong">Chi tiết hoạt động</div>
+                <h3 className="type-hoatdong">Chi tiết hoạt động</h3>
                 <div className="DiemNoiBat-hoatdong">
                     <div className="NoiDung-DiemNoiBat ">
-                        Trầm trồ trước vẻ đẹp ấn tượng của các hòn đảo ở Nha Trang Khám phá Hòn Mun, khu bảo tồn biển duy nhất tại Việt Nam Thưởng thức các món ăn dân dã, đậm đà hương vị biển ở Vịnh San Hô tại Hòn Một Nằm phơi nắng dưới hàng dừa ở bãi biển Mini tuyệt đẹp tại Hòn Miễu Phù hợp cho: Yêu thích thiên nhiên, Gia đình vui vẻ Lịch trình Tour
+                        {Tour.DiemNoiBat}
                     </div>
+
                     <div className="Noidung-DatTour-small-hoatdong ">
-                        <div className="tieude-diadiem">Tour 3 đảo Nha Trang bằng tàu siêu tốc - 1 ngày</div>
-                        <div className="btn-Noidung-DatTour-small-hoatdong">Tim tour</div>
+                        <div className="tieude-diadiem">{Tour.TenTour}</div>
+                        <div className="btn-timtour btn-Noidung-DatTour-small-hoatdong">Tìm tour</div>
                         <div className="Ve-Noidung-DatTour-small-hoatdong">
                             <img src="https://ik.imagekit.io/tvlk/image/imageResource/2020/02/24/1582532977248-c01603da7f91217b28788f2c9642158f.png?tr=h-16,w-16"></img>
-                            <p className="title-Ve-Noidung-DatTour-small-hoatdong">Ngày có vé tiếp theo: Chủ,09 May 2021</p>
+                            <p className="title-Ve-Noidung-DatTour-small-hoatdong">Ngày có vé tiếp theo: Chủ Nhật, 09 May 2021</p>
                         </div>
                         <div className="ThoiGian-Noidung-DatTour-small-hoatdong">
                             <img src="https://ik.imagekit.io/tvlk/image/imageResource/2020/02/24/1582533047443-34d220e4b4d814bd55e67b2677144ca4.png?tr=h-16,w-16"></img>
-                            <p className="title-ThoiGian-Noidung-DatTour-small-hoatdong">Độ dài: 1 Day</p>
+                            <p className="title-ThoiGian-Noidung-DatTour-small-hoatdong">Độ dài: {Tour.DoDai} giờ</p>
                         </div>
                         <div className="TinhNang-Noidung-DatTour-small-hoatdong">Tính năng</div>
                         <div className="Easy-Noidung-DatTour-small-hoatdong">

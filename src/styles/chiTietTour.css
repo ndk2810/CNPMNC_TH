@@ -3,7 +3,6 @@
     width: 60rem;
     box-shadow: 3px 3px 5px 6px #ccc;
     border-radius: 10px;
-    height: 48rem;
     margin: 0 auto;
     margin-top: 5rem;
 }
@@ -29,6 +28,7 @@
     margin-left: 4px;
 }
 .diadiem-dattour {
+    padding: 1.2% 0;
     border-bottom: 1px solid rgb(216, 216, 216);
 }
 .image {
@@ -66,7 +66,11 @@
     flex-wrap: wrap;
     margin-top: 2rem;
     justify-content: space-around;
+    padding: 1rem;
     border-top: 1px solid rgb(216, 216, 216);
+}
+.giatien div {
+    margin-bottom: 2.5%;
 }
 .noidung-giatien-tour {
     flex-basis: 65%;
@@ -85,7 +89,8 @@
 }
 .khoanhkhac {
     border-top: 1px solid rgb(216, 216, 216);
-    margin-top: 2rem;
+    padding: 1rem;
+    height: max-content;
 }
 .btn-timtour {
     width: 15rem;
@@ -109,6 +114,7 @@
 }
 .type-hoatdong {
     margin: 3rem 17.5rem 0;
+    font-weight: 800;
 }
 .DiemNoiBat-hoatdong {
     display: flex;
@@ -119,7 +125,7 @@
     width: 41rem;
     box-shadow: 3px 3px 5px 6px #ccc;
     border-radius: 10px;
-    height: 48rem;
+    padding: 1.2%;
     margin-left: 17.3rem;
 }
 .Noidung-DatTour-small-hoatdong {
@@ -127,10 +133,10 @@
     box-shadow: 3px 3px 5px 6px #ccc;
     border-radius: 10px;
     height: 23rem;
+    padding: 1% 0;
     margin-left: 1.6rem;
 }
 .tieude-diadiem {
-    margin-top: 1rem;
     font-size: 1.3rem;
     flex: 16;
     font-weight: bold;
@@ -139,7 +145,8 @@
     margin-left: 1rem;
 }
 .btn-Noidung-DatTour-small-hoatdong {
-    width: 18rem;
+    width: 90%;
+    margin: 0 auto;
     height: 3rem;
     text-align: center;
     padding: 0.6rem;
@@ -188,6 +195,7 @@
     white-space: pre-wrap;
     word-wrap: break-word;
     margin-left: 1rem;
+    padding-bottom: 2%;
 }
 .TinhNang-Noidung-DatTour-small-hoatdong {
     margin-top: 1rem;
@@ -255,6 +263,7 @@
     white-space: pre-wrap;
     word-wrap: break-word;
     margin-left: 1rem;
+    padding-bottom: 2%;
 }
 .ThongTin-DuaDon {
     width: 41rem;
@@ -384,4 +393,9 @@
     cursor: pointer;
     background-color: rgb(168, 59, 16);
     transition: 0.5s;
+}
+
+.btn-timtour {
+    color: white;
+    font-weight: bold;
 }
