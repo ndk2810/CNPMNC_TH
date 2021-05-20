@@ -2,8 +2,9 @@
 import TopImage from '../components/PageIndex/TopImage'
 import SearchBox from '../components/PageIndex/SearchBox'
 import DiaDiems from '../components/PageIndex/DiaDiems'
+import ListTours from '../components/PageIndex/ListTours'
 
-const Index = ({ arrDiaDiem }) => {
+const Index = ({ arrDiaDiem, TourHaNoi }) => {
     return (
         <div>
             <TopImage />
@@ -18,10 +19,10 @@ const Index = ({ arrDiaDiem }) => {
 
 
                 <div className="list-diaDiemDP">
-                    <h1>Khám phá thế giới</h1>
-                    <h4>Du lịch thật xa đến những đất nước đang được nhiều người yêu thích</h4>
+                    <h1>Hà Nội tươi đẹp</h1>
+                    <h4>Du lịch thật xa đến những địa điểm đang được nhiều người yêu thích</h4>
                 </div>
-                <DiaDiems arrDiaDiem={arrDiaDiem} />
+                <ListTours TourHaNoi={TourHaNoi} />
             </div>
         </div>
     )

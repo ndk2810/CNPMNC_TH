@@ -1,7 +1,6 @@
 import React from 'react'
 
 const HeaderTour = ({ Tour }) => {
-    console.log(Tour)
     return (
         <div className="diadiem-dattour">
             <p className="tieude-diadiem">{Tour.TenTour}</p>

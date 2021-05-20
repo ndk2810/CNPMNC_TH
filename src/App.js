@@ -27,6 +27,21 @@ const App = () => {
       });
   }, []);
 
+  //GET tất cả tour Hà Nội
+  const [TourHaNoi, setTourHaNoi] = useState([])
+  useEffect(() => {
+    fetch("http://localhost:5000/tour/1")
+      .then(data => {
+        return data.json();
+      })
+      .then(data => {
+        setTourHaNoi(data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <Router>
 
@@ -38,7 +53,7 @@ const App = () => {
             {/* Mốt có thêm trang nào vào thì thêm trong Switch đây nhé */}
 
             <Route exact path="/">
-              <Index arrDiaDiem={DiaDiems} />
+              <Index arrDiaDiem={DiaDiems} TourHaNoi={TourHaNoi} />
             </Route>
 
             <Route exact path="/diaDiem">

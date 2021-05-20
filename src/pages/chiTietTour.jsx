@@ -25,9 +25,23 @@ const ChiTietTour = () => {
             });
     }, []);
 
+    const [HinhAnhTour, setHinhAnhTour] = useState([])
+    useEffect(() => {
+        fetch("http://localhost:5000/tour/ListHinhAnh/" + IDTour)
+            .then(data => {
+                return data.json();
+            })
+            .then(data => {
+                setHinhAnhTour(data);
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }, []);
+
     return (
         <div className="page-dattour">
-            <BoxGioiThieu Tour={Tour} />
+            <BoxGioiThieu Tour={Tour} HinhAnhTour={HinhAnhTour} />
             <CTHoatDong Tour={Tour} />
             <DatTour Tour={Tour} />
         </div >

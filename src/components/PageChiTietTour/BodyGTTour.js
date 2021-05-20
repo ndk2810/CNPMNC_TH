@@ -1,18 +1,38 @@
+const zoomImage = (src) => {
+    document.getElementById('img-main').src = src
+}
 
-const BodyTour = () => {
+const BodyTour = ({ HinhAnhTour }) => {
+    let src = 'https://semantic-ui.com/images/wireframe/white-image.png'
+    if (HinhAnhTour[0]) {
+        let hinhAnhBase64 = Buffer.from(HinhAnhTour[0].HinhAnh).toString('base64')
+        src = `data:image/jpeg;base64,${hinhAnhBase64}`
+    }
     return (
         <div className="image-dattour">
             <div className="image">
                 <div className="image-dattour-1">
-                    <img src="https://photo-baomoi.zadn.vn/w700_r1/2019_01_01_17_29196381/325b4dca7f8996d7cf98.jpg"></img>
+                    <img id="img-main" src={src}></img>
                 </div>
                 <div className="image-dattour-2">
-                    <div className="img-2"><img src="https://photo-baomoi.zadn.vn/w700_r1/2019_01_01_17_29196381/325b4dca7f8996d7cf98.jpg"></img></div>
-                    <div className="img-2"><img src="https://photo-baomoi.zadn.vn/w700_r1/2019_01_01_17_29196381/325b4dca7f8996d7cf98.jpg"></img></div>
-                    <div className="img-2"><img src="https://photo-baomoi.zadn.vn/w700_r1/2019_01_01_17_29196381/325b4dca7f8996d7cf98.jpg"></img></div>
-                    <div className="img-2"><img src="https://photo-baomoi.zadn.vn/w700_r1/2019_01_01_17_29196381/325b4dca7f8996d7cf98.jpg"></img></div>
+                    {
+                        HinhAnhTour.map(hinhAnhTour => {
+                            //Decode hình ảnh từ binary thành base64 để hiển thị
+                            let src = 'https://semantic-ui.com/images/wireframe/white-image.png'
+                            if (hinhAnhTour) {
+                                let hinhAnhBase64 = Buffer.from(hinhAnhTour.HinhAnh).toString('base64')
+                                src = `data:image/jpeg;base64,${hinhAnhBase64}`
+                            }
+                            return (
+                                <div className="img-2">
+                                    <img src={src} onClick={(e) => zoomImage(e.target.src)}></img>
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </div>
+
             <div className="giatien-tour">
                 <div className="noidung-giatien-tour"></div>
                 <div className="giatien">
@@ -20,16 +40,6 @@ const BodyTour = () => {
                     <div className="giatien-noidung">Giá từ</div>
                     <div className="giatien-chitiet-tour">700.000 VND</div>
                     <div className="btn-timtour">Tìm tour</div>
-                </div>
-            </div>
-            <div className="khoanhkhac">
-                <div className="type-khoanhkhac" >Khoảnh khắc đáng nhớ</div>
-                <div className="image-khoanhkhac">
-                    <div className="img-khoanhkhac"><img src="https://photo-baomoi.zadn.vn/w700_r1/2019_01_01_17_29196381/325b4dca7f8996d7cf98.jpg"></img></div>
-                    <div className="img-khoanhkhac"><img src="https://photo-baomoi.zadn.vn/w700_r1/2019_01_01_17_29196381/325b4dca7f8996d7cf98.jpg"></img></div>
-                    <div className="img-khoanhkhac"><img src="https://photo-baomoi.zadn.vn/w700_r1/2019_01_01_17_29196381/325b4dca7f8996d7cf98.jpg"></img></div>
-                    <div className="img-khoanhkhac"><img src="https://photo-baomoi.zadn.vn/w700_r1/2019_01_01_17_29196381/325b4dca7f8996d7cf98.jpg"></img></div>
-                    <div className="img-khoanhkhac"><img src="https://photo-baomoi.zadn.vn/w700_r1/2019_01_01_17_29196381/325b4dca7f8996d7cf98.jpg"></img></div>
                 </div>
             </div>
         </div>

@@ -37,6 +37,12 @@
     margin-top: 1rem;
     margin-left: 2rem;
 }
+#img-main {
+    width: 99%;
+    max-width: 99%;
+    max-height: 99%;
+    padding-right: 15px;
+}
 .image-dattour-1 {
     flex: 4.3;
     flex-direction: column;
