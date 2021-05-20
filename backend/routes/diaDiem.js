@@ -5,7 +5,7 @@ const db = require('../dbConfig')
 router.route('/:IDDiaDiem').get((req, res) => {
     db.connect().then(() => {
 
-        const queryString = 'select * FROM DIADIEM WHERE IDDiaDiem = ' + req.params.IDDiaDiem;
+        const queryString = 'EXEC GetDiaDiemWithID ' + req.params.IDDiaDiem;
         db.request().query(queryString, (err, result) => {
             err ? console.log(err) : res.send(result.recordset)
         })

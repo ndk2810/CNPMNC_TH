@@ -17,7 +17,7 @@ router.route('/').get((req, res) => {
 router.route('/chiTiet/:IDTour').get((req, res) => {
     db.connect().then(() => {
         const queryString =
-            'select * FROM TOUR WHERE IDTour = ' + req.params.IDTour;
+            'EXEC GetTourWithID ' + req.params.IDTour;
 
         db.request().query(queryString, (err, result) => {
             err ? console.log(err) : res.send(result.recordset)
@@ -26,11 +26,10 @@ router.route('/chiTiet/:IDTour').get((req, res) => {
 })
 //GET các tour bằng IDDiaDiem
 router.route('/:IDDiaDiem').get((req, res) => {
-    console.log(req.params.IDDiaDiem)
     db.connect().then(() => {
         //simple query
         const queryString =
-            'select * FROM TOUR WHERE IDDiaDiem = ' + req.params.IDDiaDiem;
+            'EXEC GetToursWithIDDiaDiem ' + req.params.IDDiaDiem;
 
         db.request().query(queryString, (err, result) => {
             err ? console.log(err) : res.send(result.recordset)
@@ -43,7 +42,19 @@ router.route('/:IDDiaDiem').get((req, res) => {
 router.route('/HinhAnh/:IDTour').get((req, res) => {
     db.connect().then(() => {
         const queryString =
-            'select TOP 1 * FROM HINHANHTOUR WHERE IDTour = ' + req.params.IDTour;
+            'EXEC GetAnhBiaTour ' + req.params.IDTour;
+
+        db.request().query(queryString, (err, result) => {
+            err ? console.log(err) : res.send(result.recordset)
+        })
+    })
+})
+
+//GET list hình ảnh của 1 tour
+router.route('/ListHinhAnh/:IDTour').get((req, res) => {
+    db.connect().then(() => {
+        const queryString =
+            'EXEC GetListHinhAnhTour ' + req.params.IDTour;
 
         db.request().query(queryString, (err, result) => {
             err ? console.log(err) : res.send(result.recordset)
@@ -65,8 +76,9 @@ router.route('/add').post((req, res) => {
 
         //Query
         const queryString =
-            `INSERT INTO TOUR(IDDiaDiem, IDTheLoaiTour, TenTour, DiaChiTour, DiemNoiBat, LichTrinh, NoiDungTour, DoDai) 
-        VALUES(${DiaDiem}, ${TheLoai}, N'${TenTour}', N'${DiaChiTour}', N'${DiemNoiBat}', N'${LichTrinh}', N'${NoiDung}', ${DoDai})`
+            `EXEC AddTour @IDDiaDiem = ${DiaDiem}, @IDTheLoaiTour = ${TheLoai}, @TenTour = N'${TenTour}',
+            @DiaChiTour = N'${DiaChiTour}', @DiemNoiBat = N'${DiemNoiBat}', @LichTrinh = N'${LichTrinh}',
+            @NoiDung = N'${NoiDung}', @DoDai = ${DoDai}`
 
         db.request().query(queryString, (err, result) => {
             err ? console.log(err) : res.send(result.recordset)
@@ -79,7 +91,7 @@ router.route('/remove').post((req, res) => {
     db.connect().then(() => {
         const IDTour = req.body.IDTour
         //simple query
-        const queryString = `DELETE FROM TOUR WHERE IDTour = ` + IDTour;
+        const queryString = `EXEC DeleteTour ` + IDTour;
 
         db.request().query(queryString, (err, result) => {
             err ? console.log(err) : res.send(result.recordset)
@@ -115,15 +127,9 @@ router.route('/modifyTour').post((req, res) => {
         const NoiDung = req.body.NoiDung
         const DoDai = req.body.DoDai
 
-        const queryString = `UPDATE [dbo].[TOUR]
-        SET 
-            [TenTour] = N'${TenTour}'
-           ,[DiaChiTour] = N'${DiaChiTour}'
-           ,[DiemNoiBat] = N'${DiemNoiBat}'
-           ,[LichTrinh] = N'${LichTrinh}'
-           ,[NoiDungTour] = N'${NoiDung}'
-           ,[DoDai] = ${DoDai}
-        WHERE IDTour = ${IDTour}`
+        const queryString = `EXEC ModifyTour @IDTour = ${IDTour}, @IDDiaDiem = ${DiaDiem}, @IDTheLoaiTour = ${TheLoai}, @TenTour = N'${TenTour}',
+        @DiaChiTour = N'${DiaChiTour}', @DiemNoiBat = N'${DiemNoiBat}', @LichTrinh = N'${LichTrinh}',
+        @NoiDung = N'${NoiDung}', @DoDai = ${DoDai}`
 
         db.request().query(queryString, (err, result) => {
             err ? console.log(err) : res.send(result.recordset)
@@ -137,6 +143,20 @@ router.route('/removeAllPic').post((req, res) => {
         const IDTour = req.body.IDTour
         //simple query
         const queryString = `DELETE FROM HINHANHTOUR WHERE IDTour = ` + IDTour
+
+        db.request().query(queryString, (err, result) => {
+            err ? console.log(err) : res.send(result.recordset)
+        })
+    })
+})
+
+//Search tour
+router.route('/searchTour/:TuKhoaTimKiem').get((req, res) => {
+    db.connect().then(() => {
+        const TuKhoaTimKiem = req.params.TuKhoaTimKiem
+
+        const queryString =
+            `EXEC SearchTour @TenTour = N'%${TuKhoaTimKiem}%'`;
 
         db.request().query(queryString, (err, result) => {
             err ? console.log(err) : res.send(result.recordset)
