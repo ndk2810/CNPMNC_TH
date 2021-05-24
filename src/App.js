@@ -10,6 +10,7 @@ import DiaDiem from './pages/diaDiem'
 import DatCho from './pages/datCho'
 import TimKiem from './pages/timKiem'
 import ChiTietTour from './pages/chiTietTour'
+import NgayDatTour from './components/PageChiTietTour/NgayDatTour';
 
 const App = () => {
   //GET tất cả địa điểm
@@ -70,6 +71,9 @@ const App = () => {
 
             <Route exact path="/timKiem">
               <TimKiem />
+            </Route>
+            <Route exact path="/ngay">
+              <NgayDatTour/>
             </Route>
           </Switch>
         </div>

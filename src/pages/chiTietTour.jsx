@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react'
-import '../styles/chiTietTour.css'
+import { useState, useEffect } from "react";
+import "../styles/chiTietTour.css";
 //import components
-import BoxGioiThieu from '../components/PageChiTietTour/BoxGioiThieu'
-import CTHoatDong from '../components/PageChiTietTour/CTHoatDong'
-import DatTour from '../components/PageChiTietTour/DatTour'
+import BoxGioiThieu from "../components/PageChiTietTour/BoxGioiThieu";
+import CTHoatDong from "../components/PageChiTietTour/CTHoatDong";
+import DatTour from "../components/PageChiTietTour/DatTour";
 
 const ChiTietTour = () => {
     //Lấy những query parameters
@@ -12,30 +12,30 @@ const ChiTietTour = () => {
     let IDTour = params.get('IDTour');
     let TenTheLoai = params.get('TenTheLoai');
 
-    const [Tour, setTour] = useState([])
+    const [Tour, setTour] = useState([]);
     useEffect(() => {
         fetch("http://localhost:5000/tour/chiTiet/" + IDTour)
-            .then(data => {
+            .then((data) => {
                 return data.json();
             })
-            .then(data => {
+            .then((data) => {
                 setTour(data[0]);
             })
-            .catch(err => {
+            .catch((err) => {
                 console.log(err);
             });
     }, []);
 
-    const [HinhAnhTour, setHinhAnhTour] = useState([])
+    const [HinhAnhTour, setHinhAnhTour] = useState([]);
     useEffect(() => {
         fetch("http://localhost:5000/tour/ListHinhAnh/" + IDTour)
-            .then(data => {
+            .then((data) => {
                 return data.json();
             })
-            .then(data => {
+            .then((data) => {
                 setHinhAnhTour(data);
             })
-            .catch(err => {
+            .catch((err) => {
                 console.log(err);
             });
     }, []);
@@ -43,10 +43,10 @@ const ChiTietTour = () => {
     return (
         <div className="page-dattour">
             <BoxGioiThieu Tour={Tour} HinhAnhTour={HinhAnhTour} />
-            <CTHoatDong Tour={Tour} TenTheLoai={TenTheLoai} />
+            <CTHoatDong Tour={Tour} />
             <DatTour Tour={Tour} />
-        </div >
-    )
-}
+        </div>
+    );
+};
 
-export default ChiTietTour
+export default ChiTietTour;
