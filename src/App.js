@@ -30,7 +30,7 @@ const App = () => {
   //GET tất cả tour Hà Nội
   const [TourHaNoi, setTourHaNoi] = useState([])
   useEffect(() => {
-    fetch("http://localhost:5000/tour/1")
+    fetch("http://localhost:5000/tour/2")
       .then(data => {
         return data.json();
       })

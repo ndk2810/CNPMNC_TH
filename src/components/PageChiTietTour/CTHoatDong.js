@@ -1,6 +1,6 @@
 import React from "react";
 
-const CTHoatDong = ({ Tour }) => {
+const CTHoatDong = ({ Tour, TenTheLoai }) => {
 	return (
 		<div>
 			<div className="hoatdong">
@@ -20,7 +20,7 @@ const CTHoatDong = ({ Tour }) => {
 								<img src="https://ik.imagekit.io/tvlk/image/imageResource/2020/02/24/1582533078216-28e45a291d35a380e73193eff26b4938.png"></img>
 							</div>
 							<div className="NoiDung-YeuThich-NoiDung-DiemNoiBat">
-								Phù hợp cho: Yêu thích thiên nhiên
+								Phù hợp cho: Yêu thích {TenTheLoai}
 							</div>
 						</div>
 						<div className="LichTrinh-NoiDung-DiemNoiBat">

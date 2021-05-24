@@ -10,6 +10,7 @@ const ChiTietTour = () => {
     let search = window.location.search;
     let params = new URLSearchParams(search);
     let IDTour = params.get('IDTour');
+    let TenTheLoai = params.get('TenTheLoai');
 
     const [Tour, setTour] = useState([])
     useEffect(() => {
@@ -42,7 +43,7 @@ const ChiTietTour = () => {
     return (
         <div className="page-dattour">
             <BoxGioiThieu Tour={Tour} HinhAnhTour={HinhAnhTour} />
-            <CTHoatDong Tour={Tour} />
+            <CTHoatDong Tour={Tour} TenTheLoai={TenTheLoai} />
             <DatTour Tour={Tour} />
         </div >
     )

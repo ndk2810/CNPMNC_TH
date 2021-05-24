@@ -19,7 +19,7 @@ const Index = ({ arrDiaDiem, TourHaNoi }) => {
 
 
                 <div className="list-diaDiemDP">
-                    <h1>Hà Nội tươi đẹp</h1>
+                    <h1>TP.HCM tươi đẹp</h1>
                     <h4>Du lịch thật xa đến những địa điểm đang được nhiều người yêu thích</h4>
                 </div>
                 <ListTours TourHaNoi={TourHaNoi} />

@@ -41,7 +41,7 @@ const CardTour = ({ tour }) => {
         src = `data:image/jpeg;base64,${hinhAnhBase64}`
     }
 
-    const linkTo = "/thongTinTour?IDTour=" + tour.IDTour
+    const linkTo = "/thongTinTour?IDTour=" + tour.IDTour + "&TenTheLoai=" + TheLoaiTour.TenTheLoaiTour
 
     return (
         <div className="card-tour">
