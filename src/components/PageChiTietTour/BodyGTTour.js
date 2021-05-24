@@ -26,11 +26,7 @@ const BodyTour = ({ HinhAnhTour }) => {
                             return (
                                 <div className="img-2">
                                     <img src={src} onClick={(e) => zoomImage(e.target.src)}></img>
-                                    <img src={src} onClick={(e) => zoomImage(e.target.src)}></img>
-                                    <img src={src} onClick={(e) => zoomImage(e.target.src)}></img>
-                                    <img src={src} onClick={(e) => zoomImage(e.target.src)}></img>
                                 </div>
-                                
                             )
                         })
                     }
