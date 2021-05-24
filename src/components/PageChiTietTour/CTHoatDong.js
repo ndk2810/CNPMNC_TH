@@ -1,6 +1,10 @@
 import React from "react";
+import { useLocation } from "react-router";
 
 const CTHoatDong = ({ Tour }) => {
+	const tentheloaitour = useLocation();
+	console.log(tentheloaitour);
+	const query = new URLSearchParams(tentheloaitour.search);
 	return (
 		<div>
 			<div className="hoatdong">
@@ -20,7 +24,7 @@ const CTHoatDong = ({ Tour }) => {
 								<img src="https://ik.imagekit.io/tvlk/image/imageResource/2020/02/24/1582533078216-28e45a291d35a380e73193eff26b4938.png"></img>
 							</div>
 							<div className="NoiDung-YeuThich-NoiDung-DiemNoiBat">
-								Phù hợp cho: Yêu thích thiên nhiên
+								Yêu thích:{query.get("TenTheLoai")}
 							</div>
 						</div>
 						<div className="LichTrinh-NoiDung-DiemNoiBat">
@@ -91,10 +95,10 @@ const CTHoatDong = ({ Tour }) => {
 				</div>
 			</div>
 
-			<div className="ThongTin-DuaDon">
+			{/* <div className="ThongTin-DuaDon">
 				<div className="Type-ThongTin-DuaDon"></div>
 				<div className=""></div>
-			</div>
+			</div> */}
 		</div>
 	);
 };
