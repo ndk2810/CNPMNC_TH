@@ -73,7 +73,7 @@ const App = () => {
               <TimKiem />
             </Route>
             <Route exact path="/ngay">
-              <NgayDatTour/>
+              <NgayDatTour />
             </Route>
           </Switch>
         </div>
