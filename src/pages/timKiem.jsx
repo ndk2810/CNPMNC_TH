@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import '../styles/diaDiem.css'
+import server from '../serverAddress'
 
 //COMPONENTS
 import TourList from '../components/PageDiaDiem/TourList'
@@ -28,7 +29,7 @@ const DiaDiem = () => {
     //Search tour
     const [Tours, setTours] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/tour/searchTour/" + TenDiaDiem)
+        fetch(server + "/tour/searchTour/" + TenDiaDiem)
             .then(data => {
                 return data.json();
             })

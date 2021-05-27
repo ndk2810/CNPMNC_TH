@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import server from '../../serverAddress'
 
 const TourTrangChu = ({ Tour }) => {
 
     //GET Hình ảnh bìa của tour
     let [HinhAnh, setHinhAnh] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/tour/hinhAnh/" + Tour.IDTour)
+        fetch(server + "/tour/hinhAnh/" + Tour.IDTour)
             .then(data => {
                 return data.json();
             })
@@ -22,7 +23,7 @@ const TourTrangChu = ({ Tour }) => {
     //GET thể loại tour
     let [TheLoaiTour, setTheLoaiTour] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/theLoaiTour/" + Tour.IDTheLoaiTour)
+        fetch(server + "/theLoaiTour/" + Tour.IDTheLoaiTour)
             .then((data) => {
                 return data.json();
             })

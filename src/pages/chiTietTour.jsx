@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "../styles/chiTietTour.css";
 import numberComma from '.././resources/scripts/numberComma'
+import server from '../serverAddress'
 
 //import components
 import BoxGioiThieu from "../components/PageChiTietTour/BoxGioiThieu";
@@ -17,7 +18,7 @@ const ChiTietTour = () => {
 
     const [Tour, setTour] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/tour/chiTiet/" + IDTour)
+        fetch(server + "/tour/chiTiet/" + IDTour)
             .then((data) => {
                 return data.json();
             })
@@ -32,7 +33,7 @@ const ChiTietTour = () => {
 
     const [KhungThoiGian, setKhungThoiGian] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/tour/chiTiet/khungThoiGian/" + IDTour)
+        fetch(server + "/tour/chiTiet/khungThoiGian/" + IDTour)
             .then((data) => {
                 return data.json();
             })
@@ -46,7 +47,7 @@ const ChiTietTour = () => {
 
     const [HinhAnhTour, setHinhAnhTour] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/tour/ListHinhAnh/" + IDTour)
+        fetch(server + "/tour/ListHinhAnh/" + IDTour)
             .then((data) => {
                 return data.json();
             })
