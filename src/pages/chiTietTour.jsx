@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import "../styles/chiTietTour.css";
+import numberComma from '.././resources/scripts/numberComma'
+
 //import components
 import BoxGioiThieu from "../components/PageChiTietTour/BoxGioiThieu";
 import CTHoatDong from "../components/PageChiTietTour/CTHoatDong";
 import DatTour from "../components/PageChiTietTour/DatTour";
+
 
 const ChiTietTour = () => {
     //Lấy những query parameters
@@ -19,7 +22,22 @@ const ChiTietTour = () => {
                 return data.json();
             })
             .then((data) => {
+                data[0].GiaNguoiLon = numberComma(data[0].GiaNguoiLon)
                 setTour(data[0]);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }, []);
+
+    const [KhungThoiGian, setKhungThoiGian] = useState([]);
+    useEffect(() => {
+        fetch("http://localhost:5000/tour/chiTiet/khungThoiGian/" + IDTour)
+            .then((data) => {
+                return data.json();
+            })
+            .then((data) => {
+                setKhungThoiGian(data);
             })
             .catch((err) => {
                 console.log(err);
@@ -44,7 +62,7 @@ const ChiTietTour = () => {
         <div className="page-dattour">
             <BoxGioiThieu Tour={Tour} HinhAnhTour={HinhAnhTour} />
             <CTHoatDong Tour={Tour} />
-            <DatTour Tour={Tour} />
+            <DatTour Tour={Tour} KhungThoiGian={KhungThoiGian} />
         </div>
     );
 };

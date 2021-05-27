@@ -84,7 +84,7 @@
 	flex-basis: 65%;
 }
 .btn-timtour {
-	width: 15rem;
+	width: 80%;
 	height: 3rem;
 	text-align: center;
 	padding: 0.6rem;
@@ -94,6 +94,9 @@
 	background-color: rgb(255, 94, 31);
 	border: 0 solid black;
 	cursor: pointer;
+}
+.btn-timtour a {
+	color: inherit;
 }
 .khoanhkhac {
 	border-top: 1px solid rgb(216, 216, 216);
@@ -302,17 +305,28 @@
 	width: 60rem;
 	box-shadow: 3px 3px 5px 6px #ccc;
 	border-radius: 10px;
-	height: 48rem;
+	height: max-content;
+	padding-bottom: 1.2%;
 	margin: 0 auto;
 	margin-top: 2rem;
 	justify-content: space-around;
 }
 .Content-Chon-Dattour {
-	flex-basis: 85%;
+	flex-basis: 67%;
 	margin-top: 2rem;
+	font-weight: bold;
+}
+.giatien-noidung {
+	font-weight: bold;
+}
+.giatien-chitiet-tour {
+	color: rgb(255, 94, 31);
+	font-weight: bold;
+	font-size: 1.6rem;
 }
 .giatien-chitiet {
 	position: relative;
+	font-size: 1.2rem;
 	top: 2rem;
 	right: 9rem;
 }
@@ -419,9 +433,50 @@
 	color: white;
 	font-weight: bold;
 }
-
-.calendar {
+.ngayDatTour {
+	display: inline-flex;
+	margin-top: 15%;
+	width: 100%;
+	justify-content: space-between;
+}
+.ngayDatTour-calendar {
 	position: relative;
 	width: 15rem;
 	margin-left: -45rem;
+}
+.ngayDatTour-soNguoiDi-input {
+	margin-bottom: 15%;
+}
+.ngayDatTour-soNguoiDi-input label {
+	padding-right: 10px;
+	font-weight: bold;
+}
+.ngayDatTour-soNguoiDi-input input,
+.ngayDatTour-soNguoiDi-input p {
+	float: right;
+	padding: 4px;
+	font-weight: bold;
+}
+.ngayDatTour-soNguoiDi-input p {
+	padding: 0;
+	font-weight: bolder;
+}
+.ngayDatTour-khungGio-input label,
+.ngayDatTour-khungGio-input option,
+.ngayDatTour-khungGio-input select {
+	padding: 4px;
+	font-weight: bold;
+}
+.ngayDatTour-submit {
+	margin-left: 50px;
+	border: none;
+	background-color: transparent;
+	font-weight: 800;
+	font-size: 1.2rem;
+	color: rgb(1, 148, 243);
+	transition: 0.3s;
+}
+.ngayDatTour-submit:hover {
+	cursor: pointer;
+	color: rgb(0, 105, 175);
 }

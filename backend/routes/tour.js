@@ -24,6 +24,17 @@ router.route('/chiTiet/:IDTour').get((req, res) => {
         })
     })
 })
+//GET chi tiết đăng ký tour bằng IDTour
+router.route('/chiTietDangKy/:IDTour').get((req, res) => {
+    db.connect().then(() => {
+        const queryString =
+            'SELECT * FROM CHITIETTOUR WHERE IDTour = ' + req.params.IDTour;
+
+        db.request().query(queryString, (err, result) => {
+            err ? console.log(err) : res.send(result.recordset)
+        })
+    })
+})
 //GET các tour bằng IDDiaDiem
 router.route('/:IDDiaDiem').get((req, res) => {
     db.connect().then(() => {
@@ -43,6 +54,18 @@ router.route('/HinhAnh/:IDTour').get((req, res) => {
     db.connect().then(() => {
         const queryString =
             'EXEC GetAnhBiaTour ' + req.params.IDTour;
+
+        db.request().query(queryString, (err, result) => {
+            err ? console.log(err) : res.send(result.recordset)
+        })
+    })
+})
+
+//GET các khung thời gian của 1 tour
+router.route('/chiTiet/khungThoiGian/:IDTour').get((req, res) => {
+    db.connect().then(() => {
+        const queryString =
+            'SELECT * FROM KHUNGTHOIGIAN WHERE IDTour = ' + req.params.IDTour;
 
         db.request().query(queryString, (err, result) => {
             err ? console.log(err) : res.send(result.recordset)
@@ -126,10 +149,13 @@ router.route('/modifyTour').post((req, res) => {
         const LichTrinh = req.body.LichTrinh
         const NoiDung = req.body.NoiDung
         const DoDai = req.body.DoDai
+        const GiaNguoiLon = req.body.GiaNguoiLon
+        const GiaTreEm = req.body.GiaTreEm
+        const NguoiLonToiThieu = req.body.NguoiLonToiThieu
 
         const queryString = `EXEC ModifyTour @IDTour = ${IDTour}, @IDDiaDiem = ${DiaDiem}, @IDTheLoaiTour = ${TheLoai}, @TenTour = N'${TenTour}',
         @DiaChiTour = N'${DiaChiTour}', @DiemNoiBat = N'${DiemNoiBat}', @LichTrinh = N'${LichTrinh}',
-        @NoiDung = N'${NoiDung}', @DoDai = ${DoDai}`
+        @NoiDung = N'${NoiDung}', @DoDai = ${DoDai}, @GiaNguoiLon = ${GiaNguoiLon}, @GiaTreEm = ${GiaTreEm}, @NguoiLonToiThieu = ${NguoiLonToiThieu}`
 
         db.request().query(queryString, (err, result) => {
             err ? console.log(err) : res.send(result.recordset)

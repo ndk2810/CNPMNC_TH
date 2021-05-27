@@ -8,6 +8,9 @@
 	clear: both;
 	display: table;
 }
+html {
+	scroll-behavior: smooth;
+}
 a {
 	text-decoration: none;
 }
@@ -20,8 +23,7 @@ a {
 .top-image {
 	position: relative;
 	height: 300px;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 25%),
-		url("../resources/img/topImage.jpg");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 25%), url("../resources/img/topImage.jpg");
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -344,5 +346,3 @@ div ul {
 	margin-top: 2%;
 	font-weight: bolder;
 }
-
-

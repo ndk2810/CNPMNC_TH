@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import numberComma from '../../resources/scripts/numberComma'
 
 const CardTour = ({ tour }) => {
 	//GET Hình ảnh bìa của tour
@@ -50,7 +51,6 @@ const CardTour = ({ tour }) => {
 			<Link to={linkTo}>
 				<img
 					className="card-tour-img"
-					style={{ width: 560 }}
 					alt="#"
 					src={src}
 				/>
@@ -70,7 +70,7 @@ const CardTour = ({ tour }) => {
 					></img>
 				</Link>
 				<p className="card-tour-info-diaDiem">{tour.DiaChiTour}</p>
-				<p className="card-tour-info-gia">3.500.000 VND</p>
+				<p className="card-tour-info-gia">{numberComma(tour.GiaNguoiLon)} VNĐ</p>
 			</div>
 		</div>
 	);

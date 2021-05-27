@@ -2,7 +2,7 @@ const zoomImage = (src) => {
     document.getElementById('img-main').src = src
 }
 
-const BodyTour = ({ HinhAnhTour }) => {
+const BodyTour = ({ HinhAnhTour, Tour }) => {
     let src = 'https://semantic-ui.com/images/wireframe/white-image.png'
     if (HinhAnhTour[0]) {
         let hinhAnhBase64 = Buffer.from(HinhAnhTour[0].HinhAnh).toString('base64')
@@ -38,8 +38,10 @@ const BodyTour = ({ HinhAnhTour }) => {
                 <div className="giatien">
                     <img className="btn-favorite" src="https://d1785e74lyxkqq.cloudfront.net/webxpe-desktop/_next/static/745a2dacef20a88638b724cfa87c7fd8.svg"></img>
                     <div className="giatien-noidung">Giá từ</div>
-                    <div className="giatien-chitiet-tour">700.000 VND</div>
-                    <div className="btn-timtour">Tìm tour</div>
+                    <div className="giatien-chitiet-tour">{Tour.GiaNguoiLon} VNĐ</div>
+                    <div className="btn-timtour">
+                        <a className="btn-timtour-a" href="#ngayDatTour">Tìm tour</a>
+                    </div>
                 </div>
             </div>
         </div>

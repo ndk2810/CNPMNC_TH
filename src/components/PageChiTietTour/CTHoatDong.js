@@ -40,6 +40,7 @@ const CTHoatDong = ({ Tour }) => {
 						</div>
 						<div className="TraiNghiem-NoiDung-DiemNoiBat">
 							<h2
+								id="ngayDatTour"
 								className="TieuDe-TraiNghiem-DiemNoiBat-ChiTiet"
 								style={{ paddingTop: 15 }}
 							>
@@ -56,7 +57,7 @@ const CTHoatDong = ({ Tour }) => {
 					<div className="Noidung-DatTour-small-hoatdong ">
 						<div className="tieude-diadiem">{Tour.TenTour}</div>
 						<div className="btn-timtour btn-Noidung-DatTour-small-hoatdong">
-							Tìm tour
+							<a className="btn-timtour-a" href="#ngayDatTour">Tìm tour</a>
 						</div>
 						<div className="Ve-Noidung-DatTour-small-hoatdong">
 							<img src="https://ik.imagekit.io/tvlk/image/imageResource/2020/02/24/1582532977248-c01603da7f91217b28788f2c9642158f.png?tr=h-16,w-16"></img>
