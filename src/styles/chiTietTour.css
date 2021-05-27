@@ -350,6 +350,7 @@
 	background-color: rgb(255, 94, 31);
 	border: 0 solid black;
 	cursor: pointer;
+	margin-right: 0.2rem;
 }
 .thoiGianTQ {
 	margin-top: 5%;
@@ -479,4 +480,10 @@
 .ngayDatTour-submit:hover {
 	cursor: pointer;
 	color: rgb(0, 105, 175);
+}
+.btn-hoanthanh:hover {
+	background-color: orange;
+}
+.show-NgayDat {
+	margin-top: 2rem;
 }
