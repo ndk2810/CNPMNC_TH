@@ -4,6 +4,8 @@ import axios from 'axios'
 import FormThemDD from '../components/PageIndex/FormThemDD'
 import TableDD from '../components/PageIndex/TableDD'
 
+import server from '../serverAddress'
+
 const addDiaDiem = (e) => {
     e.preventDefault()
     const TenDiaDiem = document.getElementById('tenDiaDiem').value
@@ -17,7 +19,7 @@ const addDiaDiem = (e) => {
     }
 
     if (window.confirm('Thêm địa điểm vào CSDL ?')) {
-        axios.post('http://localhost:5000/diaDiem/add', {
+        axios.post(server + '/diaDiem/add', {
             tenDiaDiem: TenDiaDiem,
             hinhAnh: HinhAnh,
             gioiThieu: GioiThieuDiaDiem
@@ -33,7 +35,7 @@ const deleteDD = (IDDiaDiem) => {
     }
 
     if (window.confirm('Xoá địa điểm ?')) {
-        axios.post('http://localhost:5000/diaDiem/remove', data)
+        axios.post(server + '/diaDiem/remove', data)
             .then(() => console.log('success'))
             .catch(err => console.log(err))
 

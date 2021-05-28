@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import '../styles/chiTietTour.css'
 
+import server from '../serverAddress'
 const axios = require('axios');
 const { default: FormCTTour } = require('../components/PageChiTietTour/FormCTTour');
 
@@ -18,16 +19,22 @@ const suaThongTinTour = (IDTour) => {
     const LichTrinh = document.getElementById('lichTrinh').value
     const NoiDung = document.getElementById('noiDung').value
     const DoDai = document.getElementById('doDai').value
+    const GiaNguoiLon = document.getElementById('giaNguoiLon').value
+    const GiaTreEm = document.getElementById('giaTreEm').value
+    const NguoiLonToiThieu = document.getElementById('nguoiLonToiThieu').value
 
     if (window.confirm('Sửa thông tin tour ?')) {
-        axios.post('http://localhost:5000/tour/modifyTour', {
+        axios.post(server + '/tour/modifyTour', {
             IDTour: IDTour,
             TenTour: TenTour,
             DiaChiTour: DiaChiTour,
             DiemNoiBat: DiemNoiBat,
             LichTrinh: LichTrinh,
             NoiDung: NoiDung,
-            DoDai: DoDai
+            DoDai: DoDai,
+            GiaNguoiLon: GiaNguoiLon,
+            GiaTreEm: GiaTreEm,
+            NguoiLonToiThieu: NguoiLonToiThieu
         })
             .then(() => {
                 window.location.reload()
@@ -46,7 +53,7 @@ const addHinhAnh = (IDTour) => {
     }
 
     if (window.confirm('Thêm hình ảnh vào tour ?')) {
-        axios.post('http://localhost:5000/tour/insertPic', {
+        axios.post(server + '/tour/insertPic', {
             IDTour: IDTour,
             hinhAnh: HinhAnh,
         })
@@ -60,7 +67,7 @@ const addHinhAnh = (IDTour) => {
 
 const xoaTatCaHinhAnh = (IDTour) => {
     if (window.confirm('Xoá tất cả hình ảnh của tour ?')) {
-        axios.post('http://localhost:5000/tour/removeAllPic', {
+        axios.post(server + '/tour/removeAllPic', {
             IDTour: IDTour,
         })
             .then(() => {
@@ -80,7 +87,7 @@ const TourChiTiet = () => {
 
     const [Tour, setTour] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/tour/chiTiet/" + IDTour)
+        fetch(server + "/tour/chiTiet/" + IDTour)
             .then(data => {
                 return data.json();
             })
@@ -94,7 +101,7 @@ const TourChiTiet = () => {
 
     let [TheLoaiTour, setTheLoaiTour] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/theLoaiTour/" + IDTheLoaiTour)
+        fetch(server + "/theLoaiTour/" + IDTheLoaiTour)
             .then(data => {
                 return data.json();
             })
@@ -109,7 +116,7 @@ const TourChiTiet = () => {
 
     let [DiaDiem, setDiaDiem] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/diaDiem/" + IDDiaDiem)
+        fetch(server + "/diaDiem/" + IDDiaDiem)
             .then(data => {
                 return data.json();
             })
@@ -124,7 +131,7 @@ const TourChiTiet = () => {
 
     let [HinhAnh, setHinhAnh] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/tour/HinhAnh/" + IDTour)
+        fetch(server + "/tour/HinhAnh/" + IDTour)
             .then(data => {
                 return data.json();
             })
@@ -139,7 +146,10 @@ const TourChiTiet = () => {
 
     return (
         <div className="main-body">
-            <FormCTTour suaThongTinTour={suaThongTinTour} addHinhAnh={addHinhAnh} Tour={Tour} HinhAnh={HinhAnh} TheLoaiTour={TheLoaiTour} DiaDiem={DiaDiem} xoaTatCaHinhAnh={xoaTatCaHinhAnh} />
+            <FormCTTour
+                suaThongTinTour={suaThongTinTour} addHinhAnh={addHinhAnh} Tour={Tour} HinhAnh={HinhAnh} TheLoaiTour={TheLoaiTour}
+                DiaDiem={DiaDiem} xoaTatCaHinhAnh={xoaTatCaHinhAnh}
+            />
         </div>
     )
 }

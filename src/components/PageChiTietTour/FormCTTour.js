@@ -13,7 +13,7 @@ const loadIMG = () => {
     }
 }
 
-const FormCTTour = ({ suaThongTinTour, addHinhAnh, Tour, HinhAnh, TheLoaiTour, DiaDiem, xoaTatCaHinhAnh }) => {
+const FormCTTour = ({ suaThongTinTour, addHinhAnh, Tour, HinhAnh, TheLoaiTour, xoaTatCaHinhAnh }) => {
     let src = 'https://semantic-ui.com/images/wireframe/white-image.png'
     if (HinhAnh.HinhAnh) {
         let hinhAnhBase64 = Buffer.from(HinhAnh.HinhAnh).toString('base64')
@@ -53,6 +53,18 @@ const FormCTTour = ({ suaThongTinTour, addHinhAnh, Tour, HinhAnh, TheLoaiTour, D
                     <div className="form-chiTiet-info">
                         <h2>Độ dài (giờ): </h2>
                         <input type="number" id="doDai" defaultValue={Tour.DoDai} />
+                    </div>
+                    <div className="form-chiTiet-info">
+                        <h2>Giá người lớn: </h2>
+                        <input type="number" id="giaNguoiLon" defaultValue={Tour.GiaNguoiLon} />
+                    </div>
+                    <div className="form-chiTiet-info">
+                        <h2>Giá trẻ em: </h2>
+                        <input type="number" id="giaTreEm" defaultValue={Tour.GiaTreEm} />
+                    </div>
+                    <div className="form-chiTiet-info">
+                        <h2>Người lớn tối thiểu: </h2>
+                        <input type="number" id="nguoiLonToiThieu" defaultValue={Tour.NguoiLonToiThieu} />
                     </div>
                 </div>
                 <div className="form-chiTiet-footer">

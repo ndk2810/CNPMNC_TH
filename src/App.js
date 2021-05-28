@@ -1,6 +1,7 @@
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useState, useEffect } from 'react'
+import server from './serverAddress'
 
 //COMPONENTS
 import Header from './components/Header'
@@ -13,7 +14,7 @@ import TourChiTiet from './pages/tourChiTiet'
 function App() {
   const [DiaDiems, setDiaDiems] = useState([])
   useEffect(() => {
-    fetch("http://localhost:5000/diaDiem/")
+    fetch(server + "/diaDiem/")
       .then(data => {
         return data.json();
       })
@@ -27,7 +28,7 @@ function App() {
 
   const [Tours, setTours] = useState([])
   useEffect(() => {
-    fetch("http://localhost:5000/tour/")
+    fetch(server + "/tour/")
       .then(data => {
         return data.json();
       })
@@ -41,7 +42,7 @@ function App() {
 
   let [TheLoaiTour, setTheLoaiTour] = useState([])
   useEffect(() => {
-    fetch("http://localhost:5000/theLoaiTour")
+    fetch(server + "/theLoaiTour")
       .then(data => {
         return data.json();
       })

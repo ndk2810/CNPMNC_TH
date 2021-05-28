@@ -4,6 +4,8 @@ import axios from 'axios'
 import FormThemTour from '../components/PageQLTour/FormThemTour'
 import TableTour from '../components/PageQLTour/TableTour'
 
+import server from '../serverAddress'
+
 //Hàm thêm tour
 const addTour = (e) => {
     e.preventDefault()
@@ -22,7 +24,7 @@ const addTour = (e) => {
     }
 
     if (window.confirm('Thêm tour vào CSDL ?')) {
-        axios.post('http://localhost:5000/tour/add', {
+        axios.post(server + '/tour/add', {
             DiaDiem: DiaDiem,
             TheLoai: TheLoai,
             TenTour: TenTour,
