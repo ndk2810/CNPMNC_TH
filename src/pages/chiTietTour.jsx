@@ -8,13 +8,11 @@ import BoxGioiThieu from "../components/PageChiTietTour/BoxGioiThieu";
 import CTHoatDong from "../components/PageChiTietTour/CTHoatDong";
 import DatTour from "../components/PageChiTietTour/DatTour";
 
-
 const ChiTietTour = () => {
     //Lấy những query parameters
-    let search = window.location.search;
-    let params = new URLSearchParams(search);
-    let IDTour = params.get('IDTour');
-    let TenTheLoai = params.get('TenTheLoai');
+    const search = window.location.search;
+    const params = new URLSearchParams(search);
+    const IDTour = params.get('IDTour');
 
     const [Tour, setTour] = useState([]);
     useEffect(() => {
