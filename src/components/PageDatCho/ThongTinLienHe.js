@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const ThongTinLienHe = () => {
     return (
         <div className="thongTinLienHe">
@@ -8,7 +9,6 @@ const ThongTinLienHe = () => {
                 <form className="form-thongTinLienHe">
                     <div className="form-thongTinLienHe-header">
                         <h3>Thông tin liên hệ (nhận vé/phiếu thanh toán)</h3>
-                        <button>Lưu</button>
                     </div>
 
                     <div className="form-thongTinLienHe-body">
@@ -19,7 +19,7 @@ const ThongTinLienHe = () => {
 
                         <div className="form-thongTinLienHe-input">
                             <label>Điện thoại</label>
-                            <input type="number" id="input-dienThoai" />
+                            <input type="text" id="input-dienThoai" />
                         </div>
 
                         <div className="form-thongTinLienHe-input">
@@ -30,12 +30,12 @@ const ThongTinLienHe = () => {
 
                     <div className="form-thongTinLienHe-footer">
                         <div>
-                            <input type="radio" id="male" name="gender" value="male" />
-                            <label for="male">Tôi là khách tham quan</label>
+                            <input type="radio" id="khachTQ" name="loaiKhach" value="khachTQ" />
+                            <label for="khachTQ">Tôi là khách tham quan</label>
                         </div>
                         <div>
-                            <input type="radio" id="male" name="gender" value="male" />
-                            <label for="male">Tôi đặt cho người khác</label>
+                            <input type="radio" id="ngKhac" name="loaiKhach" value="ngKhac" />
+                            <label for="ngKhac">Tôi đặt cho người khác</label>
                         </div>
                     </div>
                 </form>

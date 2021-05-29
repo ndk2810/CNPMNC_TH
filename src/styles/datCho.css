@@ -127,3 +127,7 @@ img {
     text-align: end;
     font-weight: bold;
 }
+.box-tomTat-giaCaNhan h4 span {
+    font-weight: lighter;
+    font-size: smaller;
+}

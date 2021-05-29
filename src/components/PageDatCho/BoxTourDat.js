@@ -1,4 +1,4 @@
-const BoxTourDat = ({ Tour, ngayDi, soNguoiLon, soTreEm, idKhungGio }) => {
+const BoxTourDat = ({ Tour, ngayDi, soNguoiLon, soTreEm, KhungThoiGian }) => {
     return (
         <div className="box-tourDat">
             <div>
@@ -25,7 +25,7 @@ const BoxTourDat = ({ Tour, ngayDi, soNguoiLon, soTreEm, idKhungGio }) => {
                                 </tr>
                                 <tr>
                                     <td>Khung thời gian</td>
-                                    <td className="box-tourDat-thongTinTour-value">{idKhungGio}</td>
+                                    <td className="box-tourDat-thongTinTour-value">{KhungThoiGian.ThoiGian}</td>
                                 </tr>
                                 <tr>
                                     <td>Áp dụng cho</td>

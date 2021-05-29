@@ -1,7 +1,6 @@
 import server from '../serverAddress'
 import '../styles/datCho.css'
 import { useState, useEffect } from "react"
-import numberComma from '.././resources/scripts/numberComma'
 
 //COMPONENTS
 import ThongTinLienHe from '../components/PageDatCho/ThongTinLienHe'
@@ -9,6 +8,8 @@ import ThongTinKhach from '../components/PageDatCho/ThongTinKhach'
 import BoxTourDat from '../components/PageDatCho/BoxTourDat'
 import ThoiGianTQ from '../components/PageDatCho/ThoiGianTQ'
 import TomTat from '../components/PageDatCho/TomTat'
+
+const axios = require('axios');
 
 const DatCho = () => {
     const search = window.location.search;
@@ -20,6 +21,35 @@ const DatCho = () => {
     const soTreEm = params.get('soTreEm');
     const idKhungGio = params.get('idKhungGio');
 
+    const xacNhanDatTour = (e) => {
+        e.preventDefault()
+
+        const hoTen = document.getElementById('input-hoTen').value
+        const dienThoai = document.getElementById('input-dienThoai').value
+        const email = document.getElementById('input-email').value
+        let loaiKhach
+
+        const hoTenChung = document.getElementById('input-hoTen-chung').value
+        const dienThoaiChung = document.getElementById('input-dienThoai-chung').value
+        const emailChung = document.getElementById('input-email-chung').value
+        const danhXung = document.getElementById('danhXung').value
+
+        const radios = document.getElementsByName('loaiKhach')
+
+        // loop through list of radio buttons
+        for (var i = 0, len = radios.length; i < len; i++) {
+            if (radios[i].checked) { // radio checked?
+                loaiKhach = radios[i].value; // if so, hold its value in val
+                break; // and break out of for loop
+            }
+        }
+
+        if (!hoTen || !dienThoai || !email || !loaiKhach || !hoTenChung || !dienThoaiChung || !emailChung || !danhXung) {
+            alert('Vui lòng điền đầy đủ thông tin !')
+            return
+        }
+    }
+
     const [Tour, setTour] = useState([]);
     useEffect(() => {
         fetch(server + "/tour/chiTiet/" + IDTour)
@@ -28,7 +58,20 @@ const DatCho = () => {
             })
             .then((data) => {
                 setTour(data[0]);
-                console.log(Tour)
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }, []);
+
+    const [KhungThoiGian, setKhungThoiGian] = useState([]);
+    useEffect(() => {
+        fetch(server + "/khungThoiGian/" + idKhungGio)
+            .then((data) => {
+                return data.json();
+            })
+            .then((data) => {
+                setKhungThoiGian(data[0]);
             })
             .catch((err) => {
                 console.log(err);
@@ -42,14 +85,14 @@ const DatCho = () => {
                 <h4>Điền thông tin và xem lại đặt chỗ.</h4>
                 <BoxTourDat
                     Tour={Tour} ngayDi={ngayDi} soNguoiLon={soNguoiLon}
-                    soTreEm={soTreEm} idKhungGio={idKhungGio}
+                    soTreEm={soTreEm} KhungThoiGian={KhungThoiGian}
                 />
                 <ThongTinLienHe />
                 <ThongTinKhach />
                 <ThoiGianTQ />
-                <TomTat />
+                <TomTat Tour={Tour} soNguoiLon={soNguoiLon} soTreEm={soTreEm} />
 
-                <button className="btn-tiepTuc">Tiếp tục</button>
+                <button className="btn-tiepTuc" onClick={e => xacNhanDatTour(e)}>Tiếp tục</button>
             </div>
         </div>
     )
