@@ -1,0 +1,63 @@
+.form-chiTiet-imgs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.form-chiTiet-imgs img {
+    width: 50%;
+}
+.form-chiTiet-info {
+    width: 100%;
+    display: inline-flex;
+    margin-top: 1%;
+}
+.form-chiTiet-info h2 {
+    width: 20%;
+}
+.form-chiTiet-info input,
+.form-chiTiet-info select {
+    width: 80%;
+    padding: 5px;
+}
+.form-chiTiet-footer-submit {
+    width: 80%;
+    margin-top: 15px;
+    float: right;
+}
+.form-chiTiet-footer-submit input {
+    padding: 1%;
+    float: left;
+    width: 30%;
+    font-size: 1rem;
+    color: white;
+    background-color: #1a73e8;
+    border: none;
+    transition: 0.3s;
+}
+.form-chiTiet-footer-submit input:hover {
+    cursor: pointer;
+    background-color: #1252a7;
+}
+
+.form-themHinhAnh {
+    display: inline-flex;
+    justify-content: space-around;
+    float: right;
+    width: 80%;
+    margin: 2% 0;
+}
+.form-themHinhAnh-input {
+    border: 1px solid rgb(179, 179, 179);
+    margin-right: 2%;
+}
+.btn-modal-show {
+    padding: 0.4%;
+    border: none;
+    background-color: #d3d3d3;
+    margin-left: 5%;
+    transition: 0.3s;
+}
+.btn-modal-show:hover {
+    background-color: #999999;
+    cursor: pointer;
+}
