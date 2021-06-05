@@ -14,9 +14,9 @@ const ThongTinKhach = () => {
                         <div className="form-thongTinLienHe-input">
                             <label>Danh xưng</label>
                             <select id="danhXung">
-                                <option value="ong">Ông</option>
-                                <option value="ba">Bà</option>
-                                <option value="co">Cô</option>
+                                <option value="Ông">Ông</option>
+                                <option value="Bà">Bà</option>
+                                <option value="Cô">Cô</option>
                             </select>
                         </div>
                         <div className="form-thongTinLienHe-input">
@@ -26,7 +26,7 @@ const ThongTinKhach = () => {
 
                         <div className="form-thongTinLienHe-input">
                             <label>Điện thoại</label>
-                            <input type="number" id="input-dienThoai-chung" />
+                            <input type="text" id="input-dienThoai-chung" />
                         </div>
 
                         <div className="form-thongTinLienHe-input">
