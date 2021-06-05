@@ -4,20 +4,21 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { useState, useEffect } from "react";
 
+import server from "./serverAddress";
+
 //Import các trang
 import Index from "./pages/index";
 import DiaDiem from "./pages/diaDiem";
 import DatCho from "./pages/datCho";
 import TimKiem from "./pages/timKiem";
 import ChiTietTour from "./pages/chiTietTour";
-import NgayDatTour from "./components/PageChiTietTour/NgayDatTour";
 import ThanhToan from "./pages/thanhToan";
 
 const App = () => {
 	//GET tất cả địa điểm
 	const [DiaDiems, setDiaDiems] = useState([]);
 	useEffect(() => {
-		fetch("http://localhost:5000/diaDiem")
+		fetch(server + "/diaDiem")
 			.then((data) => {
 				return data.json();
 			})
@@ -32,7 +33,7 @@ const App = () => {
 	//GET tất cả tour Hà Nội
 	const [TourHaNoi, setTourHaNoi] = useState([]);
 	useEffect(() => {
-		fetch("http://localhost:5000/tour/2")
+		fetch(server + "/tour/2")
 			.then((data) => {
 				return data.json();
 			})
@@ -75,9 +76,6 @@ const App = () => {
 
 						<Route exact path="/timKiem">
 							<TimKiem />
-						</Route>
-						<Route exact path="/ngay">
-							<NgayDatTour />
 						</Route>
 					</Switch>
 				</div>

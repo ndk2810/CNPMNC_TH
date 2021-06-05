@@ -9,15 +9,45 @@ function NgayDatTour({ Tour, KhungThoiGian }) {
 		const soNguoiLon = parseInt(document.getElementById("soNguoiLon").value);
 		const soTreEm = parseInt(document.getElementById("soTreEm").value);
 
-		document.getElementById('tongTien').innerText = numberComma((soNguoiLon * Tour.GiaNguoiLon * 1000) + (soTreEm * Tour.GiaTreEm)) + " VNĐ"
-	}
-	var today = new Date()
+		document.getElementById("tongTien").innerText =
+			numberComma(
+				soNguoiLon * Tour.GiaNguoiLon * 1000 + soTreEm * Tour.GiaTreEm
+			) + " VNĐ";
+	};
+
+	const validation = () => {
+		const ngayDi = document.getElementById("ngayDi").value;
+		const soNguoiLon = document.getElementById("soNguoiLon").value;
+		const soTreEm = document.getElementById("soTreEm").value;
+		const idKhungGio = document.getElementById("khungGio").value;
+
+		if (ngayDi)
+			window.location.href =
+				"/datCho?ngayDi=" +
+				ngayDi +
+				"&soNguoiLon=" +
+				soNguoiLon +
+				"&soTreEm=" +
+				soTreEm +
+				"&idKhungGio=" +
+				idKhungGio +
+				"&idTour=" +
+				Tour.IDTour;
+		else alert("Vui lòng chọn ngày đi");
+	};
+
+	var today = new Date();
+
 	return (
 		<div>
 			<form>
 				<div className="ngayDatTour">
 					<div className="ngayDatTour-calendar">
-						<DatePickerComponent placeholder="Enter Date" min={today}></DatePickerComponent>
+						<DatePickerComponent
+							id="ngayDi"
+							placeholder="Enter Date"
+							min={today}
+						></DatePickerComponent>
 					</div>
 
 					<div className="ngayDatTour-soNguoiDi">
@@ -50,7 +80,7 @@ function NgayDatTour({ Tour, KhungThoiGian }) {
 					<div className="ngayDatTour-khungGio">
 						<div className="ngayDatTour-khungGio-input">
 							<label>Khung giờ </label>
-							<select>
+							<select id="khungGio">
 								{KhungThoiGian.map((khungTG) => {
 									return (
 										<option value={khungTG.IDKhungThoiGian}>
@@ -61,17 +91,10 @@ function NgayDatTour({ Tour, KhungThoiGian }) {
 							</select>
 						</div>
 					</div>
-					<div>
-						<Link to="/datCho" className="ngayDatTour-submit">
-							<button
-								className="btn-timtour btn-hoanthanh"
-								style={{ width: 100, position: "relative", bottom: 10 }}
-							>
-								Hoàn thành
-							</button>
-						</Link>
-					</div>
 				</div>
+				<p onClick={validation} className="ngayDatTour-submit">
+					Hoàn thành
+				</p>
 			</form>
 		</div>
 	);

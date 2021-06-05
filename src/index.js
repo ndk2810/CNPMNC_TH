@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 //IMPORT CSS HERE
 import "./styles/Grid.css";
 import "./styles/queries.css";
+import "./styles/index.css";
 
 ReactDOM.render(
 	<React.StrictMode>

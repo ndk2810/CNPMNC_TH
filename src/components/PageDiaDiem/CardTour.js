@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import numberComma from '../../resources/scripts/numberComma'
+import server from '../../serverAddress'
 
 const CardTour = ({ tour }) => {
 	//GET Hình ảnh bìa của tour
 	let [HinhAnh, setHinhAnh] = useState([]);
 	useEffect(() => {
-		fetch("http://localhost:5000/tour/hinhAnh/" + tour.IDTour)
+		fetch(server + "/tour/hinhAnh/" + tour.IDTour)
 			.then((data) => {
 				return data.json();
 			})
@@ -21,7 +22,7 @@ const CardTour = ({ tour }) => {
 	//GET thể loại tour
 	let [TheLoaiTour, setTheLoaiTour] = useState([]);
 	useEffect(() => {
-		fetch("http://localhost:5000/theLoaiTour/" + tour.IDTheLoaiTour)
+		fetch(server + "/theLoaiTour/" + tour.IDTheLoaiTour)
 			.then((data) => {
 				return data.json();
 			})

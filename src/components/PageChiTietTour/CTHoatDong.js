@@ -3,7 +3,7 @@ import { useLocation } from "react-router";
 
 const CTHoatDong = ({ Tour }) => {
 	const tentheloaitour = useLocation();
-	console.log(tentheloaitour);
+
 	const query = new URLSearchParams(tentheloaitour.search);
 	return (
 		<div>
