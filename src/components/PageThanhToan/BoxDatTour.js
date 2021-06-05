@@ -1,6 +1,6 @@
 import React from "react";
 import { Input } from "antd";
-import "antd/dist/antd.css";
+//import "antd/dist/antd.css";
 const BoxDatTour = () => {
 	return (
 		<div className="container-thanhtoan">
@@ -24,25 +24,25 @@ const BoxDatTour = () => {
 					</h3>
 					<Input
 						placeholder="16 chữ số mặt trên mặt thẻ"
-						style={{ width: 445, marginLeft: 15 }}
+						style={{ width: 445, marginLeft: 15, padding: 6 }}
 					></Input>
 					<div className="input-group-thoigianthe">
 						<div className="input-group1">
 							<p>Hiệu lực đến</p>
-							<Input placeholder="MM/YY"></Input>
+							<Input placeholder="MM/YY" style={{ padding: 6 }}></Input>
 						</div>
 						<div className="input-group2">
 							<p>CVV</p>
-							<Input placeholder="3 số CVV"></Input>
+							<Input placeholder="3 số CVV" style={{ padding: 6 }}></Input>
 						</div>
 					</div>
 					<div className="input-ten">
-						<h3 style={{ fontSize: 15, marginLeft: 20, paddingTop: 20 }}>
+						<h3 style={{ fontSize: 15, marginLeft: 20, paddingTop: 20, padding: 6 }}>
 							Tên trên thẻ
 						</h3>
 						<Input
 							placeholder="Tên trên thẻ"
-							style={{ width: 445, marginLeft: 15 }}
+							style={{ width: 445, marginLeft: 15, padding: 6 }}
 						></Input>
 					</div>
 					<div className="box-giatienchitiet">

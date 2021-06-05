@@ -43,7 +43,7 @@
 .input-group-thoigianthe {
 	display: flex;
 	margin-top: 2rem;
-	justify-content: space-evenly;
+	justify-content: space-around;
 }
 .input-group1 {
 	padding: 0 auto;
