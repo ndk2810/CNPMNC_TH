@@ -1,3 +1,4 @@
+import '../styles/index.css'
 //import components
 import TopImage from "../components/PageIndex/TopImage";
 import SearchBox from "../components/PageIndex/SearchBox";

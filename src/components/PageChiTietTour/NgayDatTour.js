@@ -9,21 +9,15 @@ function NgayDatTour({ Tour, KhungThoiGian }) {
 		const soNguoiLon = parseInt(document.getElementById("soNguoiLon").value);
 		const soTreEm = parseInt(document.getElementById("soTreEm").value);
 
-		document.getElementById("tongTien").innerText =
-			numberComma(
-				soNguoiLon * Tour.GiaNguoiLon * 1000 + soTreEm * Tour.GiaTreEm
-			) + " VNĐ";
-	};
-
+		document.getElementById('tongTien').innerText = numberComma((soNguoiLon * Tour.GiaNguoiLon * 1000) + (soTreEm * Tour.GiaTreEm)) + " VNĐ"
+	}
+	var today = new Date()
 	return (
 		<div>
 			<form>
 				<div className="ngayDatTour">
 					<div className="ngayDatTour-calendar">
-						<DatePickerComponent
-							min={today}
-							placeholder="Enter Date"
-						></DatePickerComponent>
+						<DatePickerComponent placeholder="Enter Date" min={today}></DatePickerComponent>
 					</div>
 
 					<div className="ngayDatTour-soNguoiDi">
