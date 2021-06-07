@@ -1,10 +1,9 @@
 import React from "react";
 import { Input } from "antd";
 //import "antd/dist/antd.css";
-const BoxDatTour = () => {
+const BoxThanhToan = () => {
 	return (
 		<div className="container-thanhtoan">
-			<h3>Thanh Toán</h3>
 			<div className="box">
 				<div className="box-gioithieu">
 					<span style={{ marginLeft: 40 }}>travelokaPay</span>
@@ -37,7 +36,14 @@ const BoxDatTour = () => {
 						</div>
 					</div>
 					<div className="input-ten">
-						<h3 style={{ fontSize: 15, marginLeft: 20, paddingTop: 20, padding: 6 }}>
+						<h3
+							style={{
+								fontSize: 15,
+								marginLeft: 20,
+								paddingTop: 20,
+								padding: 6,
+							}}
+						>
 							Tên trên thẻ
 						</h3>
 						<Input
@@ -60,10 +66,33 @@ const BoxDatTour = () => {
 							<div className="tien">690.000VND</div>
 						</div>
 					</div>
+					<div className="end-box-thanhtoan">
+						<p>
+							<span>
+								Bằng việc nhấn Thanh toán, bạn đồng ý
+								<a href="https://www.traveloka.com/en-vn/termsandconditions">
+									Điều khoản & Điều kiện
+								</a>
+								và
+								<a href="https://www.traveloka.com/en-vn/privacypolicy">
+									Chính sách quyền riêng tư
+								</a>
+							</span>
+						</p>
+						<button className="btn-thanhtoan">
+							<img
+								src="https://ik.imagekit.io/tvlk/image/imageResource/2017/01/17/1484666312891-e732ae873c384e84346bcccb8bb3eb1c.png?tr=q-75"
+								style={{ width: 15 }}
+							></img>
+							<span style={{ paddingLeft: 8 }}>
+								Thanh toán thẻ tín dụng Paypal
+							</span>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
 	);
 };
 
-export default BoxDatTour;
+export default BoxThanhToan;

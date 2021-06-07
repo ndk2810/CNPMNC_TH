@@ -1,11 +1,14 @@
 import React from "react";
-import BoxDatTour from "../components/PageThanhToan/BoxDatTour";
+import BoxThanhToan from "../components/PageThanhToan/BoxThanhToan";
+import BoxTour from "../components/PageThanhToan/BoxTour";
 import "../styles/thanhToan.css";
 
 const thanhToan = () => {
 	return (
 		<div>
-			<BoxDatTour />
+			<h3 style={{ textAlign: "center" }}>Thanh Toán</h3>
+			<BoxTour />
+			<BoxThanhToan />
 		</div>
 	);
 };

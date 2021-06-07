@@ -11,16 +11,17 @@
 }
 .box {
 	position: relative;
-	margin-left: 30rem;
+	margin-left: 22rem;
 	width: 500px;
 	min-height: 550px;
+	margin-top: 1rem;
 	display: flex;
 	z-index: 1000;
 }
 .box-gioithieu {
 	position: absolute;
 	width: 12rem;
-	height: 34.4rem;
+	height: 37.5rem;
 	height: calc(100%-80px);
 	background: #073e68;
 	z-index: 1;
@@ -37,7 +38,7 @@
 	margin-bottom: 12rem;
 	margin-left: 12rem;
 	width: 500px;
-	min-height: 550px;
+	min-height: 600px;
 	background: whitesmoke;
 }
 .input-group-thoigianthe {
@@ -76,4 +77,81 @@
 	margin-left: 20px;
 	justify-content: space-between;
 	padding-top: 15px;
+}
+.btn-thanhtoan {
+	width: 50%;
+	height: 2.5rem;
+	text-align: center;
+	margin-top: 2rem;
+	margin-left: 15rem;
+	padding: 0.6rem;
+	border-width: 2px;
+	border-radius: 10px;
+	border-color: rgba(255, 255, 255, 1);
+	background-color: rgb(255, 94, 31);
+	border: 0 solid black;
+	cursor: pointer;
+	color: seashell;
+}
+.end-box-thanhtoan p {
+	text-align: right;
+	font-size: 14px;
+	color: #434343;
+	line-height: 25px;
+	margin-left: 4rem;
+}
+.end-box-thanhtoan p a {
+	color: #0d7fcc;
+}
+
+.Box-tour {
+	width: 300px;
+	height: 15rem;
+	float: right;
+	margin-top: 1rem;
+	margin-right: 10rem;
+	background: whitesmoke;
+	box-shadow: rgb(3 18 26 / 20%) 0px 1px 2px;
+}
+.Ma-datcho {
+	color: #8f8f8f;
+	text-transform: uppercase;
+	margin-left: 1rem;
+}
+.Chitiet1 {
+	border-top: 1px solid rgb(216, 216, 216);
+}
+.Chitiet2 {
+	text-transform: uppercase;
+	margin-left: 1rem;
+	color: #8f8f8f;
+	font-size: 12px;
+	margin-top: 1rem;
+}
+.diadiemtour {
+	margin-left: 1rem;
+}
+.ngaythamquan {
+	margin-top: 0.5rem;
+	display: flex;
+	margin-left: 1rem;
+	justify-content: space-between;
+	color: #8f8f8f;
+	font-size: 14px;
+}
+.apdung {
+	margin-top: 1rem;
+	display: flex;
+	margin-left: 1rem;
+	justify-content: space-between;
+	color: #8f8f8f;
+	font-size: 14px;
+}
+.thoigian {
+	margin-top: 1rem;
+	display: flex;
+	margin-left: 1rem;
+	justify-content: space-between;
+	color: #8f8f8f;
+	font-size: 14px;
 }
