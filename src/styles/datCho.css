@@ -61,7 +61,7 @@ img {
 
 /* BOX TOUR ĐẶT */
 .box-tourDat {
-    width: max-content;
+    width: 458px;
     float: right;
     margin-top: 6%;
     box-shadow: rgb(3 18 26 / 20%) 0px 1px 2px;
@@ -102,6 +102,9 @@ img {
 .box-tourDat-chiTietTour {
     display: inline-flex;
 }
+.box-tourDat-chiTietTour p {
+    width: 360px;
+}
 .pd {
     padding: 5px 15px;
 }
@@ -123,4 +126,8 @@ img {
 .box-tourDat-thongTinTour-value {
     text-align: end;
     font-weight: bold;
+}
+.box-tomTat-giaCaNhan h4 span {
+    font-weight: lighter;
+    font-size: smaller;
 }

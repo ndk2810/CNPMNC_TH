@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import server from '../../serverAddress'
 
 const accordion = () => {
     var acc = document.getElementsByClassName("accordion");
@@ -22,7 +23,7 @@ const BoLoc = ({ filterTour }) => {
     //GET các thể loại tour từ server để load
     let [TheLoaiTour, setTheLoaiTour] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/theLoaiTour")
+        fetch(server + "/theLoaiTour")
             .then(data => {
                 return data.json();
             })

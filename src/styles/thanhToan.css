@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+@font-face {
+	font-family: MuseoSans;
+	src: url("../resources/fonts/SVN-Museo\ Sans\ Regular.ttf");
+}
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: "MuseoSans";
+}
+.box {
+	position: relative;
+	margin-left: 22rem;
+	width: 500px;
+	min-height: 550px;
+	margin-top: 1rem;
+	display: flex;
+	z-index: 1000;
+}
+.box-gioithieu {
+	position: absolute;
+	width: 12rem;
+	height: 37.5rem;
+	height: calc(100%-80px);
+	background: #073e68;
+	z-index: 1;
+	padding-top: 1rem;
+	flex-direction: column;
+	box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+	color: seashell;
+}
+.box-gioithieu h3 {
+	color: seashell;
+}
+.box-thanhtoan {
+	z-index: 0;
+	position: absolute;
+	margin-bottom: 12rem;
+	margin-left: 12rem;
+	width: 500px;
+	min-height: 600px;
+	background: whitesmoke;
+}
+.input-group-thoigianthe {
+	display: flex;
+	margin-top: 2rem;
+	justify-content: space-around;
+}
+.input-group1 {
+	padding: 0 auto;
+	width: 15rem;
+}
+.input-group2 {
+	position: relative;
+	right: 1rem;
+	width: 12rem;
+}
+.box-giatienchitiet {
+	width: 100%;
+	height: 150px;
+	background: white;
+	margin-top: 2rem;
+}
+.giachitiet {
+	display: flex;
+	margin-left: 20px;
+	justify-content: space-between;
+}
+/* .giachitiet-tienich {
+	display: flex;
+	margin-left: 20px;
+	justify-content: space-between;
+	border-bottom: 1px solid rgb(216, 216, 216);
+} */
+.gia-tongtien {
+	display: flex;
+	margin-left: 20px;
+	justify-content: space-between;
+	padding-top: 15px;
+	border-top: 1px solid rgb(216, 216, 216);
+}
+.btn-thanhtoan {
+	width: 50%;
+	height: 2.5rem;
+	text-align: center;
+	margin-top: 2rem;
+	margin-left: 15rem;
+	padding: 0.6rem;
+	border-width: 2px;
+	border-radius: 10px;
+	border-color: rgba(255, 255, 255, 1);
+	background-color: rgb(255, 94, 31);
+	border: 0 solid black;
+	cursor: pointer;
+	color: seashell;
+}
+.end-box-thanhtoan p {
+	text-align: right;
+	font-size: 14px;
+	color: #434343;
+	line-height: 25px;
+	margin-left: 4rem;
+}
+.end-box-thanhtoan p a {
+	color: #0d7fcc;
+}
+
+.Box-tour {
+	width: 300px;
+	height: 15rem;
+	float: right;
+	margin-top: 1rem;
+	margin-right: 10rem;
+	background: whitesmoke;
+	box-shadow: rgb(3 18 26 / 20%) 0px 1px 2px;
+}
+.Box-tour-chiTietDat {
+	padding-right: 12px;
+}
+.Ma-datcho {
+	color: #8f8f8f;
+	text-transform: uppercase;
+	padding-left: 1rem;
+	padding-bottom: 0.6rem;
+	border-bottom: 1px solid rgb(216, 216, 216);
+}
+.Ma-datcho h3 {
+	padding-top: 10px;
+}
+.Chitiet2 {
+	text-transform: uppercase;
+	margin-left: 1rem;
+	color: #8f8f8f;
+	font-size: 12px;
+	margin-top: 1rem;
+}
+.diadiemtour {
+	margin-left: 1rem;
+}
+.ngaythamquan {
+	margin-top: 0.5rem;
+	display: flex;
+	margin-left: 1rem;
+	justify-content: space-between;
+	color: #8f8f8f;
+	font-size: 14px;
+}
+.apdung {
+	margin-top: 1rem;
+	display: flex;
+	margin-left: 1rem;
+	justify-content: space-between;
+	color: #8f8f8f;
+	font-size: 14px;
+}
+.thoigian {
+	margin-top: 1rem;
+	display: flex;
+	margin-left: 1rem;
+	justify-content: space-between;
+	color: #8f8f8f;
+	font-size: 14px;
+}
+.thanhToan-cardInput {
+	padding: 2% !important;
+	background-color: white;
+}

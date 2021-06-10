@@ -1,6 +1,10 @@
 import React from "react";
+import { useLocation } from "react-router";
 
 const CTHoatDong = ({ Tour }) => {
+	const tentheloaitour = useLocation();
+
+	const query = new URLSearchParams(tentheloaitour.search);
 	return (
 		<div>
 			<div className="hoatdong">
@@ -20,7 +24,7 @@ const CTHoatDong = ({ Tour }) => {
 								<img src="https://ik.imagekit.io/tvlk/image/imageResource/2020/02/24/1582533078216-28e45a291d35a380e73193eff26b4938.png"></img>
 							</div>
 							<div className="NoiDung-YeuThich-NoiDung-DiemNoiBat">
-								Phù hợp cho: Yêu thích thiên nhiên
+								Yêu thích:{query.get("TenTheLoai")}
 							</div>
 						</div>
 						<div className="LichTrinh-NoiDung-DiemNoiBat">
@@ -36,6 +40,7 @@ const CTHoatDong = ({ Tour }) => {
 						</div>
 						<div className="TraiNghiem-NoiDung-DiemNoiBat">
 							<h2
+								id="ngayDatTour"
 								className="TieuDe-TraiNghiem-DiemNoiBat-ChiTiet"
 								style={{ paddingTop: 15 }}
 							>
@@ -52,7 +57,7 @@ const CTHoatDong = ({ Tour }) => {
 					<div className="Noidung-DatTour-small-hoatdong ">
 						<div className="tieude-diadiem">{Tour.TenTour}</div>
 						<div className="btn-timtour btn-Noidung-DatTour-small-hoatdong">
-							Tìm tour
+							<a className="btn-timtour-a" href="#ngayDatTour">Tìm tour</a>
 						</div>
 						<div className="Ve-Noidung-DatTour-small-hoatdong">
 							<img src="https://ik.imagekit.io/tvlk/image/imageResource/2020/02/24/1582532977248-c01603da7f91217b28788f2c9642158f.png?tr=h-16,w-16"></img>
@@ -91,10 +96,10 @@ const CTHoatDong = ({ Tour }) => {
 				</div>
 			</div>
 
-			<div className="ThongTin-DuaDon">
+			{/* <div className="ThongTin-DuaDon">
 				<div className="Type-ThongTin-DuaDon"></div>
 				<div className=""></div>
-			</div>
+			</div> */}
 		</div>
 	);
 };

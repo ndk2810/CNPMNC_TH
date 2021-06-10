@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import '../styles/diaDiem.css'
+import server from '../serverAddress'
 
 //COMPONENTS
 import TourList from '../components/PageDiaDiem/TourList'
@@ -29,7 +30,7 @@ const DiaDiem = () => {
     //Lấy các tours có IDDiaDiem này
     const [Tours, setTours] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/tour/" + IDDiaDiem)
+        fetch(server + "/tour/" + IDDiaDiem)
             .then(data => {
                 return data.json();
             })

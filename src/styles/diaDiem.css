@@ -16,7 +16,8 @@
     width: 100%;
 }
 .card-tour-img {
-    width: 20rem;
+    width: 32rem;
+    height: 14.4rem;
 }
 .card-tour-info-diaDiem {
     display: inline-block;

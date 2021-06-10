@@ -1,14 +1,13 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import server from '../../serverAddress'
 
 const TourTrangChu = ({ Tour }) => {
-    //Link dùng để chuyển trang
-    const linkTo = '/thongTinTour?IDTour=' + Tour.IDTour
 
     //GET Hình ảnh bìa của tour
     let [HinhAnh, setHinhAnh] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/tour/hinhAnh/" + Tour.IDTour)
+        fetch(server + "/tour/hinhAnh/" + Tour.IDTour)
             .then(data => {
                 return data.json();
             })
@@ -20,6 +19,24 @@ const TourTrangChu = ({ Tour }) => {
                 console.log(err);
             });
     }, []);
+
+    //GET thể loại tour
+    let [TheLoaiTour, setTheLoaiTour] = useState([]);
+    useEffect(() => {
+        fetch(server + "/theLoaiTour/" + Tour.IDTheLoaiTour)
+            .then((data) => {
+                return data.json();
+            })
+            .then((data) => {
+                if (data.length > 0) setTheLoaiTour(data[0]);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }, []);
+
+    //Link dùng để chuyển trang
+    const linkTo = '/thongTinTour?IDTour=' + Tour.IDTour + "&TenTheLoai=" + TheLoaiTour.TenTheLoaiTour
 
     let src = 'url(https://semantic-ui.com/images/wireframe/white-image.png)'
     if (HinhAnh.HinhAnh) {

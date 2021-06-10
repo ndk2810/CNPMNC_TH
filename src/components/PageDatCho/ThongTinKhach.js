@@ -7,32 +7,31 @@ const ThongTinKhach = () => {
             <div>
                 <form className="form-thongTinLienHe">
                     <div className="form-thongTinLienHe-header">
-                        <h3>Người lớn 1</h3>
-                        <button>Lưu</button>
+                        <h3>Chung 1</h3>
                     </div>
 
                     <div className="form-thongTinLienHe-body">
                         <div className="form-thongTinLienHe-input">
                             <label>Danh xưng</label>
-                            <select>
-                                <option value="ong">Ông</option>
-                                <option value="ba">Bà</option>
-                                <option value="co">Cô</option>
+                            <select id="danhXung">
+                                <option value="Ông">Ông</option>
+                                <option value="Bà">Bà</option>
+                                <option value="Cô">Cô</option>
                             </select>
                         </div>
                         <div className="form-thongTinLienHe-input">
                             <label>Họ tên</label>
-                            <input type="text" id="input-hoTen" />
+                            <input type="text" id="input-hoTen-chung" />
                         </div>
 
                         <div className="form-thongTinLienHe-input">
                             <label>Điện thoại</label>
-                            <input type="number" id="input-dienThoai" />
+                            <input type="text" id="input-dienThoai-chung" />
                         </div>
 
                         <div className="form-thongTinLienHe-input">
                             <label>Email</label>
-                            <input type="email" id="input-email" />
+                            <input type="email" id="input-email-chung" />
                         </div>
                     </div>
                 </form>
