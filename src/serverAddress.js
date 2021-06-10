@@ -1,7 +1,7 @@
-const server = "http://localhost:5000"
+const server = "https://tourdulich-backend.herokuapp.com/"
 
 //Host backend:
-//https://dulich-huflit.azurewebsites.net
+//https://tourdulich-backend.herokuapp.com/
 
 
 //Localhost dùng để test và develop
