@@ -97,7 +97,8 @@ const DatCho = () => {
                     IDTour: IDTour
                 })
                     .then(() => {
-                        window.location.reload()
+                        const linkToThanhToan = "/thanhToan?HoTenChung=" + hoTenChung + "&SoDienThoaiChung=" + dienThoaiChung + "&IDTour=" + IDTour + "&NgayDi=" + ngayDi;
+                        window.location.href = linkToThanhToan
                     })
                     .catch(err => alert(err))
             }

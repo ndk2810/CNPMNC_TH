@@ -34,6 +34,7 @@
 	color: seashell;
 }
 .box-thanhtoan {
+	z-index: 0;
 	position: absolute;
 	margin-bottom: 12rem;
 	margin-left: 12rem;
@@ -66,17 +67,18 @@
 	margin-left: 20px;
 	justify-content: space-between;
 }
-.giachitiet-tienich {
+/* .giachitiet-tienich {
 	display: flex;
 	margin-left: 20px;
 	justify-content: space-between;
 	border-bottom: 1px solid rgb(216, 216, 216);
-}
+} */
 .gia-tongtien {
 	display: flex;
 	margin-left: 20px;
 	justify-content: space-between;
 	padding-top: 15px;
+	border-top: 1px solid rgb(216, 216, 216);
 }
 .btn-thanhtoan {
 	width: 50%;
@@ -113,13 +115,18 @@
 	background: whitesmoke;
 	box-shadow: rgb(3 18 26 / 20%) 0px 1px 2px;
 }
+.Box-tour-chiTietDat {
+	padding-right: 12px;
+}
 .Ma-datcho {
 	color: #8f8f8f;
 	text-transform: uppercase;
-	margin-left: 1rem;
+	padding-left: 1rem;
+	padding-bottom: 0.6rem;
+	border-bottom: 1px solid rgb(216, 216, 216);
 }
-.Chitiet1 {
-	border-top: 1px solid rgb(216, 216, 216);
+.Ma-datcho h3 {
+	padding-top: 10px;
 }
 .Chitiet2 {
 	text-transform: uppercase;
@@ -154,4 +161,8 @@
 	justify-content: space-between;
 	color: #8f8f8f;
 	font-size: 14px;
+}
+.thanhToan-cardInput {
+	padding: 2% !important;
+	background-color: white;
 }
