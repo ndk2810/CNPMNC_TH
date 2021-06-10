@@ -1,10 +1,7 @@
 import React from "react";
-import { Input } from "antd";
 import { Elements } from '@stripe/react-stripe-js'
 import { loadStripe } from '@stripe/stripe-js'
-import server from '../../serverAddress'
 import PaymentForm from "./PaymentForm";
-import numberComma from "../../resources/scripts/numberComma";
 
 const PUBLIC_KEY = "pk_test_51IzjQtAHeeyUAi3R0NUAODbvvHUsbSnR28rxbiSZOC2MVmk1M5d835wj7Nh6GwMCERYO4cgUwVt7V9elmc27uFC7002UAaioYH"
 const stripeTestPromise = loadStripe(PUBLIC_KEY)
