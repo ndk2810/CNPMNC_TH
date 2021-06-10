@@ -41,7 +41,11 @@ const Header = () => {
                     <li>
                         <a href="#" className="container">
                             <img className="service-logo" src="https://d1785e74lyxkqq.cloudfront.net/webxpe-desktop/_next/static/f2171ac260ed89a6b04b4097e1fcd4c0.svg" alt="" />
-                            <div className="text">Tài khoản</div>
+                            <div className="text">
+                                <Link to="/login">
+                                    Tài khoản
+                                </Link>
+                            </div>
                         </a>
                     </li>
                 </ul>
