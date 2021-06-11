@@ -25,8 +25,9 @@ const PaymentForm = ({ amount, tenTour, hoTen }) => {
                 })
 
                 if (respone.data.success) {
-                    console.log("Successful payment !")
                     setSuccess(true)
+                    alert("Thanh toán thành công rồi nha !")
+                    window.location.replace('/')
                 }
             }
             catch (error) {
