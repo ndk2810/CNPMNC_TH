@@ -1,6 +1,6 @@
 import React from "react";
 
-const BoxTour = ({ ThongTinDat, NgayDi }) => {
+const BoxTour = ({ ThongTinDat, NgayDi, KTG }) => {
 	return (
 		<div className="tour">
 			<form className="Box-tour">
@@ -23,7 +23,7 @@ const BoxTour = ({ ThongTinDat, NgayDi }) => {
 					</div>
 					<div className="thoigian">
 						<div>Khung thời gian</div>
-						<div>08:30</div>
+						<div>{KTG}</div>
 					</div>
 				</div>
 			</form>

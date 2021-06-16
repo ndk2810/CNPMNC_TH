@@ -4,7 +4,7 @@ const Login = () => {
 	return (
 		<div className="form-content">
 			<form className="form">
-				<h1>Dang nhap</h1>
+				<h1>ĐĂNG NHẬP</h1>
 				<div className="form-inputs">
 					<label
 						htmlFor="username"

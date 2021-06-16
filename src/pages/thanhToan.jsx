@@ -19,6 +19,7 @@ const ThanhToan = () => {
 	const HoTen = params.get('HoTenChung');
 	const SoDienThoai = params.get('SoDienThoaiChung');
 	const NgayDi = params.get('NgayDi');
+	const KTG = params.get('KTG');
 
 	//Search tour
 	const [ThongTinDat, setThongTinDat] = useState([])
@@ -54,7 +55,7 @@ const ThanhToan = () => {
 	return (
 		<div>
 			<h3 style={{ textAlign: "center" }}>Thanh Toán</h3>
-			<BoxTour ThongTinDat={ThongTinDat} NgayDi={NgayDi} />
+			<BoxTour ThongTinDat={ThongTinDat} NgayDi={NgayDi} KTG={KTG} />
 			<BoxThanhToan ThongTinDat={ThongTinDat} Tour={Tour} />
 		</div>
 	);

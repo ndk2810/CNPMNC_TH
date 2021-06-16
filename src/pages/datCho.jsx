@@ -80,7 +80,7 @@ const DatCho = () => {
         }
         else {
             if (window.confirm('Xác nhận đặt tour ?')) {
-                axios.post(server + '/datTour', {
+                axios.post(server + '/datTour/', {
                     DanhXung: danhXung,
                     HoTen: hoTen,
                     SoDienThoai: dienThoai,
@@ -97,7 +97,7 @@ const DatCho = () => {
                     IDTour: IDTour
                 })
                     .then(() => {
-                        const linkToThanhToan = "/thanhToan?HoTenChung=" + hoTenChung + "&SoDienThoaiChung=" + dienThoaiChung + "&IDTour=" + IDTour + "&NgayDi=" + ngayDi;
+                        const linkToThanhToan = "/thanhToan?HoTenChung=" + hoTenChung + "&SoDienThoaiChung=" + dienThoaiChung + "&IDTour=" + IDTour + "&NgayDi=" + ngayDi + "&KTG=" + KhungThoiGian.ThoiGian;
                         window.location.href = linkToThanhToan
                     })
                     .catch(err => alert(err))
