@@ -132,7 +132,7 @@ h4 {
 /* HEADER */
 .header {
 	width: 100%;
-	overflow: hidden;
+	overflow: visible;
 	position: fixed;
 	top: 0;
 	z-index: 1;
@@ -178,10 +178,40 @@ nav ul li img.service-logo {
 	margin-top: 6px;
 	margin-bottom: 5px;
 }
+.service-logo-login {
+	background-color: rgb(1, 148, 243);
+	border-radius: 20px;
+	object-fit: fill;
+	width: 32px !important;
+}
 .container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.dangNhap {
+	position: relative;
+	display: inline-block;
+}
+.dangNhap-hover-box {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 2;
+}
+.dangNhap-hover-box div {
+	padding: 4%;
+	font-weight: lighter;
+}
+.dangNhap-hover-box div:hover {
+	background-color: rgb(177, 177, 177);
+	transition: 0.3s;
+}
+.dangNhap:hover .dangNhap-hover-box {
+	display: block;
 }
 
 img {

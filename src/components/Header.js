@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Header = () => {
+const Header = ({ user, handleLogout }) => {
     return (
         <div className="header">
             <nav className="main-nav">
@@ -10,41 +10,62 @@ const Header = () => {
                 <ul>
                     <li>
                         <a href="#" className="container">
-                            <img className="service-logo" src="https://d1785e74lyxkqq.cloudfront.net/webxpe-desktop/_next/static/f2171ac260ed89a6b04b4097e1fcd4c0.svg" alt="" />
+                            <img className="service-logo" src="https://d1785e74lyxkqq.cloudfront.net/webxpe-desktop/_next/static/f2171ac260ed89a6b04b4097e1fcd4c0.svg" alt="#" />
                             <div className="text">Khuyến mãi</div>
                         </a>
                     </li>
                     <li>
                         <a href="#" className="container">
-                            <img className="service-logo" src="https://d1785e74lyxkqq.cloudfront.net/webxpe-desktop/_next/static/849dc83ea16f4f29a1fb0555c4aa441b.svg" alt="" />
+                            <img className="service-logo" src="https://d1785e74lyxkqq.cloudfront.net/webxpe-desktop/_next/static/849dc83ea16f4f29a1fb0555c4aa441b.svg" alt="#" />
                             <div className="text">Hộp thư của tôi</div>
                         </a>
                     </li>
                     <li>
                         <a href="#" className="container">
-                            <img className="service-logo" src="https://d1785e74lyxkqq.cloudfront.net/webxpe-desktop/_next/static/1e398766a2be8d967bd2823cd972a251.svg" alt="" />
+                            <img className="service-logo" src="https://d1785e74lyxkqq.cloudfront.net/webxpe-desktop/_next/static/1e398766a2be8d967bd2823cd972a251.svg" alt="#" />
                             <div className="text">Đã lưu</div>
                         </a>
                     </li>
                     <li>
                         <a href="#" className="container">
-                            <img className="service-logo" src="https://d1785e74lyxkqq.cloudfront.net/webxpe-desktop/_next/static/93d02ab488090cdfe57f83abf7e7dcd3.svg" alt="" />
+                            <img className="service-logo" src="https://d1785e74lyxkqq.cloudfront.net/webxpe-desktop/_next/static/93d02ab488090cdfe57f83abf7e7dcd3.svg" alt="#" />
                             <div className="text">Đặt chỗ của tôi</div>
                         </a>
                     </li>
                     <li>
                         <a href="#" className="container">
-                            <img className="service-logo" src="https://d1785e74lyxkqq.cloudfront.net/webxpe-desktop/_next/static/f2171ac260ed89a6b04b4097e1fcd4c0.svg" alt="" />
+                            <img className="service-logo" src="https://d1785e74lyxkqq.cloudfront.net/webxpe-desktop/_next/static/f2171ac260ed89a6b04b4097e1fcd4c0.svg" alt="#" />
                             <div className="text">Ngôn ngữ</div>
                         </a>
                     </li>
                     <li>
                         <a href="#" className="container">
-                            <img className="service-logo" src="https://d1785e74lyxkqq.cloudfront.net/webxpe-desktop/_next/static/f2171ac260ed89a6b04b4097e1fcd4c0.svg" alt="" />
+                            <img className="service-logo service-logo-login" src="https://d1785e74lyxkqq.cloudfront.net/webxpe-desktop/_next/static/8cec58721410d02b594f877b8abe9503.svg" alt="#" />
                             <div className="text">
-                                <Link to="/login">
-                                    Tài khoản
-                                </Link>
+                                {
+                                    !user ?
+                                        <Link to="/login">
+                                            Đăng nhập
+                                        </Link>
+                                        :
+                                        // <div class="dropdown">
+                                        //     <button class="dropbtn">Dropdown</button>
+                                        //     <div class="dropdown-content">
+                                        //         <a href="#">Link 1</a>
+                                        //         <a href="#">Link 2</a>
+                                        //         <a href="#">Link 3</a>
+                                        //     </div>
+                                        // </div>
+
+                                        <div className="dangNhap">
+                                            <p>Xin chào {user.email}</p>
+                                            <div className="dangNhap-hover-box">
+                                                <div>Chỉnh sửa hồ sơ</div>
+                                                <div>Tour đã đăng ký</div>
+                                                <div onClick={handleLogout}>Đăng xuất</div>
+                                            </div>
+                                        </div>
+                                }
                             </div>
                         </a>
                     </li>

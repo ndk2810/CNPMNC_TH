@@ -130,3 +130,6 @@
 .form-input-btn:hover {
 	background: linear-gradient(135deg, #71b7e6, #ec3389);
 }
+.form-input-btn:hover {
+	background-color: orange;
+}
