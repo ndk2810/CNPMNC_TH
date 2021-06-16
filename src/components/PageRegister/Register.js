@@ -1,30 +1,16 @@
-import { useForm } from "antd/lib/form/Form";
 import React from "react";
 import { Link } from "react-router-dom";
 import UseRegister from "./UseRegister";
 import validate from "./ValidateInfo";
+
 const Register = () => {
 	const { handleChange, values, handleSubmit, errors } = UseRegister(validate);
+
 	return (
 		<div className="form-content-1">
 			<form className="form-1" onSubmit={handleSubmit}>
 				<h1> Đăng ký</h1>
 				<div className="input-group-1">
-					<div className="form-inputs-1">
-						<label htmlFor="username" className="form-label-1">
-							Tên tài khoản
-						</label>
-						<input
-							id="username"
-							type="text"
-							name="username"
-							className="form-input-1"
-							placeholder="Nhập tên tài khoản"
-							value={values.username}
-							onChange={handleChange}
-						></input>
-						{errors.username && <p>{errors.username}</p>}
-					</div>
 					<div className="form-inputs-1">
 						<label htmlFor="email" className="form-label-1">
 							Email
