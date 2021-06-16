@@ -1,6 +1,6 @@
 import React from "react";
 
-const Login = () => {
+const Login = ({ handleLogin }) => {
 	return (
 		<div className="form-content">
 			<form className="form">
@@ -14,7 +14,7 @@ const Login = () => {
 						Username
 						<input
 							type="text"
-							name="username"
+							id="username"
 							className="form-input"
 							placeholder="Enter your username"
 						></input>
@@ -36,7 +36,10 @@ const Login = () => {
 						></input>
 					</label>
 				</div>
-				<button className="form-input-btn" type="submit">
+				<button className="form-input-btn" type="submit" id="signIn-confirm-btn" onClick={(e) => {
+					e.preventDefault()
+					handleLogin(e)
+				}}>
 					Sign in
 				</button>
 				<span style={{ color: "white" }}>

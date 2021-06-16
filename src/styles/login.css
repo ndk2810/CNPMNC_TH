@@ -52,3 +52,6 @@
 	transition: 0.5s;
 	cursor: pointer;
 }
+.form-input-btn:hover {
+	background-color: orange;
+}

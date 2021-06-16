@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import { useState, useEffect } from "react";
 
 import server from "./serverAddress";
-
+import axios from 'axios'
 
 //Import các trang
 import Index from "./pages/index";
@@ -35,7 +35,7 @@ const App = () => {
 	//GET tất cả tour Hà Nội
 	const [TourHaNoi, setTourHaNoi] = useState([]);
 	useEffect(() => {
-		fetch(server + "/tour/2")
+		fetch(server + "/tour/top4/2")
 			.then((data) => {
 				return data.json();
 			})
@@ -47,10 +47,63 @@ const App = () => {
 			});
 	}, []);
 
+	const getUserInfo = () => {
+		const userToken = JSON.parse(window.localStorage.getItem('userToken'))
+
+		if (userToken) {
+			axios.get('https://oka1kh.azurewebsites.net/api/profiles', {
+				headers: {
+					'Value': 'Token',
+					'authorization': userToken.token
+				}
+			})
+				.then((res) => {
+					if (res.data.status === "SUCCES") {
+						window.localStorage.setItem('userInfo', JSON.stringify(res.data.data.auth[0]))
+						window.location.replace('/')
+					}
+				})
+				.catch(err => console.log(err))
+		}
+		else {
+			alert('Vui lòng đăng nhập lại')
+			window.location.href('/login')
+		}
+	}
+
+	const handleLogin = (e) => {
+		const email = e.target.form[0].value
+		const pass = e.target.form[1].value
+
+		document.getElementById('signIn-confirm-btn').style.backgroundColor = 'green'
+
+		axios.post('https://oka1kh.azurewebsites.net/api/user/login', {
+			email: email,
+			pass: pass
+		})
+			.then((res) => {
+				if (res.data.status === "SUCCES") {
+					window.localStorage.setItem('userToken', JSON.stringify(res.data.data))
+
+					getUserInfo()
+				}
+			})
+			//window.location.replace('/')
+			.catch(err => alert('Tài khoản hoặc mật khẩu sai'))
+	}
+
+	const handleLogout = () => {
+		window.localStorage.removeItem('userToken')
+		window.localStorage.removeItem('userInfo')
+		window.location.reload()
+	}
+
+	const user = JSON.parse(window.localStorage.getItem('userInfo'));
+
 	return (
 		<Router>
 			<div className="App">
-				<Header />
+				<Header user={user} handleLogout={handleLogout} />
 
 				<div className="body">
 					<Switch>
@@ -80,7 +133,7 @@ const App = () => {
 							<TimKiem />
 						</Route>
 						<Route exact path="/login">
-							<Login />
+							<Login handleLogin={handleLogin} />
 						</Route>
 					</Switch>
 				</div>
