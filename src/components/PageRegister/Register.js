@@ -1,5 +1,6 @@
 import { useForm } from "antd/lib/form/Form";
 import React from "react";
+import { Link } from "react-router-dom";
 import UseRegister from "./UseRegister";
 import validate from "./ValidateInfo";
 const Register = () => {
@@ -74,7 +75,10 @@ const Register = () => {
 					Sign up
 				</button>
 				<span className="form-input-login" style={{ marginLeft: 15 }}>
-					Already have account ? Login <a href="#">here</a>
+					Already have account ? Login{" "}
+					<Link to="/login" style={{ color: "blue" }}>
+						here
+					</Link>
 				</span>
 			</form>
 		</div>

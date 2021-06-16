@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
 @font-face {
 	font-family: MuseoSans;
 	src: url("../resources/fonts/SVN-Museo\ Sans\ Regular.ttf");
@@ -51,4 +51,82 @@
 	border-radius: 15px;
 	transition: 0.5s;
 	cursor: pointer;
+} */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+@font-face {
+	font-family: MuseoSans;
+	src: url("../resources/fonts/SVN-Museo\ Sans\ Regular.ttf");
+}
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: "MuseoSans";
+}
+.form-content {
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(135deg, #71b7e6, #ec3389);
+}
+.form {
+	max-width: 700px;
+	width: 100%;
+	background: whitesmoke;
+	padding: 25px 30px;
+	border-radius: 10px;
+}
+.form h1 {
+	font-size: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.form h1::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 3px;
+	width: 30px;
+	background: linear-gradient(135deg, #71b7e6, #ec3389);
+}
+.form-inputs {
+	margin-top: 1.5rem;
+}
+.form-label {
+	font-size: 18px;
+	font-weight: 500;
+}
+.form-input {
+	width: 100%;
+	outline: none;
+	height: 45px;
+	margin-top: 0.5rem;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	padding-left: 15px;
+	font-size: 16px;
+	/* border-bottom-width: 2px;
+	transition: all 0.3s ease; */
+}
+.form-input:hover {
+	border-color: #ec3389;
+}
+.form-inputs p {
+	color: rgb(255, 0, 34);
+}
+.form-input-btn {
+	margin-top: 20px;
+	width: 10rem;
+	height: 40px;
+	border: 1px solid #ccc;
+	border-radius: 15px;
+	font-size: 15px;
+	cursor: pointer;
+	font-weight: 500;
+	background: #ec3389;
+}
+.form-input-btn:hover {
+	background: linear-gradient(135deg, #71b7e6, #ec3389);
 }

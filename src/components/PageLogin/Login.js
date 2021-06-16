@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
 	return (
@@ -6,11 +7,7 @@ const Login = () => {
 			<form className="form">
 				<h1>ĐĂNG NHẬP</h1>
 				<div className="form-inputs">
-					<label
-						htmlFor="username"
-						className="form-label"
-						style={{ color: "white" }}
-					>
+					<label htmlFor="username" className="form-label">
 						Username
 						<input
 							type="text"
@@ -21,11 +18,7 @@ const Login = () => {
 					</label>
 				</div>
 				<div className="form-inputs">
-					<label
-						htmlFor="password"
-						className="form-label "
-						style={{ color: "white" }}
-					>
+					<label htmlFor="password" className="form-label ">
 						Password
 						<input
 							id="password"
@@ -39,11 +32,11 @@ const Login = () => {
 				<button className="form-input-btn" type="submit">
 					Sign in
 				</button>
-				<span style={{ color: "white" }}>
-					Sign up{" "}
-					<a href="#" style={{ color: "blue" }}>
+				<span style={{ marginLeft: 15 }}>
+					No account ? Register{" "}
+					<Link to="/reg" style={{ color: "blue" }}>
 						here
-					</a>
+					</Link>
 				</span>
 			</form>
 		</div>
