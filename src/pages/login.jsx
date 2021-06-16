@@ -2,10 +2,10 @@ import React from "react";
 import "../styles/login.css";
 import Login from "../components/PageLogin/Login";
 
-const login = () => {
+const login = ({ handleLogin }) => {
 	return (
 		<div>
-			<Login />
+			<Login handleLogin={handleLogin} />
 		</div>
 	);
 };
