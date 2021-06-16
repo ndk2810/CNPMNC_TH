@@ -15,6 +15,7 @@ import TimKiem from "./pages/timKiem";
 import ChiTietTour from "./pages/chiTietTour";
 import ThanhToan from "./pages/thanhToan";
 import Login from "./pages/login";
+import Register from "./pages/register";
 
 const App = () => {
 	//GET tất cả địa điểm
@@ -81,6 +82,9 @@ const App = () => {
 						</Route>
 						<Route exact path="/login">
 							<Login />
+						</Route>
+						<Route exact path="/reg">
+							<Register />
 						</Route>
 					</Switch>
 				</div>

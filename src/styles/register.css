@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+@font-face {
+	font-family: MuseoSans;
+	src: url("../resources/fonts/SVN-Museo\ Sans\ Regular.ttf");
+}
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: "MuseoSans";
+}
+.form-content-1 {
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(135deg, #71b7e6, #ec3389);
+}
+.form-1 {
+	max-width: 700px;
+	width: 100%;
+	background: whitesmoke;
+	padding: 25px 30px;
+	border-radius: 10px;
+}
+.form-1 h1 {
+	font-size: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.form-1 h1::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 3px;
+	width: 30px;
+	background: linear-gradient(135deg, #71b7e6, #ec3389);
+}
+.form-inputs-1 {
+	margin-top: 1.5rem;
+}
+.form-label-1 {
+	font-size: 18px;
+	font-weight: 500;
+}
+.form-input-1 {
+	width: 100%;
+	outline: none;
+	height: 45px;
+	margin-top: 0.5rem;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	padding-left: 15px;
+	font-size: 16px;
+	/* border-bottom-width: 2px;
+	transition: all 0.3s ease; */
+}
+.form-input-1:hover {
+	border-color: #ec3389;
+}
+.form-inputs-1 p {
+	color: rgb(255, 0, 34);
+}
+.form-input-btn1 {
+	margin-top: 20px;
+	width: 10rem;
+	height: 40px;
+	border: 1px solid #ccc;
+	border-radius: 15px;
+	font-size: 15px;
+	cursor: pointer;
+	font-weight: 500;
+}
+.form-input-btn1:hover {
+	background: linear-gradient(135deg, #71b7e6, #ec3389);
+}
