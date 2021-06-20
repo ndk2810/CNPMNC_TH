@@ -4,7 +4,6 @@ import { useState, useEffect } from "react"
 
 //COMPONENTS
 import ThongTinLienHe from '../components/PageDatCho/ThongTinLienHe'
-import ThongTinKhach from '../components/PageDatCho/ThongTinKhach'
 import BoxTourDat from '../components/PageDatCho/BoxTourDat'
 import ThoiGianTQ from '../components/PageDatCho/ThoiGianTQ'
 import TomTat from '../components/PageDatCho/TomTat'
@@ -55,26 +54,12 @@ const DatCho = () => {
         const hoTen = document.getElementById('input-hoTen').value
         const dienThoai = document.getElementById('input-dienThoai').value
         const email = document.getElementById('input-email').value
-        let loaiKhach
-
-        const hoTenChung = document.getElementById('input-hoTen-chung').value
-        const dienThoaiChung = document.getElementById('input-dienThoai-chung').value
-        const emailChung = document.getElementById('input-email-chung').value
         const danhXung = document.getElementById('danhXung').value
+        const userID = (JSON.parse(window.localStorage.getItem('userInfo'))).userId
+        const ThoiGianTaoOrder = Date.now()
+        const IDKhungThoiGian = idKhungGio
 
-        const radios = document.getElementsByName('loaiKhach')
-
-        // loop through list of radio buttons
-        for (var i = 0, len = radios.length; i < len; i++) {
-            if (radios[i].checked) { // radio checked?
-                loaiKhach = radios[i].value; // if so, hold its value in val
-                break; // and break out of for loop
-            }
-        }
-
-        loaiKhach === "khachTQ" ? loaiKhach = 1 : loaiKhach = 0
-
-        if (!hoTen || !dienThoai || !email || !loaiKhach || !hoTenChung || !dienThoaiChung || !emailChung || !danhXung) {
+        if (!hoTen || !dienThoai || !email || !danhXung) {
             alert('Vui lòng điền đầy đủ thông tin !')
             return
         }
@@ -85,19 +70,18 @@ const DatCho = () => {
                     HoTen: hoTen,
                     SoDienThoai: dienThoai,
                     Email: email,
-                    LaKhachThamQuan: loaiKhach,
                     NgayDi: ngayDi,
+                    UserID: userID,
+                    ThoiGianTaoOrder: ThoiGianTaoOrder,
+                    IDKhungThoiGian: IDKhungThoiGian,
 
-                    HoTenChung: hoTenChung,
-                    SoDienThoaiChung: dienThoaiChung,
-                    EmailChung: emailChung,
                     SoLuongNguoiLon: soNguoiLon,
                     SoLuongTreEm: soTreEm,
                     TongTien: Tour.GiaNguoiLon * soNguoiLon + Tour.GiaTreEm * soTreEm,
                     IDTour: IDTour
                 })
                     .then(() => {
-                        const linkToThanhToan = "/thanhToan?HoTenChung=" + hoTenChung + "&SoDienThoaiChung=" + dienThoaiChung + "&IDTour=" + IDTour + "&NgayDi=" + ngayDi + "&KTG=" + KhungThoiGian.ThoiGian;
+                        const linkToThanhToan = "/thanhToan?HoTenChung=" + hoTen + "&SoDienThoaiChung=" + dienThoai + "&IDTour=" + IDTour + "&NgayDi=" + ngayDi + "&KTG=" + KhungThoiGian.ThoiGian + "&TGTO=" + ThoiGianTaoOrder;
                         window.location.href = linkToThanhToan
                     })
                     .catch(err => alert(err))
@@ -115,7 +99,6 @@ const DatCho = () => {
                     soTreEm={soTreEm} KhungThoiGian={KhungThoiGian}
                 />
                 <ThongTinLienHe />
-                <ThongTinKhach />
                 <ThoiGianTQ ngayDi={ngayDi} />
                 <TomTat Tour={Tour} soNguoiLon={soNguoiLon} soTreEm={soTreEm} />
 

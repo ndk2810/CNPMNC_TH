@@ -16,24 +16,31 @@ function NgayDatTour({ Tour, KhungThoiGian }) {
 	};
 
 	const validation = () => {
-		const ngayDi = document.getElementById("ngayDi").value;
-		const soNguoiLon = document.getElementById("soNguoiLon").value;
-		const soTreEm = document.getElementById("soTreEm").value;
-		const idKhungGio = document.getElementById("khungGio").value;
+		const userInfo = localStorage.getItem('userInfo')
 
-		if (ngayDi)
-			window.location.href =
-				"/datCho?ngayDi=" +
-				ngayDi +
-				"&soNguoiLon=" +
-				soNguoiLon +
-				"&soTreEm=" +
-				soTreEm +
-				"&idKhungGio=" +
-				idKhungGio +
-				"&idTour=" +
-				Tour.IDTour;
-		else alert("Vui lòng chọn ngày đi");
+		if (userInfo) {
+			const ngayDi = document.getElementById("ngayDi").value;
+			const soNguoiLon = document.getElementById("soNguoiLon").value;
+			const soTreEm = document.getElementById("soTreEm").value;
+			const idKhungGio = document.getElementById("khungGio").value;
+
+			if (ngayDi)
+				window.location.href =
+					"/datCho?ngayDi=" +
+					ngayDi +
+					"&soNguoiLon=" +
+					soNguoiLon +
+					"&soTreEm=" +
+					soTreEm +
+					"&idKhungGio=" +
+					idKhungGio +
+					"&idTour=" +
+					Tour.IDTour;
+			else
+				alert("Vui lòng chọn ngày đi");
+		}
+		else
+			alert('Vui lòng đăng nhập !')
 	};
 
 	var today = new Date();

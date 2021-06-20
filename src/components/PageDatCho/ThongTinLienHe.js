@@ -10,8 +10,15 @@ const ThongTinLienHe = () => {
                     <div className="form-thongTinLienHe-header">
                         <h3>Thông tin liên hệ (nhận vé/phiếu thanh toán)</h3>
                     </div>
-
                     <div className="form-thongTinLienHe-body">
+                        <div className="form-thongTinLienHe-input">
+                            <label>Danh xưng</label>
+                            <select id="danhXung">
+                                <option value="Ông" selected>Ông</option>
+                                <option value="Bà">Bà</option>
+                                <option value="Cô">Cô</option>
+                            </select>
+                        </div>
                         <div className="form-thongTinLienHe-input">
                             <label>Họ tên</label>
                             <input type="text" id="input-hoTen" />
@@ -25,17 +32,6 @@ const ThongTinLienHe = () => {
                         <div className="form-thongTinLienHe-input">
                             <label>Email</label>
                             <input type="email" id="input-email" />
-                        </div>
-                    </div>
-
-                    <div className="form-thongTinLienHe-footer">
-                        <div>
-                            <input type="radio" id="khachTQ" name="loaiKhach" value="khachTQ" />
-                            <label for="khachTQ">Tôi là khách tham quan</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="ngKhac" name="loaiKhach" value="ngKhac" />
-                            <label for="ngKhac">Tôi đặt cho người khác</label>
                         </div>
                     </div>
                 </form>
