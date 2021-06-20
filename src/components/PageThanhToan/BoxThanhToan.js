@@ -1,10 +1,11 @@
 import React from "react";
-import { Elements } from '@stripe/react-stripe-js'
-import { loadStripe } from '@stripe/stripe-js'
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
 import PaymentForm from "./PaymentForm";
 
-const PUBLIC_KEY = "pk_test_51IzjQtAHeeyUAi3R0NUAODbvvHUsbSnR28rxbiSZOC2MVmk1M5d835wj7Nh6GwMCERYO4cgUwVt7V9elmc27uFC7002UAaioYH"
-const stripeTestPromise = loadStripe(PUBLIC_KEY)
+const PUBLIC_KEY =
+	"pk_test_51IzjQtAHeeyUAi3R0NUAODbvvHUsbSnR28rxbiSZOC2MVmk1M5d835wj7Nh6GwMCERYO4cgUwVt7V9elmc27uFC7002UAaioYH";
+const stripeTestPromise = loadStripe(PUBLIC_KEY);
 
 const BoxThanhToan = ({ Tour, ThongTinDat }) => {
 	return (
@@ -20,12 +21,31 @@ const BoxThanhToan = ({ Tour, ThongTinDat }) => {
 					</h3>
 				</div>
 				<div className="box-thanhtoan">
-					<h2 style={{ fontSize: 15, marginLeft: 15, paddingTop: 50, marginBottom: 10 }}>
+					<h2
+						style={{
+							fontSize: 15,
+							marginLeft: 15,
+							paddingTop: 50,
+							marginBottom: 10,
+						}}
+					>
 						Thẻ Tín Dụng
 					</h2>
 					<Elements stripe={stripeTestPromise}>
-						<PaymentForm amount={ThongTinDat.TongTien} tenTour={Tour.TenTour} hoTen={ThongTinDat.HoTen} />
+						<PaymentForm
+							amount={ThongTinDat.TongTien}
+							tenTour={Tour.TenTour}
+							hoTen={ThongTinDat.HoTen}
+						/>
 					</Elements>
+					<div className="voucher">
+						<input
+							type="text"
+							placeholder="Nhập mã giảm giá"
+							className="voucher-input"
+						></input>
+						<button className="voucher-btn">Áp dụng mã</button>
+					</div>
 
 					<div className="box-giatienchitiet">
 						<h3 style={{ marginLeft: 20 }}>Chi tiết giá</h3>
@@ -41,9 +61,12 @@ const BoxThanhToan = ({ Tour, ThongTinDat }) => {
 					<div className="end-box-thanhtoan">
 						<p>
 							<span>
-								Bằng việc nhấn Thanh toán, bạn đồng ý với <a href="https://www.traveloka.com/en-vn/termsandconditions">
+								Bằng việc nhấn Thanh toán, bạn đồng ý với{" "}
+								<a href="https://www.traveloka.com/en-vn/termsandconditions">
 									Điều khoản & Điều kiện
-								</a> và <a href="https://www.traveloka.com/en-vn/privacypolicy">
+								</a>{" "}
+								và{" "}
+								<a href="https://www.traveloka.com/en-vn/privacypolicy">
 									Chính sách quyền riêng tư
 								</a>
 							</span>
