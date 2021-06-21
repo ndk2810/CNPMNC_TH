@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+@font-face {
+	font-family: MuseoSans;
+	src: url("../resources/fonts/SVN-Museo\ Sans\ Regular.ttf");
+}
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: "MuseoSans";
+}
+.ThongTinKhachHang {
+	display: flex;
+	height: 110vh;
+	justify-content: center;
+	align-items: center;
+	background: white;
+}
+.menu-khachhang {
+	max-width: 700px;
+	width: 100%;
+	max-height: 600px;
+	height: 60%;
+	background: whitesmoke;
+	padding: 25px 30px;
+	margin-right: 2rem;
+	border-radius: 10px;
+}
+.box-group {
+	width: 700px;
+	height: 470px;
+}
+.box-ten {
+	background: whitesmoke;
+	padding: 25px 30px;
+	border-radius: 10px;
+	margin-right: 2rem;
+	margin-bottom: 25rem;
+}
+.group-thongtin {
+	position: relative;
+	top: -10px;
+}
+.capnhathoso {
+	width: 150px;
+	height: 20px;
+	float: right;
+	align-items: center;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.input-sua h3 {
+	font-size: 14px;
+	font-weight: 500;
+}
+.input-sua input {
+	width: 100%;
+	height: 2rem;
+	border: 1px solid #ccc;
+	margin-bottom: 5px;
+}
+.input-sua button {
+	color: white;
+	width: 13%;
+	float: right;
+	border: 1px solid white;
+	margin: 2px;
+	cursor: pointer;
+	background: rgb(67, 109, 247);
+}
+.box-sodienthoai {
+	position: absolute;
+	bottom: 10rem;
+	box-sizing: inherit;
+	max-width: 670px;
+	width: 100%;
+	height: 470;
+	background: whitesmoke;
+	padding: 25px 30px;
+	border-radius: 10px;
+	margin-right: 2rem;
+}
+.box-email {
+	position: absolute;
+	bottom: -5rem;
+	box-sizing: inherit;
+	max-width: 670px;
+	width: 100%;
+	height: 470;
+	background: whitesmoke;
+	padding: 25px 30px;
+	border-radius: 10px;
+	margin-right: 2rem;
+}
+.email-kh {
+	border-top: 1px solid rgb(216, 216, 216);
+	font-weight: 1000;
+}
+.sodienthoai-kh {
+	border-top: 1px solid rgb(216, 216, 216);
+	font-weight: 1000;
+}

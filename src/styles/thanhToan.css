@@ -108,7 +108,7 @@
 	width: 300px;
 	height: 15rem;
 	float: right;
-	margin-top: 1rem;
+	margin-top: 0.5rem;
 	margin-right: 10rem;
 	background: whitesmoke;
 	box-shadow: rgb(3 18 26 / 20%) 0px 1px 2px;
@@ -120,7 +120,7 @@
 	color: #8f8f8f;
 	text-transform: uppercase;
 	padding-left: 1rem;
-	padding-bottom: 0.6rem;
+	padding-bottom: 0.2;
 	border-bottom: 1px solid rgb(216, 216, 216);
 }
 .Ma-datcho h3 {
