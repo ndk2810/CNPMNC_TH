@@ -15,13 +15,16 @@ const MenuKH = () => {
 				</div>
 				<div className="danhsachdat" style={{ marginTop: 15 }}>
 					<FaCalendarAlt style={{ marginRight: 8, color: "blue" }} />
-					<span style={{ color: "gray", fontSize: 20 }}>Các Tour Đã Đặt</span>
+					<Link to="/lichsudat">
+						<span style={{ color: "gray", fontSize: 20 }}>Các Tour Đã Đặt</span>
+					</Link>
 				</div>
 				<div className="danhsachvoucher" style={{ marginTop: 15 }}>
 					<FaEnvelope style={{ marginRight: 8, color: "blue" }} />
-					<span style={{ color: "gray", fontSize: 20 }}>
-						Voucher Khách hàng
-					</span>
+					<Link to="/voucher">
+						{" "}
+						<span style={{ color: "gray", fontSize: 20 }}>Khuyến mãi</span>
+					</Link>
 				</div>
 			</div>
 		</div>

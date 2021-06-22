@@ -16,8 +16,9 @@ import ChiTietTour from "./pages/chiTietTour";
 import ThanhToan from "./pages/thanhToan";
 import Login from "./pages/login";
 import Register from "./pages/register";
-import SuaThongTinKH from './pages/suaThongTinKh'
-
+import SuaThongTinKH from "./pages/suaThongTinKh";
+import VoucherKh from "./pages/voucher";
+import TourDat from './pages/tourDat.jsx'
 const App = () => {
 	//GET tất cả địa điểm
 	const [DiaDiems, setDiaDiems] = useState([]);
@@ -150,6 +151,12 @@ const App = () => {
 						</Route>
 						<Route exact path="/taikhoan">
 							<SuaThongTinKH />
+						</Route>
+						<Route exact path="/voucher">
+							<VoucherKh />
+						</Route>
+						<Route exact path="/lichsudat">
+							<TourDat />
 						</Route>
 					</Switch>
 				</div>

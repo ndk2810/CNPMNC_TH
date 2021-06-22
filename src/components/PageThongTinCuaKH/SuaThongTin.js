@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Switch } from "antd";
 import "antd/dist/antd.css";
 import { FaUser } from "react-icons/fa";
-// import { FaPen } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa";
 import { FaEnvelopeOpenText } from "react-icons/fa";
+import { FaTrashAlt } from "react-icons/fa";
 const SuaThongTin = () => {
 	const [visiable, setVisiable] = useState(false);
 	const handleSwitch = () => setVisiable(!visiable);
@@ -71,7 +71,10 @@ const SuaThongTin = () => {
 					<span style={{ float: "right", marginRight: 15 }}>
 						Cập nhật thông tin:
 					</span>
-					<div className="email-kh">1.nthanhtung1440@gmail.com</div>
+					<div className="email-kh">
+						1.nthanhtung1440@gmail.com{" "}
+						<FaTrashAlt style={{ float: "right", marginTop: 5 }} />
+					</div>
 					{visiable2 ? (
 						<div className="input-sua">
 							<h3>Email</h3>

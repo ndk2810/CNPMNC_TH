@@ -1,5 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaCog } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
+import { FaCalendarAlt } from "react-icons/fa";
+import { FaSignOutAlt } from "react-icons/fa";
 
 const Header = ({ user, handleLogout }) => {
 	return (
@@ -92,10 +96,34 @@ const Header = ({ user, handleLogout }) => {
 										<p>Xin chào {user.email}</p>
 										<div className="dangNhap-hover-box">
 											<Link to="/taikhoan">
-												<div>Chỉnh sửa hồ sơ</div>
+												<div>
+													<FaCog style={{ marginRight: 8, color: "blue" }} />
+													Chỉnh sửa hồ sơ
+												</div>
 											</Link>
-											<div>Tour đã đăng ký</div>
-											<div onClick={handleLogout}>Đăng xuất</div>
+											<Link to="/lichsudat">
+												<div>
+													<FaCalendarAlt
+														style={{ marginRight: 8, color: "blue" }}
+													/>
+													Tour đã đăng ký
+												</div>
+											</Link>
+											<Link to="/voucher">
+												<div>
+													{" "}
+													<FaEnvelope
+														style={{ marginRight: 8, color: "blue" }}
+													/>
+													Khuyến mãi
+												</div>
+											</Link>
+											<div onClick={handleLogout} style={{ color: "black" }}>
+												<FaSignOutAlt
+													style={{ marginRight: 8, color: "blue" }}
+												/>
+												Đăng xuất
+											</div>
 										</div>
 									</div>
 								)}
