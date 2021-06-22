@@ -78,12 +78,12 @@ const App = () => {
 
 		document.getElementById('signIn-confirm-btn').style.backgroundColor = 'green'
 
-		axios.post('https://oka1kh.azurewebsites.net/api/user/login', {
+		axios.post('https://gift-api-v1.herokuapp.com/customer/login', {
 			email: email,
-			pass: pass
+			mat_khau: pass
 		})
 			.then((res) => {
-				if (res.data.status === "SUCCES") {
+				if (res.data === "SUCCES") {
 					window.localStorage.setItem('userToken', JSON.stringify(res.data.data))
 
 					getUserInfo()

@@ -19,12 +19,43 @@ const Register = () => {
 							id="email"
 							type="email"
 							name="email"
+							maxlength="45"
 							className="form-input-1"
 							placeholder="Nhập email"
 							value={values.email}
 							onChange={handleChange}
 						></input>
 						{errors.email && <p>{errors.email}</p>}
+					</div>
+					<div className="form-inputs-1">
+						<label htmlFor="name" className="form-label-1">
+							Tên
+						</label>
+						<input
+							id="name"
+							type="text"
+							name="name"
+							maxlength="50"
+							className="form-input-1"
+							placeholder="Nhập name"
+							value={values.name}
+							onChange={handleChange}
+						></input>
+					</div>
+					<div className="form-inputs-1">
+						<label htmlFor="phone" className="form-label-1">
+							SĐT
+						</label>
+						<input
+							id="phone"
+							type="tel"
+							name="phone"
+							maxlength="12"
+							className="form-input-1"
+							placeholder="Nhập phone"
+							value={values.phone}
+							onChange={handleChange}
+						></input>
 					</div>
 					<div className="form-inputs-1">
 						<label htmlFor="password" className="form-label-1">
@@ -34,6 +65,7 @@ const Register = () => {
 							id="password"
 							type="password"
 							name="password"
+							maxlength="45"
 							className="form-input-1"
 							placeholder="Nhập Mật khẩu"
 							value={values.password}
