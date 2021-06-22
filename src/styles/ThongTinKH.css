@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+@font-face {
+	font-family: MuseoSans;
+	src: url("../resources/fonts/SVN-Museo\ Sans\ Regular.ttf");
+}
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: "MuseoSans";
+}
+.ThongTinKhachHang {
+	display: flex;
+	height: 110vh;
+	justify-content: center;
+	align-items: center;
+	background: white;
+}
+.menu-khachhang {
+	max-width: 700px;
+	width: 100%;
+	max-height: 600px;
+	height: 60%;
+	background: whitesmoke;
+	padding: 25px 30px;
+	margin-right: 2rem;
+	border-radius: 10px;
+}
+.taikhoan:hover {
+	background: rgb(6, 202, 236);
+}
+.danhsachvoucher:hover {
+	background: rgb(6, 202, 236);
+}
+.danhsachdat:hover {
+	background: rgb(6, 202, 236);
+}
+.box-group {
+	width: 700px;
+	height: 500px;
+}
+.box-ten {
+	position: relative;
+	top: 6rem;
+	background: whitesmoke;
+	padding: 25px 30px;
+	border-radius: 10px;
+	margin-right: 2rem;
+	margin-bottom: 25rem;
+}
+.group-thongtin {
+	position: relative;
+	top: -10px;
+}
+.capnhathoso {
+	width: 150px;
+	height: 20px;
+	float: right;
+	align-items: center;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.input-sua h3 {
+	font-size: 14px;
+	font-weight: 500;
+}
+.input-sua input {
+	width: 100%;
+	height: 2rem;
+	border: 1px solid #ccc;
+	margin-bottom: 5px;
+}
+.input-sua button {
+	color: white;
+	width: 13%;
+	float: right;
+	border: 1px solid white;
+	margin: 2px;
+	cursor: pointer;
+	background: rgb(67, 109, 247);
+}
+.box-sodienthoai {
+	position: relative;
+	bottom: 15rem;
+	box-sizing: inherit;
+	max-width: 670px;
+	width: 100%;
+	height: 470;
+	background: whitesmoke;
+	padding: 25px 30px;
+	border-radius: 10px;
+	margin-right: 2rem;
+}
+.box-email {
+	position: relative;
+	bottom: 11rem;
+	box-sizing: inherit;
+	max-width: 670px;
+	width: 100%;
+	height: 470;
+	background: whitesmoke;
+	padding: 25px 30px;
+	border-radius: 10px;
+	margin-right: 2rem;
+}
+.email-kh {
+	border-top: 1px solid rgb(216, 216, 216);
+	font-weight: 1000;
+}
+.sodienthoai-kh {
+	border-top: 1px solid rgb(216, 216, 216);
+	font-weight: 1000;
+}
+.voucher-kh {
+	width: 700px;
+	height: 470px;
+	margin-bottom: 5rem;
+}
+.voucher-kh h3 {
+	font-size: 30px;
+	font-weight: 1000;
+}
+.voucher-kh button {
+	border: 1px solid rgb(22, 191, 233);
+	cursor: pointer;
+	background: rgb(25, 200, 253);
+	border-radius: 5px;
+}
+.voucher-kh button:hover {
+	background: rgb(240, 199, 14);
+}
+.box-voucher {
+	max-width: 800px;
+	width: 100%;
+	height: 435px;
+	background: whitesmoke;
+	padding: 25px 30px;
+	border-radius: 10px;
+	margin-right: 2rem;
+	margin-top: 1rem;
+}
+.danhsach-dat {
+	width: 700px;
+	height: 470px;
+	margin-bottom: 5rem;
+}
+.danhsach-dat h3 {
+	font-size: 30px;
+	font-weight: 1000;
+}
+.list-lichsu {
+	max-width: 800px;
+	width: 100%;
+	height: 475px;
+	background: whitesmoke;
+	padding: 25px 30px;
+	border-radius: 10px;
+	margin-right: 2rem;
+	margin-top: 1rem;
+}
+.list-lichsu button {
+	float: right;
+	margin-right: 1rem;
+	border: 1px solid #ccc;
+	cursor: pointer;
+	width: 50px;
+	border-radius: 5px;
+}
+.huy-tour {
+	background: rgb(240, 33, 6);
+	color: white;
+	font-size: 15px;
+}
+.datlai-tour {
+	background: rgb(170, 170, 84);
+	color: white;
+	font-size: 15px;
+}

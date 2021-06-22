@@ -217,7 +217,7 @@
 	white-space: pre-wrap;
 	word-wrap: break-word;
 	margin-left: 1rem;
-	padding-bottom: 2%;
+	/* padding-bottom: 2%; */
 }
 .TinhNang-Noidung-DatTour-small-hoatdong {
 	margin-top: 1rem;
@@ -230,14 +230,14 @@
 }
 .Easy-Noidung-DatTour-small-hoatdong {
 	display: flex;
-	margin-top: 1rem;
+	/* margin-top: 1rem; */
 }
 .Easy-Noidung-DatTour-small-hoatdong img {
 	width: 1rem;
 	height: 1rem;
 	flex: 1;
 	margin-left: 1rem;
-	margin-top: 0.2rem;
+	/* margin-top: 0.2rem; */
 }
 .title-Easy-Noidung-DatTour-small-hoatdong {
 	font-size: 0.9rem;
@@ -249,14 +249,14 @@
 }
 .Gia-Noidung-DatTour-small-hoatdong {
 	display: flex;
-	margin-top: 0.5rem;
+	/* margin-top: 0.5rem; */
 }
 .Gia-Noidung-DatTour-small-hoatdong img {
 	width: 1rem;
 	height: 1rem;
 	flex: 1;
 	margin-left: 1rem;
-	margin-top: 0.2rem;
+	/* margin-top: 0.2rem; */
 }
 .title-Gia-Noidung-DatTour-small-hoatdong {
 	font-size: 0.9rem;
@@ -268,15 +268,15 @@
 }
 .Accept-Noidung-DatTour-small-hoatdong {
 	display: flex;
-	margin-top: 0.5rem;
-	border-bottom: 1px solid rgb(216, 216, 216);
+	/* margin-top: 0.5rem; */
+	/* border-bottom: 1px solid rgb(216, 216, 216); */
 }
 .Accept-Noidung-DatTour-small-hoatdong img {
 	width: 1rem;
 	height: 1rem;
 	flex: 1;
 	margin-left: 1rem;
-	margin-top: 0.2rem;
+	/* margin-top: 0.2rem; */
 }
 .title-Accept-Noidung-DatTour-small-hoatdong {
 	font-size: 0.9rem;
@@ -285,7 +285,7 @@
 	white-space: pre-wrap;
 	word-wrap: break-word;
 	margin-left: 1rem;
-	padding-bottom: 2%;
+	/* padding-bottom: 2%; */
 }
 .ThongTin-DuaDon {
 	width: 41rem;
