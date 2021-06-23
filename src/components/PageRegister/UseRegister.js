@@ -23,12 +23,14 @@ const UseRegister = validate => {
 		const listErrors = validate(values)
 
 		if (!listErrors.email && !listErrors.password && !listErrors.password2) {
-			axios.post('https://oka1kh.azurewebsites.net/api/user', {
+			axios.post('https://gift-api-v1.herokuapp.com/customer/register', {
+				ten: values.name,
+				sdt: values.phone,
 				email: values.email,
-				pass: values.password
+				mat_khau: values.password
 			})
 				.then((res) => {
-					if (res.data.status === "SUCCES") {
+					if (res.data === "Success") {
 						alert('Đăng ký thành công !')
 						window.location.replace('/login')
 					}

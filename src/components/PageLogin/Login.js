@@ -8,12 +8,12 @@ const Login = ({ handleLogin }) => {
 				<h1>ĐĂNG NHẬP</h1>
 				<div className="form-inputs">
 					<label htmlFor="username" className="form-label">
-						Username
+						Email
 						<input
-							type="text"
+							type="email"
 							id="username"
 							className="form-input"
-							placeholder="Enter your username"
+							placeholder="Enter your email"
 						></input>
 					</label>
 				</div>
