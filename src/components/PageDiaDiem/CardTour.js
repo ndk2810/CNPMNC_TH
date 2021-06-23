@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import numberComma from '../../resources/scripts/numberComma'
-import server from '../../serverAddress'
+import numberComma from "../../resources/scripts/numberComma";
+import server from "../../serverAddress";
 
 const CardTour = ({ tour }) => {
 	//GET Hình ảnh bìa của tour
@@ -50,15 +50,12 @@ const CardTour = ({ tour }) => {
 	return (
 		<div className="card-tour">
 			<Link to={linkTo}>
-				<img
-					className="card-tour-img"
-					alt="#"
-					src={src}
-				/>
+				<img className="card-tour-img" alt="#" src={src} />
 			</Link>
 			<div className="card-tour-info">
 				<p className="card-tour-type">Tour</p>
 				<p className="card-tour-theLoai">{TheLoaiTour.TenTheLoaiTour}</p>
+				<input className="yeuthich" checked="checked" type="checkbox"></input>
 				<Link to={linkTo}>
 					<h1 className="card-tour-info-tenTour">{tour.TenTour}</h1>
 				</Link>
@@ -70,8 +67,11 @@ const CardTour = ({ tour }) => {
 						height="12"
 					></img>
 				</Link>
+
 				<p className="card-tour-info-diaDiem">{tour.DiaChiTour}</p>
-				<p className="card-tour-info-gia">{numberComma(tour.GiaNguoiLon)} VNĐ</p>
+				<p className="card-tour-info-gia">
+					{numberComma(tour.GiaNguoiLon)} VNĐ
+				</p>
 			</div>
 		</div>
 	);
