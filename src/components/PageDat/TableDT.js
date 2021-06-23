@@ -11,7 +11,6 @@ const TableDT = ({ ListDatTour }) => {
                     <thead>
                         <tr>
                             <th>Họ tên khách</th>
-                            <th>Tour</th>
                             <th>Ngày đi</th>
                             <th>Tổng tiền</th>
                             <th></th>
@@ -19,11 +18,10 @@ const TableDT = ({ ListDatTour }) => {
                     </thead>
                     <tbody>
                         {ListDatTour.map(data => {
-                            const linkTo = "/datChiTiet?IDDat=" + data.IDDat
+                            const linkTo = "/datChiTiet?IDDat=" + data.IDDat + "&IDTour=" + data.IDTour
                             return (
                                 <tr>
                                     <td>{data.HoTen}</td>
-                                    <td>{data.IDTour}</td>
                                     <td>{data.NgayDi}</td>
                                     <td>{data.TongTien}</td>
                                     <td>

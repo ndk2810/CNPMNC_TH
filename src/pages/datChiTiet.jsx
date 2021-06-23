@@ -8,6 +8,7 @@ const DatChiTiet = () => {
     let search = window.location.search;
     let params = new URLSearchParams(search);
     let IDDat = params.get('IDDat');
+    let IDTour = params.get('IDTour');
 
     const [Dat, setDat] = useState([])
     useEffect(() => {
@@ -23,9 +24,24 @@ const DatChiTiet = () => {
             });
     }, []);
 
+    const [Tour, setTour] = useState([])
+    useEffect(() => {
+        fetch(server + "/tour/chiTiet/" + IDTour)
+            .then(data => {
+                return data.json();
+            })
+            .then(data => {
+                setTour(data[0]);
+
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }, []);
+
     return (
         <div className="main-body">
-            <FormCTDat Dat={Dat} />
+            <FormCTDat Dat={Dat} Tour={Tour} />
         </div>
     )
 }

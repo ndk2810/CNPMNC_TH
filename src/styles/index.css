@@ -19,7 +19,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 25rem;
+  height: 50rem;
 }
 .Create {
   font-size: 1rem;
@@ -113,7 +113,7 @@
 .table-admin {
   background: #fff;
   border-radius: 7px;
-  margin-top: 12.5%;
+  margin-top: 8.5%;
 }
 .table-admin table {
   width: 100%;

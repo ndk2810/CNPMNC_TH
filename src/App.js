@@ -72,9 +72,9 @@ function App() {
 		<Router>
 			<div className="App">
 				<div className="body">
+					<Header />
 					<Switch>
 						{/* Mốt có thêm trang nào vào thì thêm trong Switch đây nhé */}
-						<Header />
 
 						<Route exact path="/">
 							<QuanLyTour
