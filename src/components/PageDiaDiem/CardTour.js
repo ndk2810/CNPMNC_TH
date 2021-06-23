@@ -55,7 +55,7 @@ const CardTour = ({ tour }) => {
 			<div className="card-tour-info">
 				<p className="card-tour-type">Tour</p>
 				<p className="card-tour-theLoai">{TheLoaiTour.TenTheLoaiTour}</p>
-				<input className="yeuthich" checked="checked" type="checkbox"></input>
+				<input className="yeuthich" type="checkbox"></input>
 				<Link to={linkTo}>
 					<h1 className="card-tour-info-tenTour">{tour.TenTour}</h1>
 				</Link>

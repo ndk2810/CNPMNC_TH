@@ -25,12 +25,6 @@ const MenuKH = () => {
 						<span style={{ color: "gray", fontSize: 20 }}>Khuyến mãi</span>
 					</Link>
 				</div>
-				<div className="danhsachdat" style={{ marginTop: 15 }}>
-					<FaCalendarAlt style={{ marginRight: 8, color: "blue" }} />
-					<Link to="/yeuThich">
-						<span style={{ color: "gray", fontSize: 20 }}>Các Tour Yêu Thích</span>
-					</Link>
-				</div>
 			</div>
 		</div>
 	);
