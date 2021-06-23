@@ -1,104 +1,109 @@
 .card-tour {
-    display: inline-flex;
-    margin-bottom: 2%;
-    float: right;
-    width: 70%;
-    box-shadow: 3px 3px 5px 6px #ccc;
-    border-radius: 10px;
-    height: 230px;
+	display: inline-flex;
+	margin-bottom: 2%;
+	float: right;
+	width: 70%;
+	box-shadow: 3px 3px 5px 6px #ccc;
+	border-radius: 10px;
+	height: 230px;
 }
 .card-tour h1 {
-    font-size: 1.2rem;
-    margin-bottom: 1.6rem;
+	font-size: 1.2rem;
+	margin-bottom: 1.6rem;
 }
 .card-tour-info {
-    padding: 1rem;
-    width: 100%;
+	padding: 1rem;
+	width: 100%;
 }
 .card-tour-img {
-    width: 32rem;
-    height: 14.4rem;
+	width: 32rem;
+	height: 14.4rem;
 }
 .card-tour-info-diaDiem {
-    display: inline-block;
-    margin-left: 8px;
+	display: inline-block;
+	margin-left: 8px;
 }
 .card-tour-info-tenTour {
-    color: black;
+	color: black;
 }
 .card-tour-info-gia {
-    color: rgb(255, 94, 31);
-    font-weight: bold;
-    font-size: 1.6rem;
-    position: sticky;
-    top: 100%;
+	color: rgb(255, 94, 31);
+	font-weight: bold;
+	font-size: 1.6rem;
+	position: sticky;
+	top: 100%;
+}
+.yeuthich {
+	border: 1px #ccc;
+	background: wheat;
+	float: right;
 }
 .search-chiTiet {
-    box-shadow: none !important;
-    border: 1px solid rgba(219, 219, 219, 1);
+	box-shadow: none !important;
+	border: 1px solid rgba(219, 219, 219, 1);
 }
 .h4-chiTiet {
-    margin-bottom: 2%;
-    font-size: 2rem;
+	margin-bottom: 2%;
+	font-size: 2rem;
 }
 .card-tour-type {
-    display: inline-block;
-    color: rgb(2, 100, 200);
-    background-color: rgb(236, 248, 255);
-    font-size: 0.8rem;
-    padding: 0.4rem;
-    max-width: max-content;
-    border-radius: 14px;
+	display: inline-block;
+	color: rgb(2, 100, 200);
+	background-color: rgb(236, 248, 255);
+	font-size: 0.8rem;
+	padding: 0.4rem;
+	max-width: max-content;
+	border-radius: 14px;
 }
 .card-tour-theLoai {
-    display: inline-block;
-    color: rgb(114, 114, 114);
-    font-size: 0.8rem;
-    padding: 0.4rem;
-    max-width: max-content;
-    border-radius: 14px;
+	display: inline-block;
+	color: rgb(114, 114, 114);
+	font-size: 0.8rem;
+	padding: 0.4rem;
+	max-width: max-content;
+	border-radius: 14px;
 }
 .favourite-btn {
-    width: 24px;
-    height: 24px;
-    float: right;
-    margin-top: 4px;
+	width: 24px;
+	height: 24px;
+	float: right;
+	margin-top: 4px;
 }
 /*ACCORDION - CỘT DANH MỤC */
 .boLoc {
-    width: 28%;
-    float: left;
+	width: 28%;
+	float: left;
 }
 .accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    border: none;
-    text-align: left;
-    outline: none;
-    width: 100%;
-    font-size: 15px;
-    transition: 0.4s;
+	background-color: #eee;
+	color: #444;
+	cursor: pointer;
+	padding: 18px;
+	border: none;
+	text-align: left;
+	outline: none;
+	width: 100%;
+	font-size: 15px;
+	transition: 0.4s;
 }
 
 .active,
 .accordion:hover {
-    background-color: #ccc;
+	background-color: #ccc;
 }
 
 .panel {
-    padding: 0 18px;
-    display: none;
-    background-color: white;
-    overflow: hidden;
+	padding: 0 18px;
+	display: none;
+	background-color: white;
+	overflow: hidden;
 }
 /*END*/
 
 .panel ul li {
-    margin-top: 4%;
-    margin-bottom: 4%;
+	margin-top: 4%;
+	margin-bottom: 4%;
 }
 .panel ul li input {
-    margin-right: 10px;
+	margin-right: 10px;
 }
