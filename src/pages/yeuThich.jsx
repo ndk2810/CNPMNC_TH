@@ -1,20 +1,19 @@
-import React from 'react'
 import { useState, useEffect } from "react";
-
 import MenuKH from '../components/PageThongTinCuaKH/MenuKH'
-import VoucherKH from '../components/PageThongTinCuaKH/VoucherKH'
+import ToursYeuThich from '../components/PageThongTinCuaKH/ToursYeuThich'
+import server from '../serverAddress';
 
-const Voucher = () => {
+const YeuThich = () => {
     const idKhach = (JSON.parse(localStorage.getItem('userToken'))).id
 
-    const [ThongTinKhach, setThongTinKhach] = useState([]);
+    const [YeuThich, setYeuThich] = useState([]);
     useEffect(() => {
-        fetch("https://gift-api-v1.herokuapp.com/customer/detail/?id=" + idKhach)
+        fetch(server + "/tour/getFavorites/" + idKhach)
             .then((data) => {
                 return data.json();
             })
             .then((data) => {
-                setThongTinKhach(data);
+                setYeuThich(data);
             })
             .catch((err) => {
                 console.log(err);
@@ -24,9 +23,9 @@ const Voucher = () => {
     return (
         <div className="ThongTinKhachHang">
             <MenuKH />
-            <VoucherKH ThongTinKhach={ThongTinKhach} />
+            <ToursYeuThich YeuThich={YeuThich} />
         </div>
     )
 }
 
-export default Voucher
+export default YeuThich

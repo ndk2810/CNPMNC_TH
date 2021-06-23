@@ -19,6 +19,8 @@ import Register from "./pages/register";
 import SuaThongTinKH from "./pages/suaThongTinKh";
 import VoucherKh from "./pages/voucher";
 import TourDat from './pages/tourDat.jsx'
+import YeuThich from './pages/yeuThich'
+
 const App = () => {
 	//GET tất cả địa điểm
 	const [DiaDiems, setDiaDiems] = useState([]);
@@ -50,33 +52,6 @@ const App = () => {
 			});
 	}, []);
 
-	const getUserInfo = () => {
-		const userToken = JSON.parse(window.localStorage.getItem("userToken"));
-
-		if (userToken) {
-			axios
-				.get("https://oka1kh.azurewebsites.net/api/profiles", {
-					headers: {
-						Value: "Token",
-						authorization: userToken.token,
-					},
-				})
-				.then((res) => {
-					if (res.data.status === "SUCCES") {
-						window.localStorage.setItem(
-							"userInfo",
-							JSON.stringify(res.data.data.auth[0])
-						);
-						window.location.replace("/");
-					}
-				})
-				.catch((err) => console.log(err));
-		} else {
-			alert("Vui lòng đăng nhập lại");
-			window.location.href("/login");
-		}
-	};
-
 	const handleLogin = (e) => {
 		const email = e.target.form[0].value;
 		const pass = e.target.form[1].value;
@@ -89,23 +64,20 @@ const App = () => {
 			mat_khau: pass
 		})
 			.then((res) => {
-				if (res.data === "SUCCES") {
-					window.localStorage.setItem('userToken', JSON.stringify(res.data.data))
-
-					getUserInfo();
-				}
+				res.data.email = email
+				window.localStorage.setItem('userToken', JSON.stringify(res.data))
+				window.location.replace('/')
 			})
-			//window.location.replace('/')
 			.catch((err) => alert("Tài khoản hoặc mật khẩu sai"));
 	};
 
 	const handleLogout = () => {
 		window.localStorage.removeItem("userToken");
-		window.localStorage.removeItem("userInfo");
+		//window.localStorage.removeItem("userToken");
 		window.location.reload();
 	};
 
-	const user = JSON.parse(window.localStorage.getItem("userInfo"));
+	const user = JSON.parse(window.localStorage.getItem("userToken"));
 
 	return (
 		<Router>
@@ -153,6 +125,9 @@ const App = () => {
 						</Route>
 						<Route exact path="/lichsudat">
 							<TourDat />
+						</Route>
+						<Route exact path="/yeuThich">
+							<YeuThich />
 						</Route>
 					</Switch>
 				</div>

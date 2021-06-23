@@ -3,7 +3,7 @@ import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js'
 import axios from 'axios'
 import server from '../../serverAddress'
 
-const PaymentForm = ({ amount, tenTour, hoTen }) => {
+const PaymentForm = ({ amount, tenTour, hoTen, ThongTinDat }) => {
     const [success, setSuccess] = useState(false)
     const stripe = useStripe()
     const elements = useElements()
@@ -19,6 +19,7 @@ const PaymentForm = ({ amount, tenTour, hoTen }) => {
             try {
                 const { id } = paymentMethod
                 const respone = await axios.post(server + "/thanhToan", {
+                    IDDat: ThongTinDat.IDDat,
                     amount: amount,
                     description: "Khách " + hoTen + " đặt tour " + tenTour,
                     id
@@ -26,8 +27,16 @@ const PaymentForm = ({ amount, tenTour, hoTen }) => {
 
                 if (respone.data.success) {
                     setSuccess(true)
-                    alert("Thanh toán thành công rồi nha !")
-                    window.location.replace('/')
+
+                    //Cộng điểm cho khách hàng
+                    axios.put('https://gift-api-v1.herokuapp.com/customer/updatepoint', {
+                        khach_hang_id: (JSON.parse(localStorage.getItem('userToken'))).id,
+                        diem_tich_luy: 20
+                    })
+                        .then(() => {
+                            alert("Thanh toán thành công !")
+                            //window.location.replace('/')
+                        })
                 }
             }
             catch (error) {

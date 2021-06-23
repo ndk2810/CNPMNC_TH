@@ -2,6 +2,8 @@ import React from 'react'
 
 
 const ThongTinLienHe = () => {
+    const tenKhach = (JSON.parse(localStorage.getItem('userToken'))).ten
+    const emailKhach = (JSON.parse(localStorage.getItem('userToken'))).email
     return (
         <div className="thongTinLienHe">
             <h2>Thông tin liên hệ</h2> <br />
@@ -21,7 +23,7 @@ const ThongTinLienHe = () => {
                         </div>
                         <div className="form-thongTinLienHe-input">
                             <label>Họ tên</label>
-                            <input type="text" id="input-hoTen" />
+                            <input type="text" id="input-hoTen" defaultValue={tenKhach} />
                         </div>
 
                         <div className="form-thongTinLienHe-input">
@@ -31,7 +33,7 @@ const ThongTinLienHe = () => {
 
                         <div className="form-thongTinLienHe-input">
                             <label>Email</label>
-                            <input type="email" id="input-email" />
+                            <input type="email" id="input-email" defaultValue={emailKhach} />
                         </div>
                     </div>
                 </form>

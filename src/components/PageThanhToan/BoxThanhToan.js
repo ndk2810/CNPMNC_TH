@@ -36,16 +36,17 @@ const BoxThanhToan = ({ Tour, ThongTinDat }) => {
 							amount={ThongTinDat.TongTien}
 							tenTour={Tour.TenTour}
 							hoTen={ThongTinDat.HoTen}
+							ThongTinDat={ThongTinDat}
 						/>
 					</Elements>
-					<div className="voucher">
+					{/* <div className="voucher">
 						<input
 							type="text"
 							placeholder="Nhập mã giảm giá"
 							className="voucher-input"
 						></input>
 						<button className="voucher-btn">Áp dụng mã</button>
-					</div>
+					</div> */}
 
 					<div className="box-giatienchitiet">
 						<h3 style={{ marginLeft: 20 }}>Chi tiết giá</h3>

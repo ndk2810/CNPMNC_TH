@@ -93,7 +93,7 @@ const Header = ({ user, handleLogout }) => {
 									// </div>
 
 									<div className="dangNhap">
-										<p>Xin chào {user.email}</p>
+										<p>Xin chào {user.ten}</p>
 										<div className="dangNhap-hover-box">
 											<Link to="/taikhoan">
 												<div>

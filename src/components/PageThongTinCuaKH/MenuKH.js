@@ -1,16 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaCog } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import { FaCalendarAlt } from "react-icons/fa";
 const MenuKH = () => {
 	return (
 		<div className="ThongTinKhachHang">
 			<div className="menu-khachhang">
-				<div className="taikhoan">
-					<FaCog style={{ marginRight: 8, color: "blue" }} />
+				<div className="danhsachdat" style={{ marginTop: 15 }}>
+					<FaCalendarAlt style={{ marginRight: 8, color: "blue" }} />
 					<Link to="/taikhoan">
-						<span style={{ color: "gray", fontSize: 20 }}>Tài Khoản</span>
+						<span style={{ color: "gray", fontSize: 20 }}>Thông tin cá nhân</span>
 					</Link>
 				</div>
 				<div className="danhsachdat" style={{ marginTop: 15 }}>
@@ -24,6 +23,12 @@ const MenuKH = () => {
 					<Link to="/voucher">
 						{" "}
 						<span style={{ color: "gray", fontSize: 20 }}>Khuyến mãi</span>
+					</Link>
+				</div>
+				<div className="danhsachdat" style={{ marginTop: 15 }}>
+					<FaCalendarAlt style={{ marginRight: 8, color: "blue" }} />
+					<Link to="/yeuThich">
+						<span style={{ color: "gray", fontSize: 20 }}>Các Tour Yêu Thích</span>
 					</Link>
 				</div>
 			</div>

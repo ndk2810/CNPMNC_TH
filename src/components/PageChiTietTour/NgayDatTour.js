@@ -16,7 +16,7 @@ function NgayDatTour({ Tour, KhungThoiGian }) {
 	};
 
 	const validation = () => {
-		const userInfo = localStorage.getItem('userInfo')
+		const userInfo = localStorage.getItem('userToken')
 
 		if (userInfo) {
 			const ngayDi = document.getElementById("ngayDi").value;

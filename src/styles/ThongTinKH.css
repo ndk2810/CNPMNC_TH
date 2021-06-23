@@ -11,9 +11,10 @@
 }
 .ThongTinKhachHang {
 	display: flex;
-	height: 110vh;
+	height: 140vh;
+	padding-bottom: 5%;
 	justify-content: center;
-	align-items: center;
+	margin-top: 2%;
 	background: white;
 }
 .menu-khachhang {
@@ -149,9 +150,8 @@
 	font-weight: 1000;
 }
 .list-lichsu {
-	max-width: 800px;
-	width: 100%;
-	height: 475px;
+	max-width: 890px;
+	width: 120%;
 	background: whitesmoke;
 	padding: 25px 30px;
 	border-radius: 10px;
@@ -175,4 +175,36 @@
 	background: rgb(170, 170, 84);
 	color: white;
 	font-size: 15px;
+}
+.list-lichsu-tourDaDat {
+	width: 100%;
+	display: flex;
+	margin-bottom: 4%;
+}
+.list-lichsu-tourDaDat img {
+	width: 36%;
+	height: 193px;
+	max-height: 193px;
+	max-width: 263px;
+}
+.list-lichsu-tourDaDat-ttct {
+	color: black;
+	margin-left: 3%;
+}
+.list-lichsu-tourDaDat-huyBtn {
+	height: 45%;
+	margin-right: 0 !important;
+	margin-top: 3.6rem;
+	font-weight: bolder;
+	border: 0.5px solid rgb(175, 175, 175);
+	background-color: rgb(255, 255, 255);
+	color: rgb(12, 175, 240);
+	transition: 0.3s;
+}
+.list-lichsu-tourDaDat-huyBtn:hover {
+	background-color: rgb(12, 175, 240);
+	color: white;
+}
+.flexer {
+	display: flex;
 }

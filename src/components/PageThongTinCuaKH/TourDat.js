@@ -1,12 +1,20 @@
 import React from "react";
 
-const TourDat = () => {
+import TourCard from "./TourCard";
+
+const TourDat = ({ ListTourDaDat }) => {
+
 	return (
 		<div className="danhsach-dat">
 			<h3>Lịch sử đặt tour</h3>
 			<div className="list-lichsu">
-				<button className='huy-tour'>Hủy</button>
-				<button className='datlai-tour'>Đặt lại </button>
+				{
+					ListTourDaDat.map(tour => {
+						return (
+							<TourCard IDTour={tour.IDTour} tour={tour} />
+						)
+					})
+				}
 			</div>
 		</div>
 	);

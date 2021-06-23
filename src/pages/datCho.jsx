@@ -55,7 +55,7 @@ const DatCho = () => {
         const dienThoai = document.getElementById('input-dienThoai').value
         const email = document.getElementById('input-email').value
         const danhXung = document.getElementById('danhXung').value
-        const userID = (JSON.parse(window.localStorage.getItem('userInfo'))).userId
+        const userID = (JSON.parse(window.localStorage.getItem('userToken'))).id
         const ThoiGianTaoOrder = Date.now()
         const IDKhungThoiGian = idKhungGio
 
