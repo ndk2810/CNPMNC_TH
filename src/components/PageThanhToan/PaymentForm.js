@@ -35,7 +35,7 @@ const PaymentForm = ({ amount, tenTour, hoTen, ThongTinDat }) => {
                     })
                         .then(() => {
                             alert("Thanh toán thành công !")
-                            //window.location.replace('/')
+                            window.location.replace('/')
                         })
                 }
             }
